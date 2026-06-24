@@ -13,10 +13,22 @@
     "Zboží expedujeme do 24 hodin. Doručení do České republiky zajišťujeme spolehlivými přepravci. Pro konzultaci a výběr správné techniky nás kontaktujte — poradíme v češtině i slovenštině."
   ],
   "benefits": [
-    { "title": "Ověřená kvalita", "description": "Prodáváme jen techniku, kterou sami používáme v praxi." },
-    { "title": "Rychlé dodání", "description": "Expedice do 24 hodin, doručení do ČR." },
-    { "title": "Odborné poradenství", "description": "30 let zkušeností ve svařování a kovovýrobě." },
-    { "title": "Servisní zázemí", "description": "Záruční i pozáruční servis v našem středisku v Nitře." }
+    {
+      "title": "Ověřená kvalita",
+      "description": "Prodáváme jen techniku, kterou sami používáme v praxi."
+    },
+    {
+      "title": "Rychlé dodání",
+      "description": "Expedice do 24 hodin, doručení do ČR."
+    },
+    {
+      "title": "Odborné poradenství",
+      "description": "30 let zkušeností ve svařování a kovovýrobě."
+    },
+    {
+      "title": "Servisní zázemí",
+      "description": "Záruční i pozáruční servis v našem středisku v Nitře."
+    }
   ],
   "faqs": [
     {
@@ -37,5 +49,11 @@
   "ctaText": "Prohlédnout nabídku",
   "ctaUrl": "https://www.billik.sk/sortiment/?utm_source=billik.cz&utm_medium=domain",
   "accentColor": "#0066cc",
-  "keywords": ["svářecí technika", "svářecí invertory", "svářečky", "Billik Trade", "MIG svářečka"]
+  "keywords": [
+    "svářecí technika",
+    "svářecí invertory",
+    "svářečky",
+    "Billik Trade",
+    "MIG svářečka"
+  ]
 }
