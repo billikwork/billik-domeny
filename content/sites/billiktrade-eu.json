@@ -4,11 +4,11 @@
   "locale": "sk_SK",
   "language": "sk",
   "title": "Billik Trade | Zváranie, kovovýroba, servis | Nitra, Slovensko",
-  "description": "Billik Trade s.r.o. — zváracia technika, kovovýroba, oprava zváračiek a práškové lakovanie. Požičovňa zváračiek a elektrocentrál. Tradícia od roku 1992, Nitra.",
+  "description": "Billik Trade s.r.o. — zváracia technika, kovovýroba a oprava zváračiek. Požičovňa zváračiek a elektrocentrál. Tradícia od roku 1992, Nitra.",
   "h1": "Billik Trade — kompletné riešenia pre zváranie a kovovýrobu",
   "subtitle": "Zváracia technika, kovovýroba, servis a prenájom pod jednou strechou",
   "paragraphs": [
-    "Billik Trade s.r.o. je slovenská firma s tradíciou od roku 1992. Ponúkame kompletný servis pre zváračov a priemysel — predaj zváracej techniky, kovovýrobu na mieru, opravu zváračiek, práškové lakovanie a prenájom zariadení.",
+    "Billik Trade s.r.o. je slovenská firma s tradíciou od roku 1992. Ponúkame kompletný servis pre zváračov a priemysel — predaj zváracej techniky, kovovýrobu na mieru, opravu zváračiek a prenájom zariadení.",
     "Naša predajňa a servisné stredisko v Nitre zabezpečujú odborné poradenstvo, rýchle dodanie a spoľahlivý servis. Prenajímame zváračky, brúsky a elektrocentrály pre firmy aj jednotlivcov.",
     "Spolupracujeme s remeselníkmi, stavebnými firmami aj priemyselnými podnikmi v celom strednom Slovensku a EÚ. Kontaktujte nás pre cenovú ponuku alebo navštívte predajňu osobne."
   ],
@@ -21,7 +21,7 @@
   "faqs": [
     {
       "question": "Aké služby Billik Trade ponúka?",
-      "answer": "Predaj zváracej techniky, kovovýrobu na mieru, opravu zváračiek, práškové lakovanie a prenájom zváračiek, brúsk a elektrocentrál."
+      "answer": "Predaj zváracej techniky, kovovýrobu na mieru, opravu zváračiek a prenájom zváračiek, brúsk a elektrocentrál."
     },
     {
       "question": "Prenajímate zváračky aj jednotlivcom?",
@@ -33,7 +33,7 @@
     }
   ],
   "heroImage": "/heroes/billiktrade-eu/hero.png",
-  "heroAlt": "Billik Trade — zváracia technika, kovovýroba, servis a lakovanie v Nitre",
+  "heroAlt": "Billik Trade — zváracia technika, kovovýroba a servis v Nitre",
   "ctaText": "Navštíviť billik.sk",
   "ctaUrl": "https://www.billik.sk/?utm_source=billiktrade.eu&utm_medium=domain",
   "accentColor": "#2563eb",
