@@ -3,10 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { SiteBenefit, SiteConfig, SiteFaq } from "@billik/site-config";
-
-function sitesPreviewBase() {
-  return process.env.NEXT_PUBLIC_SITES_PREVIEW_URL || "http://localhost:3000";
-}
+import { getSitesPreviewBase } from "@/lib/sites-preview";
 
 function Field({
   label,
@@ -33,14 +30,14 @@ export function SiteEditor({ initial }: { initial: SiteConfig }) {
   const [uploading, setUploading] = useState(false);
 
   const previewUrl = useMemo(() => {
-    const base = sitesPreviewBase().replace(/\/$/, "");
+    const base = getSitesPreviewBase();
     return `${base}/?site=${site.id}`;
   }, [site.id]);
 
   const liveUrl = useMemo(() => `https://www.${site.domain}`, [site.domain]);
 
   const heroPreview = useMemo(() => {
-    const base = sitesPreviewBase().replace(/\/$/, "");
+    const base = getSitesPreviewBase();
     return `${base}${site.heroImage}`;
   }, [site.heroImage]);
 
