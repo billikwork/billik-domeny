@@ -1,0 +1,41 @@
+{
+  "id": "billik-cz",
+  "domain": "billik.cz",
+  "locale": "cs_CZ",
+  "language": "cs",
+  "title": "Svářecí technika a invertory | Billik Trade | Dodání do ČR",
+  "description": "Svářecí technika, invertory MIG/TIG/MMA a příslušenství od Billik Trade. Odborné poradenství, rychlé dodání do České republiky. Tradice od roku 1992.",
+  "h1": "Svářecí technika, která vás nezklame",
+  "subtitle": "Od invertorů pro začátečníky po profesionální MIG/TIG systémy",
+  "paragraphs": [
+    "Billik Trade je slovenský specialista na svářecí techniku s více než 30 lety zkušeností. Pro zákazníky v České republice nabízíme široký sortiment svářeček, invertorů, kuklí, drátů a spotřebního materiálu od ověřených značek IWELD a Billik.",
+    "V naší nabídce najdete vše od kompaktních MMA invertorů pro domácí dílnu až po výkonné MIG/MAG a TIG systémy pro profesionální použití. Každý produkt doporučujeme na základě praktických zkušeností z vlastní dílny.",
+    "Zboží expedujeme do 24 hodin. Doručení do České republiky zajišťujeme spolehlivými přepravci. Pro konzultaci a výběr správné techniky nás kontaktujte — poradíme v češtině i slovenštině."
+  ],
+  "benefits": [
+    { "title": "Ověřená kvalita", "description": "Prodáváme jen techniku, kterou sami používáme v praxi." },
+    { "title": "Rychlé dodání", "description": "Expedice do 24 hodin, doručení do ČR." },
+    { "title": "Odborné poradenství", "description": "30 let zkušeností ve svařování a kovovýrobě." },
+    { "title": "Servisní zázemí", "description": "Záruční i pozáruční servis v našem středisku v Nitře." }
+  ],
+  "faqs": [
+    {
+      "question": "Dodáváte svářecí techniku do České republiky?",
+      "answer": "Ano, Billik Trade zasílá zboží do celé České republiky. Pro aktuální dostupnost a cenu dopravy nás kontaktujte."
+    },
+    {
+      "question": "Jaký invertor doporučujete pro domácí dílnu?",
+      "answer": "Pro začátečníky doporučujeme MMA invertor 160–200 A. Pro svařování tenkého plechu zvažte MIG nebo TIG zařízení."
+    },
+    {
+      "question": "Kde sídlí Billik Trade?",
+      "answer": "Sídlo a prodejna jsou v Nitře na Slovensku, Priemyselná 4, 949 01 Nitra. Působíme od roku 1992."
+    }
+  ],
+  "heroImage": "/heroes/billik-cz/hero.png",
+  "heroAlt": "Svářecí invertory a technika Billik Trade — MIG, TIG, MMA",
+  "ctaText": "Prohlédnout nabídku",
+  "ctaUrl": "https://www.billik.sk/sortiment/?utm_source=billik.cz&utm_medium=domain",
+  "accentColor": "#0066cc",
+  "keywords": ["svářecí technika", "svářecí invertory", "svářečky", "Billik Trade", "MIG svářečka"]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "invertory-eu",
+  "domain": "invertory.eu",
+  "locale": "sk_SK",
+  "language": "sk",
+  "title": "Zváracie invertory | Výkon a stabilita | Billik Trade Nitra",
+  "description": "Moderné zváracie invertory IWELD a Billik Trade. Ľahšie, výkonnejšie, stabilný oblúk. Skladom v Nitre, dodanie do 24 hodín po celom Slovensku.",
+  "h1": "Zváracie invertory, ktoré nahrádzajú starú techniku",
+  "subtitle": "Viac výkonu v menšom balení — pre dielňu aj výrobu",
+  "paragraphs": [
+    "Stará transformátorová zváračka sa prehrieva, robí nekvalitné zvary a zaberá pol dielne? Moderné invertory z ponuky Billik Trade sú ľahšie, úspornejšie a poskytujú stabilný zvárací oblúk pri každom nastavení.",
+    "V Billik Trade s.r.o. v Nitre ponúkame invertory pre začiatočníkov aj profesionálov — od kompaktných MMA/TIG jednotiek až po výkonné MIG/MAG systémy značiek IWELD a Billik. Každý stroj odporúčame na základe 30 rokov praxe v zváraní.",
+    "Tovar expedujeme do 24 hodín. Osobný odber je možný na Priemyselnej 4 v Nitre, kde vám odborníci pomôžu s výberom správneho invertora pre váš materiál a spôsob zvárania."
+  ],
+  "benefits": [
+    { "title": "Stabilný oblúk", "description": "Presné nastavenie prúdu bez výkyvov pri zváraní." },
+    { "title": "Jednoduché ovládanie", "description": "Digitálny displej a intuitívne ovládače pre rýchly štart." },
+    { "title": "Skladom ihneď", "description": "Vybrané modely máme pripravené k okamžitému odberu." },
+    { "title": "Odborné poradenstvo", "description": "Pomôžeme vybrať invertor podľa hrúbky materiálu a technológie." }
+  ],
+  "faqs": [
+    {
+      "question": "Čím sa zvárací invertor líši od starej zváračky?",
+      "answer": "Invertor je menší, ľahší a efektívnejší. Využíva elektroniku namiesto veľkého transformátora, čo znamená nižšiu spotrebu, rýchlejšie nastavenie a stabilnejší oblúk."
+    },
+    {
+      "question": "Aký invertor potrebujem pre domácu dielňu?",
+      "answer": "Pre väčšinu domácich majstrov postačí MMA invertor 160–200 A. Ak plánujete zvárať tenší plech alebo hliník, odporúčame TIG alebo synergické MIG zariadenie."
+    },
+    {
+      "question": "Dodávate invertory aj do Česka a EÚ?",
+      "answer": "Áno, Billik Trade expeduje zváraciu techniku po celom Slovensku a do zahraničia. Kontaktujte nás pre konkrétnu ponuku a dopravu."
+    }
+  ],
+  "heroImage": "/heroes/invertory-eu/hero.png",
+  "heroAlt": "Moderný zvárací invertor Billik Trade — výkon v kompaktnom balení",
+  "ctaText": "Pozrieť ponuku invertorov",
+  "ctaUrl": "https://www.billik.sk/sortiment/?utm_source=invertory.eu&utm_medium=domain",
+  "accentColor": "#00b4a0",
+  "keywords": ["zváracie invertory", "invertor na zváranie", "MMA invertor", "IWELD invertor", "Billik Trade"]
+}

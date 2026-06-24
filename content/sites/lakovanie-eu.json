@@ -1,0 +1,41 @@
+{
+  "id": "lakovanie-eu",
+  "domain": "lakovanie.eu",
+  "locale": "sk_SK",
+  "language": "sk",
+  "title": "Práškové lakovanie Nitra | Povrchová úprava kovov | Billik Trade",
+  "description": "Profesionálne práškové lakovanie v Nitre. Odolné povrchy, moderná technológia, kovové diely na mieru. Billik Trade s.r.o. — zváranie, kovovýroba a lakovanie.",
+  "h1": "Práškové lakovanie pre odolné a estetické povrchy",
+  "subtitle": "Moderná povrchová úprava kovových dielov v Nitre",
+  "paragraphs": [
+    "Práškové lakovanie je najspoľahlivejší spôsob, ako ochrániť kovové diely pred koróziou a zároveň dosiahnuť jednotný, profesionálny vzhľad. V Billik Trade v Nitre kombinujeme zváranie, kovovýrobu a povrchovú úpravu pod jednou strechou.",
+    "Naša lakovňa využíva moderné technológie vrátane automatizovaného nanášania prášku. Výsledkom je trvanlivý povrch odolný voči mechanickému opotrebeniu, UV žiareniu a chemikáliám — ideálny pre brány, zábradlia, konštrukcie aj sériovú výrobu.",
+    "Potrebujete diel najprv vyrobiť a potom nalakovať? V Billik Trade zvládneme celý proces — od návrhu cez zváranie až po finálne práškové lakovanie podľa vašej RAL farby."
+  ],
+  "benefits": [
+    { "title": "Vysoká odolnosť", "description": "Povrch vydrží náročné vonkajšie podmienky aj priemyselné prostredie." },
+    { "title": "Moderná technológia", "description": "Automatizované nanášanie prášku pre rovnomerný výsledok." },
+    { "title": "Kompletný servis", "description": "Kovovýroba, zváranie a lakovanie u jedného dodávateľa." },
+    { "title": "Individuálny prístup", "description": "Riešenia na mieru pre firmy aj jednotlivcov v regióne Nitra." }
+  ],
+  "faqs": [
+    {
+      "question": "Aké materiály je možné práškovým lakovaním upraviť?",
+      "answer": "Najčastejšie lakujeme oceľové a pozinkované diely. Pred lakovaním zabezpečíme správnu prípravu povrchu — odmastenie, fosfátovanie alebo pieskovanie podľa požiadavky."
+    },
+    {
+      "question": "Kde sa nachádza vaša lakovňa?",
+      "answer": "Billik Trade sídli v Nitre na Priemyselnej 4. Pre konzultáciu a cenovú ponuku nás kontaktujte telefonicky alebo e-mailom."
+    },
+    {
+      "question": "Ponúkate aj výrobu dielov pred lakovaním?",
+      "answer": "Áno. Okrem práškového lakovania vyrábame brány, zábradlia, schody a konštrukcie na mieru. Celý proces zvládneme interne."
+    }
+  ],
+  "heroImage": "/heroes/lakovanie-eu/hero.png",
+  "heroAlt": "Práškové lakovanie kovových dielov — Billik Trade Nitra",
+  "ctaText": "Kontaktovať lakovňu",
+  "ctaUrl": "https://www.billik.sk/praskova-lakovna/?utm_source=lakovanie.eu&utm_medium=domain",
+  "accentColor": "#2563eb",
+  "keywords": ["práškové lakovanie", "lakovanie kovov", "lakovanie Nitra", "povrchová úprava", "Billik Trade"]
+}

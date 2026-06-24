@@ -1,0 +1,19 @@
+{
+  "name": "billik-domeny",
+  "private": true,
+  "packageManager": "npm@11.5.1",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "dev:sites": "npm run dev --workspace=@billik/sites"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.4",
+    "typescript": "^5.8.3"
+  }
+}

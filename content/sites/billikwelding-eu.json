@@ -1,0 +1,41 @@
+{
+  "id": "billikwelding-eu",
+  "domain": "billikwelding.eu",
+  "locale": "en_EU",
+  "language": "en",
+  "title": "Professional Welding Equipment EU | Billik Trade Slovakia",
+  "description": "Professional welding equipment and supplies from Billik Trade, Nitra, Slovakia. MIG, TIG, MMA welders, helmets, consumables. 30+ years of expertise. EU shipping available.",
+  "h1": "Professional welding equipment from Slovakia",
+  "subtitle": "Trusted by welders across Europe since 1992",
+  "paragraphs": [
+    "Billik Trade s.r.o. is a Slovak welding specialist with over three decades of experience in welding technology, metal fabrication, and industrial supplies. From our base in Nitra, we supply professional-grade welders, cutting equipment, and consumables across Slovakia and the EU.",
+    "We distribute leading brands including IWELD and our own Billik welding machines. Every product in our range is tested in real workshop conditions — we only sell equipment we would use ourselves.",
+    "Whether you run an industrial production line or a home workshop, our team provides expert advice in English and Slovak. Orders are dispatched within 24 hours, and we offer warranty and post-warranty service at our Nitra facility."
+  ],
+  "benefits": [
+    { "title": "Proven reliability", "description": "Equipment tested by professionals in demanding conditions." },
+    { "title": "Expert advice", "description": "30 years of welding expertise at your service." },
+    { "title": "Fast dispatch", "description": "Orders shipped within 24 hours from our Nitra warehouse." },
+    { "title": "Full service", "description": "Warranty and post-warranty repair at our service centre." }
+  ],
+  "faqs": [
+    {
+      "question": "Do you ship welding equipment within the EU?",
+      "answer": "Yes, Billik Trade ships across Slovakia and to EU countries. Contact us for a shipping quote and product availability for your region."
+    },
+    {
+      "question": "What welding brands do you carry?",
+      "answer": "We stock IWELD, Billik, and other proven brands covering MIG/MAG, TIG, MMA, and plasma cutting equipment."
+    },
+    {
+      "question": "Where is Billik Trade located?",
+      "answer": "Our headquarters and showroom are at Priemyselná 4, 949 01 Nitra, Slovakia. We are open Monday to Friday, 7:00–16:30."
+    }
+  ],
+  "heroImage": "/heroes/billikwelding-eu/hero.jpeg",
+  "heroAlt": "Professional welder at work — Billik Trade welding equipment",
+  "ctaText": "Browse our shop",
+  "ctaUrl": "https://www.billik.sk/sortiment/?utm_source=billikwelding.eu&utm_medium=domain",
+  "accentColor": "#1d4ed8",
+  "keywords": ["welding equipment", "welding machines", "MIG welder", "TIG welder", "Billik Trade", "Slovakia"]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "ochrannepracovneprostriedky-sk",
+  "domain": "ochrannepracovneprostriedky.sk",
+  "locale": "sk_SK",
+  "language": "sk",
+  "title": "Ochranné pracovné prostriedky | OPP pre zváračov | Billik Trade",
+  "description": "Ochranné pracovné prostriedky a pomôcky pre zváračov. Samostmievacie kukly IWELD, rukavice, ochranný odev. Skladom v Nitre, dodanie do 24 hodín.",
+  "h1": "Ochranné pracovné prostriedky pre bezpečné zváranie",
+  "subtitle": "Kvalitná OPP nie je luxus — je základ vašej každodennej ochrany",
+  "paragraphs": [
+    "Pri zváraní pracujete s vysokými teplotami, UV a IR žiarením, iskrami a škodlivými výparmi. Správne zvolené ochranné pracovné prostriedky (OPP) chránia zrak, kožu aj dýchacie cesty a sú povinnosťou každého zodpovedného zvárača.",
+    "V Billik Trade ponúkame overené OPP od značiek IWELD a ďalších špičkových výrobcov — samostmievacie kukly s vysokou optickou triedou, zváracie rukavice, ochranné plášte a doplnky. Všetko máme skladom a expedujeme do 24 hodín.",
+    "Neviete, ktorú kuklu alebo rukavice zvoliť? Naši odborníci vám poradia podľa typu zvárania, dĺžky práce a podmienok vo vašej dielni. Navštívte predajňu v Nitre alebo objednajte online."
+  ],
+  "benefits": [
+    { "title": "Ochrana zraku", "description": "Samostmievacie kukly s UV/IR filtrom a vysokou optickou triedou." },
+    { "title": "Overené značky", "description": "IWELD Panther, Vision, Gamma a ďalšie modely skladom." },
+    { "title": "Rýchle dodanie", "description": "OPP expedujeme do 24 hodín po celom Slovensku." },
+    { "title": "Odborný výber", "description": "Poradíme s výberom OPP podľa typu zvárania a pracoviska." }
+  ],
+  "faqs": [
+    {
+      "question": "Aké OPP potrebujem pri zváraní?",
+      "answer": "Základom je samostmievacia kukla, zváracie rukavice a nehorľavý pracovný odev. Pri MIG/MAG zváraní odporúčame aj chrániče predlaktia a vhodnú obuv."
+    },
+    {
+      "question": "Akú samostmievaciu kuklu odporúčate?",
+      "answer": "Pre profesionálov odporúčame IWELD Vision alebo Panther s True Color technológiou. Pre hobby zváračov postačí spoľahlivý model s dobrou optickou triedou a rýchlou reakciou."
+    },
+    {
+      "question": "Dodávate OPP aj firmám?",
+      "answer": "Áno, zásobujeme remeselníkov, autoservisy aj priemyselné podniky. Pre väčšie objednávky pripravíme individuálnu ponuku."
+    }
+  ],
+  "heroImage": "/heroes/ochrannepracovneprostriedky-sk/hero.png",
+  "heroAlt": "Samostmievacie kukly IWELD a zváracie rukavice — ochranné pracovné prostriedky",
+  "ctaText": "Pozrieť OPP v e-shope",
+  "ctaUrl": "https://www.billik.sk/sortiment/?utm_source=ochrannepracovneprostriedky.sk&utm_medium=domain",
+  "accentColor": "#eab308",
+  "keywords": ["ochranné pracovné prostriedky", "OPP", "zváracia kukla", "samostmievacia kukla", "zváracie rukavice"]
+}

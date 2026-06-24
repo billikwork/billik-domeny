@@ -1,0 +1,41 @@
+{
+  "id": "billikwelding-sk",
+  "domain": "billikwelding.sk",
+  "locale": "sk_SK",
+  "language": "sk",
+  "title": "Zváracia technika Slovensko | Zváračky a príslušenstvo | Billik Trade",
+  "description": "Zváracia technika pre profesionálov aj domácich majstrov. Zváračky MIG, TIG, MMA, kukly, drôty a servis v Nitre. Billik Trade — odborníci na zváranie od roku 1992.",
+  "h1": "Zváracia technika, ktorej môžete dôverovať",
+  "subtitle": "Pre domácich majstrov, remeselníkov aj priemysel",
+  "paragraphs": [
+    "Billik Trade je slovenský špecialista na zváraciu techniku s viac ako 30-ročnou tradíciou. V našej predajni v Nitre nájdete zváračky, rezacie zariadenia, príslušenstvo aj spotrebný materiál od overených značiek IWELD, Billik a ďalších.",
+    "Či ste domáci majster, ktorý začína so zváraním, alebo firma hľadajúca výkonný MIG/TIG systém — ponúkame individuálny prístup a odborné poradenstvo. Pomôžeme vám vybrať techniku, ktorú sami používame v dielni.",
+    "Tovar expedujeme do 24 hodín po celom Slovensku. Doručenie nad 99 € je zdarma. Servisné stredisko máme priamo v Nitre — opravujeme zváračky záručne aj pozáručne."
+  ],
+  "benefits": [
+    { "title": "Individuálny prístup", "description": "Ku každému zákazníkovi pristupujeme osobne a férovo." },
+    { "title": "Overená kvalita", "description": "Do sortimentu dávame len to, čo sami používame." },
+    { "title": "Široký sortiment", "description": "Zváračky, kukly, drôty, elektródy a príslušenstvo na jednom mieste." },
+    { "title": "Servis v Nitre", "description": "Oprava a diagnostika zváračiek priamo u nás." }
+  ],
+  "faqs": [
+    {
+      "question": "Akú zváračku odporúčate pre začiatočníka?",
+      "answer": "Pre začiatok odporúčame MMA invertor 160–200 A alebo kompaktný MIG ako IWELD Gorilla PocketMIG. K tomu samostmievaciu kuklu a základné rukavice."
+    },
+    {
+      "question": "Kde sa nachádza predajňa Billik Trade?",
+      "answer": "Predajňa a servis sú na Priemyselnej 4, 949 01 Nitra. Otvorené pondelok až piatok 7:00–16:30."
+    },
+    {
+      "question": "Ponúkate aj poradenstvo pri výbere techniky?",
+      "answer": "Áno, odborné poradenstvo je súčasťou našej služby. Môžete nás kontaktovať telefonicky, e-mailom alebo osobne v predajni."
+    }
+  ],
+  "heroImage": "/heroes/billikwelding-sk/hero.png",
+  "heroAlt": "Zváracia technika Billik Trade — zváračky, kukly a príslušenstvo",
+  "ctaText": "Nakupovať na billik.sk",
+  "ctaUrl": "https://www.billik.sk/sortiment/?utm_source=billikwelding.sk&utm_medium=domain",
+  "accentColor": "#ffd700",
+  "keywords": ["zváracia technika", "zváračky", "zvaranie", "Billik Trade", "Nitra"]
+}

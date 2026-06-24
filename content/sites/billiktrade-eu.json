@@ -1,0 +1,41 @@
+{
+  "id": "billiktrade-eu",
+  "domain": "billiktrade.eu",
+  "locale": "sk_SK",
+  "language": "sk",
+  "title": "Billik Trade | Zváranie, kovovýroba, servis | Nitra, Slovensko",
+  "description": "Billik Trade s.r.o. — zváracia technika, kovovýroba, oprava zváračiek a práškové lakovanie. Požičovňa zváračiek a elektrocentrál. Tradícia od roku 1992, Nitra.",
+  "h1": "Billik Trade — kompletné riešenia pre zváranie a kovovýrobu",
+  "subtitle": "Zváracia technika, kovovýroba, servis a prenájom pod jednou strechou",
+  "paragraphs": [
+    "Billik Trade s.r.o. je slovenská firma s tradíciou od roku 1992. Ponúkame kompletný servis pre zváračov a priemysel — predaj zváracej techniky, kovovýrobu na mieru, opravu zváračiek, práškové lakovanie a prenájom zariadení.",
+    "Naša predajňa a servisné stredisko v Nitre zabezpečujú odborné poradenstvo, rýchle dodanie a spoľahlivý servis. Prenajímame zváračky, brúsky a elektrocentrály pre firmy aj jednotlivcov.",
+    "Spolupracujeme s remeselníkmi, stavebnými firmami aj priemyselnými podnikmi v celom strednom Slovensku a EÚ. Kontaktujte nás pre cenovú ponuku alebo navštívte predajňu osobne."
+  ],
+  "benefits": [
+    { "title": "Zváracia technika", "description": "Predaj zváračiek, kukiel, drôtov a spotrebného materiálu." },
+    { "title": "Kovovýroba na mieru", "description": "Brány, zábradlia, schody a konštrukcie podľa vašich požiadaviek." },
+    { "title": "Servis zváračiek", "description": "Záručný aj pozáručný servis všetkých typov zváračiek." },
+    { "title": "Prenájom zariadení", "description": "Požičovňa zváračiek, brúsk a elektrocentrál." }
+  ],
+  "faqs": [
+    {
+      "question": "Aké služby Billik Trade ponúka?",
+      "answer": "Predaj zváracej techniky, kovovýrobu na mieru, opravu zváračiek, práškové lakovanie a prenájom zváračiek, brúsk a elektrocentrál."
+    },
+    {
+      "question": "Prenajímate zváračky aj jednotlivcom?",
+      "answer": "Áno, prenájom je dostupný pre firmy aj jednotlivcov. Kontaktujte nás na 037/65 22 106 alebo navštívte predajňu v Nitre."
+    },
+    {
+      "question": "Ako dlho pôsobí Billik Trade na trhu?",
+      "answer": "Billik Trade pôsobí od roku 1992. Máme viac ako 30 rokov skúseností v zváraní a kovovýrobe."
+    }
+  ],
+  "heroImage": "/heroes/billiktrade-eu/hero.png",
+  "heroAlt": "Billik Trade — zváracia technika, kovovýroba, servis a lakovanie v Nitre",
+  "ctaText": "Navštíviť billik.sk",
+  "ctaUrl": "https://www.billik.sk/?utm_source=billiktrade.eu&utm_medium=domain",
+  "accentColor": "#2563eb",
+  "keywords": ["Billik Trade", "zváranie", "kovovýroba", "servis zváračiek", "prenájom zváračiek"]
+}
