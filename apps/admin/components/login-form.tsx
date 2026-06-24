@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { useNavigation } from "@/components/navigation-provider";
 import { Button } from "@/components/ui/button";
 import { Field, inputClass } from "@/components/ui/field";
 import { useToast } from "@/components/ui/toast";
@@ -10,6 +11,7 @@ export function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { showToast } = useToast();
+  const { startNavigation } = useNavigation();
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -35,8 +37,8 @@ export function LoginForm() {
         return;
       }
 
-      showToast("success", "Prihlásenie úspešné. Presmerovávam…");
       const next = searchParams.get("next") || "/";
+      startNavigation(next);
       router.push(next);
       router.refresh();
     } catch {

@@ -1,4 +1,5 @@
 import { Bebas_Neue, DM_Sans } from "next/font/google";
+import { NavigationProvider } from "@/components/navigation-provider";
 import { ToastProvider } from "@/components/ui/toast";
 import "./globals.css";
 
@@ -22,7 +23,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="sk" className={`${bebasNeue.variable} ${dmSans.variable}`}>
       <body className="antialiased">
-        <ToastProvider>{children}</ToastProvider>
+        <NavigationProvider>
+          <ToastProvider>{children}</ToastProvider>
+        </NavigationProvider>
       </body>
     </html>
   );

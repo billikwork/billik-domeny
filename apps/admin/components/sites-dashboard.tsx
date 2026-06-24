@@ -1,9 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { SiteListItem } from "@/lib/sites-meta";
+import { useIsNavigatingTo, NavLink } from "@/components/nav-link";
 import { inputClass } from "@/components/ui/field";
+
 
 type SortKey = "name-asc" | "name-desc" | "edited-desc" | "edited-asc";
 
@@ -45,6 +46,54 @@ function sortSites(sites: SiteListItem[], sort: SortKey) {
         return ta - tb;
       });
   }
+}
+
+function SiteRow({ site }: { site: SiteListItem }) {
+  const href = `/sites/${site.id}`;
+  const isPending = useIsNavigatingTo(href);
+
+  return (
+    <tr
+      className={`group border-b border-white/5 transition-colors ${
+        isPending ? "bg-[#ffd700]/5" : "hover:bg-white/[0.03]"
+      }`}
+    >
+      <td className="py-4 pr-4">
+        <NavLink href={href} className="block cursor-pointer">
+          <span
+            className={`text-base font-semibold transition ${
+              isPending ? "text-[#ffd700]" : "text-white group-hover:text-[#ffd700]"
+            }`}
+          >
+            www.{site.domain}
+          </span>
+          <span className="mt-0.5 block text-xs text-zinc-600">{site.id}</span>
+        </NavLink>
+      </td>
+      <td className="hidden max-w-xs py-4 pr-4 md:table-cell">
+        <span className="line-clamp-2 text-sm text-zinc-400">{site.h1}</span>
+      </td>
+      <td className="whitespace-nowrap py-4 pr-4 text-sm text-zinc-400">
+        {formatDate(site.lastEdited)}
+      </td>
+      <td className="py-4 text-right">
+        <NavLink
+          href={href}
+          showSpinner
+          className={`inline-flex cursor-pointer items-center gap-1.5 text-sm font-medium transition ${
+            isPending ? "text-[#ffd700]" : "text-zinc-500 hover:text-[#ffd700]"
+          }`}
+        >
+          {isPending ? "Načítavam" : "Upraviť"}
+          {!isPending ? (
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          ) : null}
+        </NavLink>
+      </td>
+    </tr>
+  );
 }
 
 export function SitesDashboard({ sites }: { sites: SiteListItem[] }) {
@@ -134,41 +183,7 @@ export function SitesDashboard({ sites }: { sites: SiteListItem[] }) {
                 </td>
               </tr>
             ) : (
-              filtered.map((site) => (
-                <tr
-                  key={site.id}
-                  className="group border-b border-white/5 transition-colors hover:bg-white/[0.03]"
-                >
-                  <td className="py-4 pr-4">
-                    <Link
-                      href={`/sites/${site.id}`}
-                      className="block cursor-pointer"
-                    >
-                      <span className="text-base font-semibold text-white transition group-hover:text-[#ffd700]">
-                        www.{site.domain}
-                      </span>
-                      <span className="mt-0.5 block text-xs text-zinc-600">{site.id}</span>
-                    </Link>
-                  </td>
-                  <td className="hidden max-w-xs py-4 pr-4 md:table-cell">
-                    <span className="line-clamp-2 text-sm text-zinc-400">{site.h1}</span>
-                  </td>
-                  <td className="whitespace-nowrap py-4 pr-4 text-sm text-zinc-400">
-                    {formatDate(site.lastEdited)}
-                  </td>
-                  <td className="py-4 text-right">
-                    <Link
-                      href={`/sites/${site.id}`}
-                      className="inline-flex cursor-pointer items-center gap-1.5 text-sm font-medium text-zinc-500 transition hover:text-[#ffd700]"
-                    >
-                      Upraviť
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </Link>
-                  </td>
-                </tr>
-              ))
+              filtered.map((site) => <SiteRow key={site.id} site={site} />)
             )}
           </tbody>
         </table>
