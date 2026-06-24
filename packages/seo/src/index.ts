@@ -1,14 +1,28 @@
 import type { Metadata } from "next";
 import type { SiteConfig } from "@billik/site-config";
 
-export function buildMetadata(site: SiteConfig): Metadata {
+function siteIconPath(site: SiteConfig, isPreview: boolean) {
+  const base = isPreview ? `/favicon.ico?site=${site.id}` : "/favicon.ico";
+  return {
+    icon: [
+      { url: base, type: "image/svg+xml" },
+      { url: isPreview ? `/icon?site=${site.id}` : "/icon", type: "image/svg+xml", sizes: "32x32" },
+    ],
+    apple: isPreview ? `/apple-icon?site=${site.id}` : "/apple-icon",
+    shortcut: base,
+  };
+}
+
+export function buildMetadata(site: SiteConfig, options?: { isPreview?: boolean }): Metadata {
   const url = `https://www.${site.domain}`;
+  const isPreview = options?.isPreview ?? false;
 
   return {
     title: site.title,
     description: site.description,
     keywords: site.keywords,
     alternates: { canonical: url },
+    icons: siteIconPath(site, isPreview),
     openGraph: {
       title: site.title,
       description: site.description,

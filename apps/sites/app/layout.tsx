@@ -16,14 +16,23 @@ const dmSans = DM_Sans({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-  if (await isPreviewDeployment()) {
+  const isPreview = await isPreviewDeployment();
+  const site = await getCurrentSite();
+
+  if (isPreview) {
+    if (site) {
+      return {
+        ...buildMetadata(site, { isPreview: true }),
+        title: `Náhľad: ${site.title}`,
+        robots: { index: false, follow: false },
+      };
+    }
     return {
       title: "Náhľad stránok | Billik Trade",
       robots: { index: false, follow: false },
     };
   }
 
-  const site = await getCurrentSite();
   if (!site) {
     return { title: "Billik Trade" };
   }

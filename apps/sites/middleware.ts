@@ -11,14 +11,18 @@ function isPreviewHost(host: string) {
   );
 }
 
+function attachSiteId(response: NextResponse, siteId: string) {
+  response.headers.set("x-site-id", siteId);
+  return response;
+}
+
 export function middleware(request: NextRequest) {
   const host = request.headers.get("host") ?? "localhost:3000";
   const siteFromHost = getSiteByHost(host);
   const response = NextResponse.next();
 
   if (siteFromHost) {
-    response.headers.set("x-site-id", siteFromHost.id);
-    return response;
+    return attachSiteId(response, siteFromHost.id);
   }
 
   if (isPreviewHost(host)) {
@@ -26,7 +30,7 @@ export function middleware(request: NextRequest) {
     if (previewSite) {
       const site = getSiteById(previewSite);
       if (site) {
-        response.headers.set("x-site-id", site.id);
+        return attachSiteId(response, site.id);
       }
     }
     return response;
@@ -36,5 +40,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image|favicon.ico|heroes).*)"],
+  matcher: ["/((?!_next/static|_next/image|heroes/).*)"],
 };
