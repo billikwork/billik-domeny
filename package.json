@@ -10,7 +10,8 @@
     "dev": "turbo dev",
     "build": "turbo build",
     "lint": "turbo lint",
-    "dev:sites": "npm run dev --workspace=@billik/sites"
+    "dev:sites": "npm run dev --workspace=@billik/sites",
+    "dev:admin": "npm run dev --workspace=@billik/admin"
   },
   "devDependencies": {
     "turbo": "^2.5.4",

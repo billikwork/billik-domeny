@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@source "../app/**/*.{ts,tsx}";
+@source "../components/**/*.{ts,tsx}";
+
+@theme {
+  --font-display: "Bebas Neue", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-billik-yellow: #ffd700;
+  --color-billik-dark: #0a0a0b;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-billik-dark);
+    color: #f4f4f5;
+  }
+}
