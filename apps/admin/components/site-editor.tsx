@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { SiteBenefit, SiteConfig, SiteFaq } from "@billik/site-config";
 import { getSitesPreviewBase } from "@/lib/sites-preview";
@@ -97,16 +96,7 @@ export function SiteEditor({ initial }: { initial: SiteConfig }) {
 
   return (
     <div className="space-y-6 pb-28">
-      <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-        <Link
-          href="/"
-          className="inline-flex cursor-pointer items-center gap-2 rounded-xl border border-white/15 px-4 py-2.5 text-base text-zinc-300 transition hover:border-white/30 hover:bg-white/5 hover:text-white"
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M19 12H5M12 19l-7-7 7-7" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-          Späť na prehľad
-        </Link>
+      <div className="flex flex-wrap items-center gap-3">
         <a
           href={previewUrl}
           target="_blank"
@@ -343,7 +333,7 @@ export function SiteEditor({ initial }: { initial: SiteConfig }) {
         </div>
       </Disclosure>
 
-      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-[#0d0d0f]/95 px-5 py-4 backdrop-blur-md lg:left-72">
+      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-[#0d0d0f]/95 px-5 py-4 backdrop-blur-md">
         <div className="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-4">
           <p className="text-sm text-zinc-500">
             Po uložení sa zmeny automaticky zverejnia na stránke.

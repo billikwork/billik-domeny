@@ -9,7 +9,6 @@ export default async function AdminDashboardPage() {
     <AdminShell
       title="Domény"
       subtitle={`${sites.length} ${sites.length === 1 ? "stránka" : sites.length < 5 ? "stránky" : "stránok"} na správu`}
-      sites={sites}
     >
       <SitesDashboard sites={sites} />
     </AdminShell>
