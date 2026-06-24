@@ -2,9 +2,13 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { getSiteByHost, getSiteById } from "@billik/site-config";
 
-function isLocalhost(host: string) {
+function isPreviewHost(host: string) {
   const hostname = host.toLowerCase().split(":")[0];
-  return hostname === "localhost" || hostname === "127.0.0.1";
+  return (
+    hostname === "localhost" ||
+    hostname === "127.0.0.1" ||
+    hostname.endsWith(".vercel.app")
+  );
 }
 
 export function middleware(request: NextRequest) {
@@ -17,7 +21,7 @@ export function middleware(request: NextRequest) {
     return response;
   }
 
-  if (isLocalhost(host)) {
+  if (isPreviewHost(host)) {
     const previewSite = request.nextUrl.searchParams.get("site");
     if (previewSite) {
       const site = getSiteById(previewSite);

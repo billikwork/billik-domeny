@@ -1,9 +1,13 @@
 import { headers } from "next/headers";
 import { getSiteByHost, getSiteById, type SiteConfig } from "@billik/site-config";
 
-function isLocalhost(host: string) {
+function isPreviewHost(host: string) {
   const hostname = host.toLowerCase().split(":")[0];
-  return hostname === "localhost" || hostname === "127.0.0.1";
+  return (
+    hostname === "localhost" ||
+    hostname === "127.0.0.1" ||
+    hostname.endsWith(".vercel.app")
+  );
 }
 
 export async function getCurrentSite(): Promise<SiteConfig | null> {
@@ -21,5 +25,5 @@ export async function getCurrentSite(): Promise<SiteConfig | null> {
 export async function isLocalPreview(): Promise<boolean> {
   const headerStore = await headers();
   const host = headerStore.get("host") ?? "localhost:3000";
-  return isLocalhost(host) && !headerStore.get("x-site-id");
+  return isPreviewHost(host) && !headerStore.get("x-site-id");
 }
