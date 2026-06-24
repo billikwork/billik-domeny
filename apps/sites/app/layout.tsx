@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, DM_Sans } from "next/font/google";
 import { buildMetadata } from "@billik/seo";
-import { getCurrentSite, isLocalPreview } from "@/lib/get-site";
+import { getCurrentSite, isPreviewDeployment } from "@/lib/get-site";
 import "./globals.css";
 
 const bebasNeue = Bebas_Neue({
@@ -16,8 +16,7 @@ const dmSans = DM_Sans({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-  const preview = await isLocalPreview();
-  if (preview) {
+  if (await isPreviewDeployment()) {
     return {
       title: "Náhľad stránok | Billik Trade",
       robots: { index: false, follow: false },

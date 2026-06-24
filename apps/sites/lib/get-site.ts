@@ -22,6 +22,12 @@ export async function getCurrentSite(): Promise<SiteConfig | null> {
   return getSiteByHost(host);
 }
 
+export async function isPreviewDeployment(): Promise<boolean> {
+  const headerStore = await headers();
+  const host = headerStore.get("host") ?? "localhost:3000";
+  return isPreviewHost(host);
+}
+
 export async function isLocalPreview(): Promise<boolean> {
   const headerStore = await headers();
   const host = headerStore.get("host") ?? "localhost:3000";

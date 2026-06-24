@@ -1,11 +1,22 @@
 import type { MetadataRoute } from "next";
-import { getAllSites } from "@billik/site-config";
+import { getCurrentSite, isPreviewDeployment } from "@/lib/get-site";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  return getAllSites().map((site) => ({
-    url: `https://www.${site.domain}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 1,
-  }));
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  if (await isPreviewDeployment()) {
+    return [];
+  }
+
+  const site = await getCurrentSite();
+  if (!site) {
+    return [];
+  }
+
+  return [
+    {
+      url: `https://www.${site.domain}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 1,
+    },
+  ];
 }
