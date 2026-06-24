@@ -13,10 +13,22 @@
     "Potrebujete diel vyrobiť a rovno nalakovať? Zvládneme celý proces interne. Kontaktujte nás pre konzultáciu farby, hrúbky náteru a termínu dodania."
   ],
   "benefits": [
-    { "title": "Vysoká odolnosť", "description": "Povrch vydrží náročné vonkajšie podmienky aj priemyselné prostredie." },
-    { "title": "Presná farba RAL", "description": "Lakujeme podľa vášho odtieňa pre jednotný vzhľad celej konštrukcie." },
-    { "title": "Kompletný servis", "description": "Kovovýroba, zváranie a praskovanie u jedného dodávateľa." },
-    { "title": "Rýchla realizácia", "description": "Krátke termíny vďaka vlastnej výrobe a lakovni v Nitre." }
+    {
+      "title": "Vysoká odolnosť",
+      "description": "Povrch vydrží náročné vonkajšie podmienky aj priemyselné prostredie."
+    },
+    {
+      "title": "Presná farba RAL",
+      "description": "Lakujeme podľa vášho odtieňa pre jednotný vzhľad celej konštrukcie."
+    },
+    {
+      "title": "Kompletný servis",
+      "description": "Kovovýroba, zváranie a praskovanie u jedného dodávateľa."
+    },
+    {
+      "title": "Rýchla realizácia",
+      "description": "Krátke termíny vďaka vlastnej výrobe a lakovni v Nitre."
+    }
   ],
   "faqs": [
     {
@@ -36,6 +48,12 @@
   "heroAlt": "Práškové praskovanie kovov — profesionálna povrchová úprava Billik Trade",
   "ctaText": "Kontaktovať lakovňu",
   "ctaUrl": "https://www.billik.sk/praskova-lakovna/?utm_source=praskovanie.eu&utm_medium=domain",
-  "accentColor": "#dc2626",
-  "keywords": ["práškové praskovanie", "praskovanie kovov", "práškové lakovanie", "lakovanie Nitra", "Billik Trade"]
+  "accentColor": "#aeeeee",
+  "keywords": [
+    "práškové praskovanie",
+    "praskovanie kovov",
+    "práškové lakovanie",
+    "lakovanie Nitra",
+    "Billik Trade"
+  ]
 }
