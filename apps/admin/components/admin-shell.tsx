@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 
 type SiteNav = { id: string; domain: string; h1: string };
@@ -21,6 +21,18 @@ export function AdminShell({
   const router = useRouter();
   const pathname = usePathname();
   const [loggingOut, setLoggingOut] = useState(false);
+  const [sidebarQuery, setSidebarQuery] = useState("");
+
+  const filteredSites = useMemo(() => {
+    const q = sidebarQuery.trim().toLowerCase();
+    if (!q) return sites;
+    return sites.filter(
+      (s) =>
+        s.domain.toLowerCase().includes(q) ||
+        s.id.toLowerCase().includes(q) ||
+        s.h1.toLowerCase().includes(q),
+    );
+  }, [sites, sidebarQuery]);
 
   async function logout() {
     setLoggingOut(true);
@@ -49,11 +61,34 @@ export function AdminShell({
             </Link>
           </div>
 
-          <nav className="flex-1 overflow-y-auto px-3 py-4">
+          <nav className="flex flex-1 flex-col overflow-hidden px-3 py-4">
             <p className="mb-3 px-3 text-xs font-semibold uppercase tracking-widest text-zinc-500">
               Domény
             </p>
-            <ul className="space-y-1">
+            <div className="relative mb-3 px-1">
+              <svg
+                className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-zinc-600"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                aria-hidden="true"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <path d="M21 21l-4.35-4.35" strokeLinecap="round" />
+              </svg>
+              <input
+                type="search"
+                value={sidebarQuery}
+                onChange={(e) => setSidebarQuery(e.target.value)}
+                placeholder="Filtrovať…"
+                className="w-full rounded-lg border border-white/10 bg-white/5 py-2 pl-9 pr-3 text-sm text-white outline-none transition placeholder:text-zinc-600 focus:border-[#ffd700]/40 focus:ring-1 focus:ring-[#ffd700]/20"
+                aria-label="Filtrovať domény v bočnom paneli"
+              />
+            </div>
+            <ul className="flex-1 space-y-1 overflow-y-auto">
               <li>
                 <Link
                   href="/"
@@ -72,7 +107,10 @@ export function AdminShell({
                   Prehľad
                 </Link>
               </li>
-              {sites.map((site) => {
+              {filteredSites.length === 0 ? (
+                <li className="px-3 py-4 text-sm text-zinc-600">Žiadny výsledok</li>
+              ) : null}
+              {filteredSites.map((site) => {
                 const href = `/sites/${site.id}`;
                 const active = pathname === href;
                 return (

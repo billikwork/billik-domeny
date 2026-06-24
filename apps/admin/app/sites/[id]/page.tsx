@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation";
-import { getAllSites, getSiteById } from "@billik/site-config";
+import { getSiteById } from "@billik/site-config";
 import { AdminShell } from "@/components/admin-shell";
 import { SiteEditor } from "@/components/site-editor";
 import { readSiteConfig } from "@/lib/github";
+import { getSitesForDashboard } from "@/lib/sites-meta";
 
 export default async function EditSitePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -16,13 +17,13 @@ export default async function EditSitePage({ params }: { params: Promise<{ id: s
     site = known;
   }
 
-  const sites = getAllSites();
+  const sites = await getSitesForDashboard();
 
   return (
     <AdminShell
       title={`www.${site.domain}`}
       subtitle="Úprava textov, obrázkov a SEO nastavení"
-      sites={sites.map((s) => ({ id: s.id, domain: s.domain, h1: s.h1 }))}
+      sites={sites}
     >
       <SiteEditor initial={site} />
     </AdminShell>
