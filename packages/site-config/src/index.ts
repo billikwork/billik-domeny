@@ -7,6 +7,14 @@ import billikweldingSk from "../../../content/sites/billikwelding-sk.json";
 import invertoryEu from "../../../content/sites/invertory-eu.json";
 import lakovanieEu from "../../../content/sites/lakovanie-eu.json";
 import ochrannepracovneprostriedkySk from "../../../content/sites/ochrannepracovneprostriedky-sk.json";
+import praskovanieEu from "../../../content/sites/praskovanie-eu.json";
+import servoglasSk from "../../../content/sites/servoglas-sk.json";
+import servoreEu from "../../../content/sites/servore-eu.json";
+import zamocnickvyrobaEu from "../../../content/sites/zamocnickvyroba-eu.json";
+import zamocnickvyrobaSk from "../../../content/sites/zamocnickvyroba-sk.json";
+import zvaraciatechnikaEu from "../../../content/sites/zvaraciatechnika-eu.json";
+import zvaraciestrojeSk from "../../../content/sites/zvaraciestroje-sk.json";
+import zvarackyEu from "../../../content/sites/zvaracky-eu.json";
 
 export type { SiteConfig, SiteBenefit, SiteFaq } from "./types";
 
@@ -18,6 +26,14 @@ const sites: SiteConfig[] = [
   invertoryEu as SiteConfig,
   lakovanieEu as SiteConfig,
   ochrannepracovneprostriedkySk as SiteConfig,
+  praskovanieEu as SiteConfig,
+  servoglasSk as SiteConfig,
+  servoreEu as SiteConfig,
+  zamocnickvyrobaEu as SiteConfig,
+  zamocnickvyrobaSk as SiteConfig,
+  zvaraciatechnikaEu as SiteConfig,
+  zvaraciestrojeSk as SiteConfig,
+  zvarackyEu as SiteConfig,
 ];
 
 const domainMap = new Map<string, SiteConfig>();

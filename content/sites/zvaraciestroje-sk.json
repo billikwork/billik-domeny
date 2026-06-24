@@ -1,0 +1,41 @@
+{
+  "id": "zvaraciestroje-sk",
+  "domain": "zvaraciestroje.sk",
+  "locale": "sk_SK",
+  "language": "sk",
+  "title": "Zváracie stroje skladom | MIG, TIG, MMA | Billik Trade Nitra",
+  "description": "Zváracie stroje a invertory skladom v Nitre. IWELD a Billik Trade — rýchle dodanie po Slovensku, odborný servis a poradenstvo. Tradícia od 1992.",
+  "h1": "Zváracie stroje skladom — bez zbytočného čakania",
+  "subtitle": "Invertory, polautomaty a príslušenstvo pripravené k odberu",
+  "paragraphs": [
+    "Keď potrebujete zvárací stroj rýchlo, čakanie týždne nie je riešenie. V Billik Trade máme v Nitre sklad zváracích strojov — invertory MMA, TIG a MIG/MAG polautomaty od značiek IWELD a Billik.",
+    "Každý stroj odporúčame na základe skúseností z vlastnej dielne. Pomôžeme vám vybrať výkon, typ oblúka a príslušenstvo podľa materiálu, ktorý zvárate. Ku každému nákupu ponúkame servis a technickú podporu.",
+    "Osobný odber je možný na Priemyselnej 4 v Nitre. Online objednávky expedujeme do 24 hodín po celom Slovensku."
+  ],
+  "benefits": [
+    { "title": "Skladom v Nitre", "description": "Vybrané stroje pripravené k okamžitému odberu." },
+    { "title": "IWELD a Billik", "description": "Overené značky s dlhoročnou praxou v dielni." },
+    { "title": "Rýchle dodanie", "description": "Expedícia do 24 hodín po celom Slovensku." },
+    { "title": "Servisné stredisko", "description": "Opravy a diagnostika priamo u nás v Nitre." }
+  ],
+  "faqs": [
+    {
+      "question": "Ktoré zváracie stroje máte skladom?",
+      "answer": "Skladová dostupnosť sa mení podľa dopytu. Aktuálny stav nájdete na billik.sk alebo nás kontaktujte telefonicky — radi overíme konkrétny model."
+    },
+    {
+      "question": "Aký stroj je vhodný pre domácu dielňu?",
+      "answer": "Pre začiatok odporúčame MMA invertor 160–200 A alebo kompaktný MIG. Pri osobnej návšteve vám poradíme podľa vášho rozpočtu a plánovanej práce."
+    },
+    {
+      "question": "Ponúkate financovanie alebo fakturáciu pre firmy?",
+      "answer": "Pre firemných zákazníkov pripravíme ponuku na mieru. Kontaktujte nás s požiadavkou a IČO."
+    }
+  ],
+  "heroImage": "/heroes/zvaraciestroje-sk/hero.png",
+  "heroAlt": "Zváracie stroje IWELD skladom v Nitre — Billik Trade",
+  "ctaText": "Pozrieť stroje skladom",
+  "ctaUrl": "https://www.billik.sk/sortiment/?utm_source=zvaraciestroje.sk&utm_medium=domain",
+  "accentColor": "#84cc16",
+  "keywords": ["zváracie stroje", "zváračka skladom", "invertor", "MIG stroj", "Billik Trade Nitra"]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "zvaraciatechnika-eu",
+  "domain": "zvaraciatechnika.eu",
+  "locale": "sk_SK",
+  "language": "sk",
+  "title": "Zváracia technika EÚ | MIG, TIG, MMA | Billik Trade Nitra",
+  "description": "Profesionálna zváracia technika pre dielne a výrobu. Zváračky MIG, TIG, MMA, invertory IWELD skladom. Dodanie do EÚ z Nitry. Billik Trade s.r.o.",
+  "h1": "Zváracia technika pre náročnú prácu",
+  "subtitle": "Moderné stroje, stabilný výkon a odborné poradenstvo",
+  "paragraphs": [
+    "Správna zváracia technika rozhoduje o kvalite zvaru, rýchlosti práce aj bezpečnosti v dielni. Billik Trade ponúka kompletný sortiment zváracej techniky — od kompaktných invertorov pre domácich majstrov až po výkonné MIG/MAG systémy pre profesionálov.",
+    "Do ponuky vyberáme len značky a modely, ktoré sami používame v praxi. IWELD, Billik a overení výrobcovia s dlhoročnou spoľahlivosťou. Ku každému stroju poskytujeme odborné poradenstvo a servis v Nitre.",
+    "Expedujeme zváraciu techniku po Slovensku aj do EÚ. Vybrané modely máme skladom a pripravené k okamžitému odoslaniu."
+  ],
+  "benefits": [
+    { "title": "MIG, TIG aj MMA", "description": "Technika pre každý typ zvárania a materiálu." },
+    { "title": "Moderné invertory", "description": "Stabilný oblúk, nižšia spotreba a jednoduché ovládanie." },
+    { "title": "Skladom v Nitre", "description": "Rýchle dodanie vybraných modelov bez zbytočného čakania." },
+    { "title": "Servis a podpora", "description": "Záručný servis a technická pomoc po nákupe." }
+  ],
+  "faqs": [
+    {
+      "question": "Akú zváraciu techniku ponúkate?",
+      "answer": "Ponúkame zváračky MMA, TIG, MIG/MAG, plazmové rezačky, kukly, drôty, elektródy a kompletné príslušenstvo. Sortiment nájdete na billik.sk."
+    },
+    {
+      "question": "Dodávate techniku aj do zahraničia?",
+      "answer": "Áno, Billik Trade expeduje zváraciu techniku do EÚ. Kontaktujte nás pre dostupnosť, dopravu a cenovú ponuku."
+    },
+    {
+      "question": "Ponúkate aj zaškolenie pri kúpe stroja?",
+      "answer": "Pri osobnom odbere v Nitre vám radi ukážeme základné nastavenie a odporučíme postup pre váš materiál."
+    }
+  ],
+  "heroImage": "/heroes/zvaraciatechnika-eu/hero.png",
+  "heroAlt": "Profesionálna zváracia technika MIG a invertory IWELD — Billik Trade",
+  "ctaText": "Pozrieť zváraciu techniku",
+  "ctaUrl": "https://www.billik.sk/sortiment/?utm_source=zvaraciatechnika.eu&utm_medium=domain",
+  "accentColor": "#2563eb",
+  "keywords": ["zváracia technika", "MIG zváračka", "TIG zváračka", "IWELD", "Billik Trade"]
+}

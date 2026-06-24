@@ -1,0 +1,41 @@
+{
+  "id": "praskovanie-eu",
+  "domain": "praskovanie.eu",
+  "locale": "sk_SK",
+  "language": "sk",
+  "title": "Práškové lakovanie a praskovanie kovov | Billik Trade Nitra",
+  "description": "Profesionálne práškové lakovanie (praskovanie) kovových dielov v Nitre. Odolné povrchy, presná farba RAL, kovovýroba a zváranie v jednom. Billik Trade s.r.o.",
+  "h1": "Práškové praskovanie pre trvácne a farebné povrchy",
+  "subtitle": "Kovové diely nalakujeme rýchlo, rovnomerne a na roky",
+  "paragraphs": [
+    "Práškové lakovanie — praskovanie — je najspoľahlivejší spôsob, ako ochrániť kov pred koróziou a dosiahnuť jednotný, profesionálny vzhľad. V Billik Trade v Nitre ponúkame kompletný servis od výroby dielu cez zváranie až po finálne praskovanie.",
+    "Naša lakovňa pracuje s modernými technológiami nanášania prášku. Výsledok je povrch odolný voči mechanickému opotrebeniu, UV žiareniu a chemikáliám — ideálny pre brány, zábradlia, konštrukcie aj sériové diely.",
+    "Potrebujete diel vyrobiť a rovno nalakovať? Zvládneme celý proces interne. Kontaktujte nás pre konzultáciu farby, hrúbky náteru a termínu dodania."
+  ],
+  "benefits": [
+    { "title": "Vysoká odolnosť", "description": "Povrch vydrží náročné vonkajšie podmienky aj priemyselné prostredie." },
+    { "title": "Presná farba RAL", "description": "Lakujeme podľa vášho odtieňa pre jednotný vzhľad celej konštrukcie." },
+    { "title": "Kompletný servis", "description": "Kovovýroba, zváranie a praskovanie u jedného dodávateľa." },
+    { "title": "Rýchla realizácia", "description": "Krátke termíny vďaka vlastnej výrobe a lakovni v Nitre." }
+  ],
+  "faqs": [
+    {
+      "question": "Čo je práškové praskovanie?",
+      "answer": "Praskovanie je bežný názov pre práškové lakovanie — nanášanie práškového laku na kov, ktorý sa následne vytvrdí v peci. Výsledkom je tvrdý, rovnomerný a dlho trvajúci povrch."
+    },
+    {
+      "question": "Aké diely je možné praskovať?",
+      "answer": "Najčastejšie lakujeme oceľové a pozinkované konštrukcie — brány, zábradlia, rámy, regály a diely na mieru. Pred lakovaním zabezpečíme prípravu povrchu."
+    },
+    {
+      "question": "Kde sa nachádza vaša lakovňa?",
+      "answer": "Billik Trade sídli v Nitre na Priemyselnej 4. Pre cenovú ponuku nás kontaktujte telefonicky alebo e-mailom."
+    }
+  ],
+  "heroImage": "/heroes/praskovanie-eu/hero.png",
+  "heroAlt": "Práškové praskovanie kovov — profesionálna povrchová úprava Billik Trade",
+  "ctaText": "Kontaktovať lakovňu",
+  "ctaUrl": "https://www.billik.sk/praskova-lakovna/?utm_source=praskovanie.eu&utm_medium=domain",
+  "accentColor": "#dc2626",
+  "keywords": ["práškové praskovanie", "praskovanie kovov", "práškové lakovanie", "lakovanie Nitra", "Billik Trade"]
+}

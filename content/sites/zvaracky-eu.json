@@ -1,0 +1,41 @@
+{
+  "id": "zvaracky-eu",
+  "domain": "zvaracky.eu",
+  "locale": "sk_SK",
+  "language": "sk",
+  "title": "Zváračky a invertory | Kvalita bez kompromisov | Billik Trade",
+  "description": "Zváračky MIG, TIG a MMA invertory pre dielňu aj výrobu. IWELD a Billik Trade — odborný výber, rýchle dodanie a servis v Nitre. EÚ expedícia.",
+  "h1": "Zváračky, ktoré posunú vašu dielňu ďalej",
+  "subtitle": "Kvalitné stroje, overené značky a podpora po celom nákupe",
+  "paragraphs": [
+    "Nesprávna zváračka znamená nekvalitné zvary, prestoje a zbytočné náklady. V Billik Trade ponúkame zváračky a invertory, ktoré sami používame — od kompaktných jednotiek pre domácu dielňu až po profesionálne MIG/MAG systémy.",
+    "Pomôžeme vám vybrať správny výkon, typ zvárania a príslušenstvo. Do sortimentu patria značky IWELD a Billik s overenou životnosťou a dostupnými náhradnými dielmi.",
+    "Zváračky expedujeme po Slovensku aj do EÚ. Servisné stredisko máme v Nitre — záručný aj pozáručný servis bez zbytočného čakania."
+  ],
+  "benefits": [
+    { "title": "Kvalitné značky", "description": "IWELD a Billik — stroje, ktoré odporúčame z praxe." },
+    { "title": "Široký výber", "description": "MMA, TIG, MIG aj kompletné sety pre začiatočníkov." },
+    { "title": "Rýchle dodanie", "description": "Expedícia do 24 hodín, osobný odber v Nitre." },
+    { "title": "Odborné poradenstvo", "description": "Pomôžeme vybrať zváračku podľa materiálu a rozpočtu." }
+  ],
+  "faqs": [
+    {
+      "question": "Aký je rozdiel medzi MMA, MIG a TIG zváračkou?",
+      "answer": "MMA je univerzálna a jednoduchá pre začiatok. MIG je rýchla pre oceľ a plech. TIG dáva najkvalitnejší zvar, ideálna pre tenké plechy a nerez."
+    },
+    {
+      "question": "Kde kúpiť zváračku s poradenstvom?",
+      "answer": "Navštívte Billik Trade v Nitre na Priemyselnej 4 alebo objednajte online na billik.sk. Radi poradíme aj telefonicky."
+    },
+    {
+      "question": "Čo ak sa zváračka pokazí?",
+      "answer": "Máme vlastné servisné stredisko v Nitre. Záručný servis riešime bezplatne, pozáručný po diagnostike a cenovej ponuke."
+    }
+  ],
+  "heroImage": "/heroes/zvaracky-eu/hero.png",
+  "heroAlt": "Kvalitné zváračky a invertory IWELD — Billik Trade",
+  "ctaText": "Vybrať zváračku",
+  "ctaUrl": "https://www.billik.sk/sortiment/?utm_source=zvaracky.eu&utm_medium=domain",
+  "accentColor": "#eab308",
+  "keywords": ["zváračky", "zváračka", "invertor na zváranie", "MIG zváračka", "Billik Trade"]
+}

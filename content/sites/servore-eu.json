@@ -1,0 +1,41 @@
+{
+  "id": "servore-eu",
+  "domain": "servore.eu",
+  "locale": "sk_SK",
+  "language": "sk",
+  "title": "Servis a oprava zváračiek | Billik Trade Nitra | EÚ",
+  "description": "Záručný aj pozáručný servis zváračiek a zváracej techniky v Nitre. Diagnostika, opravy, náhradné diely a odborná podpora. Billik Trade s.r.o.",
+  "h1": "Servis zváračiek, na ktorý sa môžete spoľahnúť",
+  "subtitle": "Diagnostika, oprava a technická podpora v Nitri aj pre zákazníkov z EÚ",
+  "paragraphs": [
+    "Porucha zváračky zastaví celú výrobu alebo projekt v dielni. V Billik Trade prevádzkujeme vlastné servisné stredisko v Nitre, kde diagnostikujeme a opravujeme zváračky MIG, TIG, MMA aj plazmové rezačky.",
+    "Servisujeme zariadenia zakúpené u nás aj u iných predajcov. Ponúkame záručný servis, pozáručné opravy, výmenu opotrebovaných dielov a odborné poradenstvo pri nastavení parametrov zvárania.",
+    "Pre firmy a remeselníkov z EÚ zabezpečujeme rýchlu komunikáciu, transparentné cenové ponuky a expedíciu opraveného zariadenia späť na adresu zákazníka."
+  ],
+  "benefits": [
+    { "title": "Servisné stredisko v Nitre", "description": "Opravy priamo u nás — bez zbytočného posielania do zahraničia." },
+    { "title": "Záruka aj po záruke", "description": "Servisujeme nové aj staršie stroje rôznych značiek." },
+    { "title": "Náhradné diely skladom", "description": "Bežné diely máme dostupné pre rýchlejšiu opravu." },
+    { "title": "Technická podpora", "description": "Pomôžeme aj po oprave — s nastavením a prevádzkou." }
+  ],
+  "faqs": [
+    {
+      "question": "Aké zváračky servisujete?",
+      "answer": "Servisujeme invertory MMA/TIG/MIG, polautomaty, plazmové rezačky a príslušenstvo značiek IWELD, Billik a ďalších. Kontaktujte nás s modelom a popisom poruchy."
+    },
+    {
+      "question": "Ako prebieha pozáručný servis?",
+      "answer": "Zariadenie prinesiete alebo pošlete do nášho servisu v Nitre. Po diagnostike dostanete cenovú ponuku. Po schválení opravu vykonáme a zariadenie vám vrátime pripravené na prácu."
+    },
+    {
+      "question": "Servisujete aj zákazníkov mimo Slovenska?",
+      "answer": "Áno, spolupracujeme so zákazníkmi z EÚ. Kontaktujte nás e-mailom alebo telefonicky pre postup odoslania zariadenia a dopravy."
+    }
+  ],
+  "heroImage": "/heroes/servore-eu/hero.png",
+  "heroAlt": "Servis a oprava zváračiek — Billik Trade servisné stredisko Nitra",
+  "ctaText": "Objednať servis",
+  "ctaUrl": "https://www.billik.sk/servis/?utm_source=servore.eu&utm_medium=domain",
+  "accentColor": "#16a34a",
+  "keywords": ["servis zváračiek", "oprava zváračiek", "servis zváracej techniky", "Billik Trade servis", "Nitra"]
+}

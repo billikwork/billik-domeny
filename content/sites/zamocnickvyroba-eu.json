@@ -1,0 +1,41 @@
+{
+  "id": "zamocnickvyroba-eu",
+  "domain": "zamocnickvyroba.eu",
+  "locale": "sk_SK",
+  "language": "sk",
+  "title": "Zámočnícka výroba na mieru | Brány, zábradlia, konštrukcie | Billik Trade",
+  "description": "Zámočnícka a kovová výroba na mieru v Nitre. Brány, zábradlia, schody, oplotenie a konštrukcie. Zváranie, kovovýroba a práškové lakovanie v jednom.",
+  "h1": "Zámočnícka výroba, ktorá sedí na váš projekt",
+  "subtitle": "Brány, zábradlia a kovové konštrukcie na mieru",
+  "paragraphs": [
+    "Potrebujete bránu, zábradlie, schodisko alebo atypickú kovovú konštrukciu? V Billik Trade spájame zámočnícku výrobu so zváraním a povrchovou úpravou — od návrhu cez výrobu až po finálne práškové lakovanie.",
+    "Vyrábame pre domácnosti, firmy aj priemyselné objekty. Každý diel riešime individuálne podľa rozmerov, nosnosti a požadovanej farby. Vďaka vlastnej dielni v Nitre vieme skrátiť dodacie termíny.",
+    "Spolupracujeme so stavebnými firmami, architektmi aj koncovými zákazníkmi v Slovensku a EÚ. Kontaktujte nás pre konzultáciu a nezáväznú cenovú ponuku."
+  ],
+  "benefits": [
+    { "title": "Výroba na mieru", "description": "Brány, zábradlia, schody a konštrukcie podľa vašich výkresov." },
+    { "title": "Zváranie a kovovýroba", "description": "Celý proces pod jednou strechou v Nitre." },
+    { "title": "Práškové lakovanie", "description": "Finálna úprava v požadovanej RAL farbe." },
+    { "title": "Individuálny prístup", "description": "Riešenia pre domácnosti aj priemyselné projekty." }
+  ],
+  "faqs": [
+    {
+      "question": "Čo všetko vyrábate v rámci zámočníckej výroby?",
+      "answer": "Vyrábame brány, zábradlia, schody, oplotenie, regály, rámy a atypické kovové diely. Každý projekt posudzujeme individuálne."
+    },
+    {
+      "question": "Zabezpečíte aj montáž?",
+      "answer": "Montáž riešime podľa dohody a rozsahu projektu. Pri konzultácii vám povieme, čo je v našich možnostiach v regióne Nitra a okolia."
+    },
+    {
+      "question": "Ako prebieha cenová ponuka?",
+      "answer": "Pošlite nám rozmery, fotku alebo výkres. Pripravíme nezáväznú ponuku vrátane materiálu, výroby a prípadného lakovanía."
+    }
+  ],
+  "heroImage": "/heroes/zamocnickvyroba-eu/hero.png",
+  "heroAlt": "Zámočnícka kovová výroba — brány a konštrukcie Billik Trade",
+  "ctaText": "Vyžiadať cenovú ponuku",
+  "ctaUrl": "https://www.billik.sk/kovovyroba/?utm_source=zamocnickvyroba.eu&utm_medium=domain",
+  "accentColor": "#eab308",
+  "keywords": ["zámočnícka výroba", "kovová výroba", "brány na mieru", "zábradlia", "Billik Trade"]
+}

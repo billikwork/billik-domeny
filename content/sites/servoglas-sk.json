@@ -1,0 +1,41 @@
+{
+  "id": "servoglas-sk",
+  "domain": "servoglas.sk",
+  "locale": "sk_SK",
+  "language": "sk",
+  "title": "Samostmievacie kukly a sklá do zváračiek | Billik Trade",
+  "description": "Samostmievacie zváracie kukly, náhradné sklá a filtre IWELD skladom. Ochrana zraku pri zváraní, odborný výber a rýchle dodanie z Nitry.",
+  "h1": "Kukly a sklá, ktoré chránia pri každom zvare",
+  "subtitle": "Samostmievacie kukly, náhradné sklá a príslušenstvo skladom",
+  "paragraphs": [
+    "Kvalitná zváracia kukla a spoľahlivé sklo sú základ bezpečnosti pri každom zváraní. V Billik Trade ponúkame samostmievacie kukly IWELD a Billik, náhradné filtre, sklá aj kompletné sety pre začiatočníkov aj profesionálov.",
+    "Pomôžeme vám vybrať kuklu podľa typu zvárania — MMA, MIG, TIG alebo plazma. Poradíme s citlivosťou stmievania, veľkosťou zorného poľa a kompatibilitou s vašou existujúcou výbavou.",
+    "Väčšinu kukiel a príslušenstva máme skladom v Nitre a expedujeme do 24 hodín po celom Slovensku. Osobný odber je možný na Priemyselnej 4."
+  ],
+  "benefits": [
+    { "title": "Samostmievacie kukly", "description": "Moderné kukly IWELD s rýchlou reakciou a širokým zorným poľom." },
+    { "title": "Náhradné sklá a filtre", "description": "Originálne aj kompatibilné diely pre dlhšiu životnosť kukly." },
+    { "title": "Skladom ihneď", "description": "Populárne modely pripravené k okamžitému odberu alebo expedícii." },
+    { "title": "Odborné poradenstvo", "description": "Pomôžeme vybrať správnu ochranu zraku pre váš typ práce." }
+  ],
+  "faqs": [
+    {
+      "question": "Akú kuklu odporúčate pre domácu dielňu?",
+      "answer": "Pre väčšinu domácich majstrov postačí samostmievacia kukla s DIN 9–13 a zorným poľom 100×60 mm alebo väčším. K tomu rukavice a základný ochranný odev."
+    },
+    {
+      "question": "Dá sa vymeniť len sklo v kukle?",
+      "answer": "Áno, ponúkame náhradné vnútorné a vonkajšie filtre aj sklá pre vybrané modely kukiel IWELD. Kontaktujte nás s typom vašej kukly."
+    },
+    {
+      "question": "Kde môžem kuklu vyskúšať pred kúpou?",
+      "answer": "Navštívte predajňu Billik Trade v Nitre na Priemyselnej 4. Radi vám poradíme a ukážeme dostupné modely."
+    }
+  ],
+  "heroImage": "/heroes/servoglas-sk/hero.png",
+  "heroAlt": "Samostmievacie zváracie kukly a ochranné sklá IWELD — Billik Trade",
+  "ctaText": "Pozrieť kukly a sklá",
+  "ctaUrl": "https://www.billik.sk/sortiment/?utm_source=servoglas.sk&utm_medium=domain",
+  "accentColor": "#f97316",
+  "keywords": ["zváracia kukla", "samostmievacia kukla", "sklo do kukly", "IWELD kukla", "ochrana pri zváraní"]
+}
