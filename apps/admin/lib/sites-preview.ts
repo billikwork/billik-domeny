@@ -12,3 +12,10 @@ export function getSitesPreviewBase() {
 
   return DEFAULT_SITES_PREVIEW_URL;
 }
+
+/** Resized hero URL via the sites app's Next.js image optimizer (much faster than raw PNG). */
+export function getOptimizedHeroUrl(heroPath: string, width = 720) {
+  const base = getSitesPreviewBase();
+  const params = new URLSearchParams({ url: heroPath, w: String(width), q: "75" });
+  return `${base}/_next/image?${params.toString()}`;
+}

@@ -93,9 +93,10 @@ export function LandingPage({ site }: LandingPageProps) {
                 <Image
                   src={site.heroImage}
                   alt={site.heroAlt}
-                  width={1200}
-                  height={1400}
+                  width={1400}
+                  height={900}
                   priority
+                  quality={80}
                   className="h-auto w-full object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />

@@ -82,8 +82,8 @@ export async function writeSiteConfig(site: SiteConfig) {
   return { mode: "local" as const };
 }
 
-export async function writeHeroImage(siteId: string, buffer: Buffer, extension: string) {
-  const filename = extension === "jpeg" || extension === "jpg" ? "hero.jpeg" : "hero.png";
+export async function writeHeroImage(siteId: string, buffer: Buffer, extension = "webp") {
+  const filename = extension === "jpeg" || extension === "jpg" ? "hero.jpeg" : "hero.webp";
   const repoPath = heroRepoPath(siteId, filename);
 
   if (githubEnabled()) {

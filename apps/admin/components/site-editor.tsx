@@ -1,8 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { SiteBenefit, SiteConfig, SiteFaq } from "@billik/site-config";
-import { getSitesPreviewBase } from "@/lib/sites-preview";
+import { getOptimizedHeroUrl, getSitesPreviewBase } from "@/lib/sites-preview";
 import { Button } from "@/components/ui/button";
 import { Disclosure } from "@/components/ui/disclosure";
 import { Field, inputClass } from "@/components/ui/field";
@@ -16,8 +16,12 @@ function SectionIcon({ children }: { children: React.ReactNode }) {
 export function SiteEditor({ initial }: { initial: SiteConfig }) {
   const { showToast } = useToast();
   const [site, setSite] = useState<SiteConfig>(initial);
+  const [savedSnapshot, setSavedSnapshot] = useState(() => JSON.stringify(initial));
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const [heroLoaded, setHeroLoaded] = useState(false);
+
+  const isDirty = useMemo(() => JSON.stringify(site) !== savedSnapshot, [site, savedSnapshot]);
 
   const previewUrl = useMemo(() => {
     const base = getSitesPreviewBase();
@@ -26,10 +30,11 @@ export function SiteEditor({ initial }: { initial: SiteConfig }) {
 
   const liveUrl = useMemo(() => `https://www.${site.domain}`, [site.domain]);
 
-  const heroPreview = useMemo(() => {
-    const base = getSitesPreviewBase();
-    return `${base}${site.heroImage}`;
-  }, [site.heroImage]);
+  const heroPreview = useMemo(() => getOptimizedHeroUrl(site.heroImage, 720), [site.heroImage]);
+
+  useEffect(() => {
+    setHeroLoaded(false);
+  }, [heroPreview]);
 
   function update<K extends keyof SiteConfig>(key: K, value: SiteConfig[K]) {
     setSite((prev) => ({ ...prev, [key]: value }));
@@ -65,6 +70,7 @@ export function SiteEditor({ initial }: { initial: SiteConfig }) {
       return;
     }
     const data = (await res.json()) as { mode?: string };
+    setSavedSnapshot(JSON.stringify(site));
     showToast(
       "success",
       data.mode === "github"
@@ -85,7 +91,9 @@ export function SiteEditor({ initial }: { initial: SiteConfig }) {
       return;
     }
     const data = (await res.json()) as { heroImage: string; mode?: string };
-    update("heroImage", data.heroImage);
+    const nextSite = { ...site, heroImage: data.heroImage };
+    setSite(nextSite);
+    setSavedSnapshot(JSON.stringify(nextSite));
     showToast(
       "success",
       data.mode === "github"
@@ -96,30 +104,41 @@ export function SiteEditor({ initial }: { initial: SiteConfig }) {
 
   return (
     <div className="space-y-6 pb-28">
-      <div className="flex flex-wrap items-center gap-3">
-        <a
-          href={previewUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex cursor-pointer items-center gap-2 rounded-xl border border-[#ffd700]/30 bg-[#ffd700]/10 px-4 py-2.5 text-base font-medium text-[#ffd700] transition hover:border-[#ffd700]/50 hover:bg-[#ffd700]/15"
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="flex flex-wrap items-center gap-3">
+          <a
+            href={previewUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex cursor-pointer items-center gap-2 rounded-xl border border-[#ffd700]/30 bg-[#ffd700]/10 px-4 py-2.5 text-base font-medium text-[#ffd700] transition hover:border-[#ffd700]/50 hover:bg-[#ffd700]/15"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+            Náhľad stránky
+          </a>
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex cursor-pointer items-center gap-2 rounded-xl px-4 py-2.5 text-base text-zinc-400 transition hover:text-white"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            Otvoriť www.{site.domain}
+          </a>
+        </div>
+        <Button
+          size="md"
+          onClick={save}
+          loading={saving}
+          disabled={uploading || !isDirty}
+          className={isDirty ? "shadow-[0_0_24px_rgba(255,215,0,0.35)]" : ""}
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-            <circle cx="12" cy="12" r="3" />
-          </svg>
-          Náhľad stránky
-        </a>
-        <a
-          href={liveUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex cursor-pointer items-center gap-2 rounded-xl px-4 py-2.5 text-base text-zinc-400 transition hover:text-white"
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-          Otvoriť www.{site.domain}
-        </a>
+          {saving ? "Ukladám…" : isDirty ? "Uložiť a zverejniť" : "Uložené"}
+        </Button>
       </div>
 
       <Disclosure
@@ -130,11 +149,19 @@ export function SiteEditor({ initial }: { initial: SiteConfig }) {
         badge="Hero"
       >
         <div className="grid gap-6 lg:grid-cols-2">
-          <div className="relative overflow-hidden rounded-xl border border-white/10">
+          <div className="relative overflow-hidden rounded-xl border border-white/10 bg-zinc-900">
+            {!heroLoaded ? (
+              <div className="flex h-80 items-center justify-center">
+                <Spinner className="h-8 w-8 text-[#ffd700]" />
+              </div>
+            ) : null}
             <img
               src={heroPreview}
               alt={site.heroAlt}
-              className="max-h-80 w-full object-cover"
+              loading="eager"
+              decoding="async"
+              onLoad={() => setHeroLoaded(true)}
+              className={`max-h-80 w-full object-cover transition-opacity duration-200 ${heroLoaded ? "opacity-100" : "absolute inset-0 opacity-0"}`}
             />
             {uploading ? (
               <div className="absolute inset-0 flex items-center justify-center bg-black/60 backdrop-blur-sm">
@@ -333,13 +360,48 @@ export function SiteEditor({ initial }: { initial: SiteConfig }) {
         </div>
       </Disclosure>
 
-      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-[#0d0d0f]/95 px-5 py-4 backdrop-blur-md">
+      <div
+        className={`fixed inset-x-0 bottom-0 z-40 border-t px-5 py-4 backdrop-blur-md transition-colors ${
+          isDirty
+            ? "border-[#ffd700]/40 bg-[#1a1608]/95"
+            : "border-white/10 bg-[#0d0d0f]/95"
+        }`}
+      >
         <div className="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-4">
-          <p className="text-sm text-zinc-500">
-            Po uložení sa zmeny automaticky zverejnia na stránke.
-          </p>
-          <Button size="lg" onClick={save} loading={saving} disabled={uploading}>
-            {saving ? "Ukladám zmeny…" : "Uložiť zmeny"}
+          {isDirty ? (
+            <div>
+              <p className="text-base font-semibold text-white">Máte neuložené zmeny</p>
+              <p className="text-sm text-zinc-400">
+                Uložte, aby sa zmeny zobrazili na{" "}
+                <span className="text-[#ffd700]">www.{site.domain}</span>
+              </p>
+            </div>
+          ) : (
+            <div className="flex items-center gap-2 text-sm text-zinc-500">
+              <span className="inline-flex h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true" />
+              Všetko uložené — zmeny sú zverejnené na www.{site.domain}
+            </div>
+          )}
+          <Button
+            size="lg"
+            onClick={save}
+            loading={saving}
+            disabled={uploading || !isDirty}
+            className={isDirty ? "min-w-[220px] shadow-[0_0_28px_rgba(255,215,0,0.4)]" : "min-w-[220px]"}
+          >
+            {saving ? (
+              "Ukladám a zverejňujem…"
+            ) : isDirty ? (
+              <>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                  <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M17 21v-8H7v8M7 3v5h8" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                Uložiť a zverejniť
+              </>
+            ) : (
+              "Všetko uložené"
+            )}
           </Button>
         </div>
       </div>

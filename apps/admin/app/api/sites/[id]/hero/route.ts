@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import sharp from "sharp";
 import { isAuthenticated } from "@/lib/auth";
 import { readSiteConfig, writeHeroImage, writeSiteConfig } from "@/lib/github";
 
@@ -25,9 +26,14 @@ export async function POST(request: Request, context: { params: Promise<{ id: st
   }
 
   try {
-    const buffer = Buffer.from(await file.arrayBuffer());
-    const extension = file.type === "image/png" ? "png" : file.type === "image/webp" ? "webp" : "jpeg";
-    const hero = await writeHeroImage(id, buffer, extension);
+    const input = Buffer.from(await file.arrayBuffer());
+    const optimized = await sharp(input)
+      .rotate()
+      .resize({ width: 1400, withoutEnlargement: true })
+      .webp({ quality: 82 })
+      .toBuffer();
+
+    const hero = await writeHeroImage(id, optimized, "webp");
 
     const site = await readSiteConfig(id);
     site.heroImage = hero.heroImage;
