@@ -1,9 +1,9 @@
 import { AdminShell } from "@/components/admin-shell";
 import { SitesDashboard } from "@/components/sites-dashboard";
-import { getSitesForDashboard } from "@/lib/sites-meta";
+import { getSitesForDashboardFast } from "@/lib/sites-meta";
 
-export default async function AdminDashboardPage() {
-  const sites = await getSitesForDashboard();
+export default function AdminDashboardPage() {
+  const sites = getSitesForDashboardFast();
 
   return (
     <AdminShell

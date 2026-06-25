@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { SiteListItem } from "@/lib/sites-meta";
 import { useIsNavigatingTo, NavLink } from "@/components/nav-link";
 import { inputClass } from "@/components/ui/field";
@@ -59,7 +59,7 @@ function SiteRow({ site }: { site: SiteListItem }) {
       }`}
     >
       <td className="py-4 pr-4">
-        <NavLink href={href} className="block cursor-pointer">
+        <NavLink href={href} prefetch className="block cursor-pointer">
           <span
             className={`text-base font-semibold transition ${
               isPending ? "text-[#ffd700]" : "text-white group-hover:text-[#ffd700]"
@@ -79,6 +79,7 @@ function SiteRow({ site }: { site: SiteListItem }) {
       <td className="py-4 text-right">
         <NavLink
           href={href}
+          prefetch
           showSpinner
           className={`inline-flex cursor-pointer items-center gap-1.5 text-sm font-medium transition ${
             isPending ? "text-[#ffd700]" : "text-zinc-500 hover:text-[#ffd700]"
@@ -96,9 +97,19 @@ function SiteRow({ site }: { site: SiteListItem }) {
   );
 }
 
-export function SitesDashboard({ sites }: { sites: SiteListItem[] }) {
+export function SitesDashboard({ sites: initialSites }: { sites: SiteListItem[] }) {
+  const [sites, setSites] = useState(initialSites);
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState<SortKey>("edited-desc");
+
+  useEffect(() => {
+    fetch("/api/sites/meta")
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data: { sites?: SiteListItem[] } | null) => {
+        if (data?.sites) setSites(data.sites);
+      })
+      .catch(() => undefined);
+  }, []);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();

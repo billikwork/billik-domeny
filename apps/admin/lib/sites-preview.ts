@@ -1,4 +1,4 @@
-/** Single base URL for the sites Next.js app (all 15 domains live on one deployment). */
+/** Single base URL for the sites Next.js app (all domains live on one deployment). */
 export const DEFAULT_SITES_PREVIEW_URL = "https://billik-domeny-sites-ehy9.vercel.app";
 
 export function getSitesPreviewBase() {
@@ -13,9 +13,14 @@ export function getSitesPreviewBase() {
   return DEFAULT_SITES_PREVIEW_URL;
 }
 
-/** Resized hero URL via the sites app's Next.js image optimizer (much faster than raw PNG). */
-export function getOptimizedHeroUrl(heroPath: string, width = 720) {
-  const base = getSitesPreviewBase();
-  const params = new URLSearchParams({ url: heroPath, w: String(width), q: "75" });
-  return `${base}/_next/image?${params.toString()}`;
+/**
+ * Fast hero preview — pre-compressed WebP from the sites CDN in production,
+ * local resize API in development (no cross-origin round trip).
+ */
+export function getOptimizedHeroUrl(heroPath: string, siteId?: string) {
+  if (process.env.NODE_ENV === "development" && siteId) {
+    return `/api/hero?site=${siteId}&w=640`;
+  }
+
+  return `${getSitesPreviewBase()}${heroPath}`;
 }

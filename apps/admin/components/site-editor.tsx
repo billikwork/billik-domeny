@@ -30,11 +30,39 @@ export function SiteEditor({ initial }: { initial: SiteConfig }) {
 
   const liveUrl = useMemo(() => `https://www.${site.domain}`, [site.domain]);
 
-  const heroPreview = useMemo(() => getOptimizedHeroUrl(site.heroImage, 720), [site.heroImage]);
+  const heroPreview = useMemo(
+    () => getOptimizedHeroUrl(site.heroImage, site.id),
+    [site.heroImage, site.id],
+  );
 
   useEffect(() => {
     setHeroLoaded(false);
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "image";
+    link.href = heroPreview;
+    document.head.appendChild(link);
+    return () => {
+      document.head.removeChild(link);
+    };
   }, [heroPreview]);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch(`/api/sites/${initial.id}`, { signal: controller.signal })
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data: SiteConfig | null) => {
+        if (!data) return;
+        setSite((current) => {
+          if (JSON.stringify(current) !== JSON.stringify(initial)) return current;
+          if (JSON.stringify(data) === JSON.stringify(current)) return current;
+          setSavedSnapshot(JSON.stringify(data));
+          return data;
+        });
+      })
+      .catch(() => undefined);
+    return () => controller.abort();
+  }, [initial]);
 
   function update<K extends keyof SiteConfig>(key: K, value: SiteConfig[K]) {
     setSite((prev) => ({ ...prev, [key]: value }));
@@ -159,6 +187,7 @@ export function SiteEditor({ initial }: { initial: SiteConfig }) {
               src={heroPreview}
               alt={site.heroAlt}
               loading="eager"
+              fetchPriority="high"
               decoding="async"
               onLoad={() => setHeroLoaded(true)}
               className={`max-h-80 w-full object-cover transition-opacity duration-200 ${heroLoaded ? "opacity-100" : "absolute inset-0 opacity-0"}`}

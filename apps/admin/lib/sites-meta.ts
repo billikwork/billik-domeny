@@ -1,5 +1,6 @@
 import fs from "fs/promises";
 import path from "path";
+import { unstable_cache } from "next/cache";
 import { getAllSites } from "@billik/site-config";
 import { contentFilePath, contentRepoPath, heroDirPath } from "./paths";
 import { getRepoInfo } from "./github";
@@ -46,11 +47,7 @@ async function getGithubLastEdited(siteId: string): Promise<Date | null> {
   const { owner, repo, branch } = getRepoInfo();
   const octokit = new Octokit({ auth: token });
 
-  const paths = [
-    contentRepoPath(siteId),
-    `apps/sites/public/heroes/${siteId}`,
-  ];
-
+  const paths = [contentRepoPath(siteId), `apps/sites/public/heroes/${siteId}`];
   const dates: Date[] = [];
 
   for (const filePath of paths) {
@@ -73,13 +70,35 @@ async function getGithubLastEdited(siteId: string): Promise<Date | null> {
   return new Date(Math.max(...dates.map((d) => d.getTime())));
 }
 
+const getCachedGithubLastEdited = unstable_cache(
+  async (siteId: string) => {
+    const date = await getGithubLastEdited(siteId);
+    return date ? date.toISOString() : null;
+  },
+  ["site-github-last-edited"],
+  { revalidate: 300 },
+);
+
 async function getLastEdited(siteId: string): Promise<string | null> {
-  const date = process.env.GITHUB_TOKEN
-    ? await getGithubLastEdited(siteId)
-    : await getLocalLastEdited(siteId);
+  if (process.env.GITHUB_TOKEN) {
+    return getCachedGithubLastEdited(siteId);
+  }
+
+  const date = await getLocalLastEdited(siteId);
   return date ? date.toISOString() : null;
 }
 
+/** Fast list for the dashboard — bundled config, no blocking network calls. */
+export function getSitesForDashboardFast(): SiteListItem[] {
+  return getAllSites().map((site) => ({
+    id: site.id,
+    domain: site.domain,
+    h1: site.h1,
+    lastEdited: null,
+  }));
+}
+
+/** Full list with last-edited timestamps (cached GitHub, used by optional client refresh). */
 export async function getSitesForDashboard(): Promise<SiteListItem[]> {
   const sites = getAllSites();
   const items = await Promise.all(
