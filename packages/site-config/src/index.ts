@@ -13,7 +13,6 @@ import servoreEu from "../../../content/sites/servore-eu.json";
 import zamocnickvyrobaEu from "../../../content/sites/zamocnickvyroba-eu.json";
 import zamocnickvyrobaSk from "../../../content/sites/zamocnickvyroba-sk.json";
 import zvaraciatechnikaEu from "../../../content/sites/zvaraciatechnika-eu.json";
-import zvaraciestrojeSk from "../../../content/sites/zvaraciestroje-sk.json";
 import zvarackyEu from "../../../content/sites/zvaracky-eu.json";
 
 export type { SiteConfig, SiteBenefit, SiteFaq } from "./types";
@@ -32,7 +31,6 @@ const sites: SiteConfig[] = [
   zamocnickvyrobaEu as SiteConfig,
   zamocnickvyrobaSk as SiteConfig,
   zvaraciatechnikaEu as SiteConfig,
-  zvaraciestrojeSk as SiteConfig,
   zvarackyEu as SiteConfig,
 ];
 

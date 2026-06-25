@@ -3,46 +3,57 @@
   "domain": "praskovanie.eu",
   "locale": "sk_SK",
   "language": "sk",
-  "title": "Práškové lakovanie už neponúkame | Billik Trade Nitra",
-  "description": "Práškové praskovanie a lakovanie kovov už Billik Trade neponúka. Naďalej vyrábame kovové konštrukcie, zvárame a servisujeme zváračky v Nitre.",
-  "h1": "Práškové lakovanie už neponúkame",
-  "subtitle": "Billik Trade sa zameriava na zváranie, kovovýrobu a servis zváračiek",
+  "title": "Práškové lakovanie kovov | Billik Trade Nitra",
+  "description": "Práškové lakovanie a praskovanie kovov v Nitre. Brány, zábradlia, konštrukcie a diely v požadovanej farbe. Zváranie, kovovýroba a lakovanie pod jednou strechou.",
+  "h1": "Práškové lakovanie kovov v profesionálnej kvalite",
+  "subtitle": "Trvanlivá povrchová úprava pre brány, zábradlia, konštrukcie aj sériové diely",
   "paragraphs": [
-    "Službu práškového praskovania a lakovania kovov sme ukončili. Ak hľadáte výrobu brán, zábradlí, konštrukcií na mieru alebo zváraciu techniku, radi vám pomôžeme — to je to, čo dnes v Nitre robíme na dennej báze."
+    "V Billik Trade ponúkame práškové lakovanie kovových dielov v našej dielni v Nitre. Spájame zámočnícku výrobu, zváranie a finálnu povrchovú úpravu — od jednotlivých dielov až po kompletné brány, zábradlia a konštrukcie.",
+    "Práškové lakovanie zabezpečí rovnomerný, odolný povrch vo vybranej farbe RAL. Vhodné je pre exteriérové aj interiérové diely, ktoré potrebujú dlhodobú ochranu pred koróziou a mechanickým opotrebovaním.",
+    "Potrebujete výrobu aj lakovanie naraz? Pripravíme nezáväznú cenovú ponuku podľa rozmerov, materiálu a požadovanej farby. Kontaktujte nás telefonicky alebo osobne na Priemyselnej 4 v Nitre."
   ],
   "benefits": [
     {
-      "title": "Kovová výroba na mieru",
-      "description": "Brány, zábradlia, schody a konštrukcie podľa vašich požiadaviek."
+      "title": "Lakovanie na mieru",
+      "description": "Brány, zábradlia, schody, rámy a atypické kovové diely v požadovanej farbe."
     },
     {
-      "title": "Zváranie a servis",
-      "description": "Profesionálne zváranie a oprava zváračiek v našom servise v Nitre."
+      "title": "Výroba a lakovanie naraz",
+      "description": "Zváranie, kovovýroba a práškové lakovanie v jednej dielni — kratšie termíny."
     },
     {
-      "title": "Zváracia technika",
-      "description": "Predaj invertorov, kuklí a príslušenstva značiek IWELD a Billik."
+      "title": "Odolný povrch",
+      "description": "Rovnomerná povrchová úprava s dlhou životnosťou vo vonkajšom prostredí."
+    },
+    {
+      "title": "Individuálna ponuka",
+      "description": "Cenovú ponuku pripravíme podľa konkrétneho projektu a rozsahu prác."
     }
   ],
   "faqs": [
     {
-      "question": "Prečo už neponúkate práškové lakovanie?",
-      "answer": "Službu sme ukončili a sústredíme sa na zváranie, kovovú výrobu a servis zváračiek. Ďakujeme za pochopenie."
+      "question": "Aké diely práškovým lakovaním upravujete?",
+      "answer": "Lakujeme brány, zábradlia, schody, oplotenie, rámy, konštrukcie aj menšie kovové diely. Každý projekt posudzujeme individuálne."
     },
     {
-      "question": "Kam sa mám obrátiť namiesto toho?",
-      "answer": "Pre kovové diely na mieru navštívte zamocnickvyroba.eu. Pre zváraciu techniku a servis pozrite billiktrade.eu alebo billik.sk."
+      "question": "Vyrábate aj diely, ktoré následne lakujete?",
+      "answer": "Áno. V Nitre vyrábame kovové diely na mieru a zabezpečíme aj finálne práškové lakovanie v požadovanej farbe."
+    },
+    {
+      "question": "Ako získam cenovú ponuku?",
+      "answer": "Kontaktujte nás s rozmermi, fotkou alebo výkresom. Pripravíme nezáväznú ponuku vrátane výroby a lakovania."
     }
   ],
-  "heroImage": "/heroes/zamocnickvyroba-eu/hero.png",
-  "heroAlt": "Kovová výroba a zváranie — Billik Trade Nitra",
-  "ctaText": "Prejsť na kovovú výrobu",
-  "ctaUrl": "https://www.zamocnickvyroba.eu/?utm_source=praskovanie.eu&utm_medium=redirect",
+  "heroImage": "/heroes/praskovanie-eu/hero.png",
+  "heroAlt": "Práškové lakovanie kovov — Billik Trade Nitra",
+  "ctaText": "Vyžiadať cenovú ponuku",
+  "ctaUrl": "https://www.billik.sk/kovovyroba/?utm_source=praskovanie.eu&utm_medium=domain",
   "accentColor": "#DC2627",
   "keywords": [
+    "práškové lakovanie",
+    "praskovanie kovov",
+    "lakovanie kovov Nitra",
     "Billik Trade",
-    "kovová výroba Nitra",
-    "zváranie",
-    "zámočnícka výroba"
+    "povrchová úprava"
   ]
 }

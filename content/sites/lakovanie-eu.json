@@ -3,46 +3,57 @@
   "domain": "lakovanie.eu",
   "locale": "sk_SK",
   "language": "sk",
-  "title": "Práškové lakovanie už neponúkame | Billik Trade Nitra",
-  "description": "Práškové lakovanie kovov už Billik Trade neponúka. Naďalej ponúkame zváranie, kovovú výrobu a servis zváračiek v Nitre.",
-  "h1": "Práškové lakovanie už neponúkame",
-  "subtitle": "Pozrite si naše aktuálne služby — zváranie, kovovýroba a servis",
+  "title": "Práškové lakovanie kovov | Billik Trade Nitra",
+  "description": "Práškové lakovanie kovov v Nitre. Trvanlivá povrchová úprava brán, zábradlí a konštrukcií. Výroba, zváranie a lakovanie pod jednou strechou.",
+  "h1": "Práškové lakovanie — trvanlivá farba na roky",
+  "subtitle": "Profesionálna povrchová úprava kovových dielov v našej dielni v Nitre",
   "paragraphs": [
-    "Lakovňu a práškové lakovanie kovov sme ukončili. Billik Trade v Nitre naďalej vyrába kovové diely na mieru, zvára a servisuje zváračky. Ak potrebujete pomoc s projektom, kontaktujte nás."
+    "Billik Trade v Nitre ponúka práškové lakovanie kovových dielov ako súčasť komplexných služieb pre zákazníkov, ktorí potrebujú výrobu aj finálnu úpravu na jednom mieste.",
+    "Lakujeme brány, zábradlia, schody, oplotenie, rámy a ďalšie kovové konštrukcie vo vybranej farbe RAL. Práškové lakovanie zabezpečí rovnomerný, odolný povrch vhodný pre exteriér aj interiér.",
+    "Ak máte projekt, kde treba vyrobiť, zvariť aj nalakovať, radi vám pripravíme nezáväznú ponuku. Navštívte nás na Priemyselnej 4 v Nitre alebo nás kontaktujte telefonicky."
   ],
   "benefits": [
     {
-      "title": "Zámočnícka výroba",
-      "description": "Brány, zábradlia a konštrukcie na mieru v našej dielni v Nitre."
+      "title": "Práškové lakovanie",
+      "description": "Rovnomerná a odolná povrchová úprava v širokej škále farieb RAL."
     },
     {
-      "title": "Zváracia technika",
-      "description": "Invertory MIG/TIG/MMA, kukle, drôty a príslušenstvo skladom."
+      "title": "Kovová výroba",
+      "description": "Brány, zábradlia a konštrukcie na mieru pred finálnym lakovaním."
     },
     {
-      "title": "Servis zváračiek",
-      "description": "Opravy a údržba zváračiek v autorizovanom servise."
+      "title": "Zváranie a servis",
+      "description": "Kompletné riešenie od výroby cez zváranie až po finálny povrch."
+    },
+    {
+      "title": "Dielňa v Nitre",
+      "description": "Vlastná výroba a lakovanie — rýchlejšie dodanie bez zbytočných prostredníkov."
     }
   ],
   "faqs": [
     {
-      "question": "Stále ponúkate lakovanie kovov?",
-      "answer": "Nie, službu práškového lakovania sme ukončili. Ponúkame zváranie, kovovú výrobu a predaj zváracej techniky."
+      "question": "Ponúkate práškové lakovanie kovov?",
+      "answer": "Áno, práškové lakovanie je súčasťou našich služieb v Nitre. Lakujeme diely vyrobené u nás aj dodané zákazníkom po dohode."
     },
     {
-      "question": "Kde nájdem aktuálne služby Billik Trade?",
+      "question": "Aké farby sú dostupné?",
+      "answer": "Lakujeme vo farbách RAL podľa požiadavky projektu. Pri konzultácii vám poradíme vhodný odtieň a povrchovú úpravu."
+    },
+    {
+      "question": "Kde nájdem ďalšie služby Billik Trade?",
       "answer": "Prehľad všetkého, čo ponúkame, nájdete na billiktrade.eu. Pre kovové diely na mieru choďte na zamocnickvyroba.eu."
     }
   ],
-  "heroImage": "/heroes/zamocnickvyroba-eu/hero.png",
-  "heroAlt": "Kovová výroba a zváranie — Billik Trade Nitra",
-  "ctaText": "Pozrieť aktuálne služby",
-  "ctaUrl": "https://www.billiktrade.eu/?utm_source=lakovanie.eu&utm_medium=redirect",
+  "heroImage": "/heroes/lakovanie-eu/hero.png",
+  "heroAlt": "Práškové lakovanie a kovová výroba — Billik Trade Nitra",
+  "ctaText": "Vyžiadať cenovú ponuku",
+  "ctaUrl": "https://www.billik.sk/kovovyroba/?utm_source=lakovanie.eu&utm_medium=domain",
   "accentColor": "#2563eb",
   "keywords": [
+    "práškové lakovanie",
+    "lakovanie kovov",
     "Billik Trade",
-    "zváranie Nitra",
-    "kovová výroba",
-    "zváracia technika"
+    "Nitra",
+    "povrchová úprava kovov"
   ]
 }
