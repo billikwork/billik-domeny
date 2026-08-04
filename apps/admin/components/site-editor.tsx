@@ -158,15 +158,24 @@ export function SiteEditor({ initial }: { initial: SiteConfig }) {
             Otvoriť www.{site.domain}
           </a>
         </div>
-        <Button
-          size="md"
-          onClick={save}
-          loading={saving}
-          disabled={uploading || !isDirty}
-          className={isDirty ? "shadow-[0_0_24px_rgba(255,215,0,0.35)]" : ""}
-        >
-          {saving ? "Ukladám…" : isDirty ? "Uložiť a zverejniť" : "Uložené"}
-        </Button>
+        {isDirty || saving ? (
+          <Button
+            size="md"
+            onClick={save}
+            loading={saving}
+            disabled={uploading}
+            className="shadow-[0_0_24px_rgba(255,215,0,0.35)]"
+          >
+            {saving ? "Ukladám…" : "Uložiť a zverejniť"}
+          </Button>
+        ) : (
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3 py-1.5 text-sm font-medium text-emerald-400">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+              <path d="M20 6L9 17l-5-5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            Uložené
+          </span>
+        )}
       </div>
 
       <Disclosure
@@ -390,14 +399,14 @@ export function SiteEditor({ initial }: { initial: SiteConfig }) {
       </Disclosure>
 
       <div
-        className={`fixed inset-x-0 bottom-0 z-40 border-t px-5 py-4 backdrop-blur-md transition-colors ${
-          isDirty
-            ? "border-[#ffd700]/40 bg-[#1a1608]/95"
-            : "border-white/10 bg-[#0d0d0f]/95"
+        className={`fixed inset-x-0 bottom-0 z-40 border-t px-5 backdrop-blur-md transition-colors ${
+          isDirty || saving
+            ? "border-[#ffd700]/40 bg-[#1a1608]/95 py-4"
+            : "border-white/10 bg-[#0d0d0f]/95 py-3"
         }`}
       >
-        <div className="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-4">
-          {isDirty ? (
+        {isDirty || saving ? (
+          <div className="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-4">
             <div>
               <p className="text-base font-semibold text-white">Máte neuložené zmeny</p>
               <p className="text-sm text-zinc-400">
@@ -405,34 +414,42 @@ export function SiteEditor({ initial }: { initial: SiteConfig }) {
                 <span className="text-[#ffd700]">www.{site.domain}</span>
               </p>
             </div>
-          ) : (
-            <div className="flex items-center gap-2 text-sm text-zinc-500">
-              <span className="inline-flex h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true" />
-              Všetko uložené — zmeny sú zverejnené na www.{site.domain}
-            </div>
-          )}
-          <Button
-            size="lg"
-            onClick={save}
-            loading={saving}
-            disabled={uploading || !isDirty}
-            className={isDirty ? "min-w-[220px] shadow-[0_0_28px_rgba(255,215,0,0.4)]" : "min-w-[220px]"}
-          >
-            {saving ? (
-              "Ukladám a zverejňujem…"
-            ) : isDirty ? (
-              <>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
-                  <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M17 21v-8H7v8M7 3v5h8" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                Uložiť a zverejniť
-              </>
-            ) : (
-              "Všetko uložené"
-            )}
-          </Button>
-        </div>
+            <Button
+              size="lg"
+              onClick={save}
+              loading={saving}
+              disabled={uploading}
+              className="min-w-[220px] shadow-[0_0_28px_rgba(255,215,0,0.4)]"
+            >
+              {saving ? (
+                "Ukladám a zverejňujem…"
+              ) : (
+                <>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                    <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M17 21v-8H7v8M7 3v5h8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  Uložiť a zverejniť
+                </>
+              )}
+            </Button>
+          </div>
+        ) : (
+          <div className="mx-auto flex max-w-4xl items-center justify-center gap-2 text-sm text-zinc-500">
+            <span className="inline-flex h-2 w-2 shrink-0 rounded-full bg-emerald-500" aria-hidden="true" />
+            <span>
+              Všetko uložené — zmeny sú zverejnené na{" "}
+              <a
+                href={liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="text-[#ffd700] transition hover:underline"
+              >
+                www.{site.domain}
+              </a>
+            </span>
+          </div>
+        )}
       </div>
     </div>
   );
