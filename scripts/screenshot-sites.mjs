@@ -22,6 +22,23 @@ const VIEWPORTS = [
 ];
 const QUALITY = 72;
 const NAV_TIMEOUT_MS = 45_000;
+const TIMEZONE = "Europe/Bratislava";
+
+// Runners are UTC; stamp the local Slovak time so the badge reads the way Karol expects.
+function localTimestamp() {
+  const parts = new Intl.DateTimeFormat("sk-SK", {
+    timeZone: TIMEZONE,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+    timeZoneName: "short",
+  }).formatToParts(new Date());
+  const get = (type) => parts.find((p) => p.type === type)?.value ?? "";
+  return `${get("year")}-${get("month")}-${get("day")} ${get("hour")}:${get("minute")} ${get("timeZoneName")}`;
+}
 
 function parseArgs(argv) {
   const get = (flag) => {
@@ -71,7 +88,36 @@ async function scrollThrough(page) {
   await page.waitForTimeout(400);
 }
 
-async function capture(browser, site, viewport, outPath) {
+// Burned into the page rather than composited afterwards: no re-encode, no font files to ship,
+// and it scales with the viewport. Pinned top-left so it never covers the hero.
+async function stampTimestamp(page, text, isMobile) {
+  await page.evaluate(
+    ({ text, isMobile }) => {
+      const badge = document.createElement("div");
+      badge.textContent = text;
+      Object.assign(badge.style, {
+        position: "absolute",
+        top: "0",
+        left: "0",
+        zIndex: "2147483647",
+        padding: isMobile ? "5px 8px" : "7px 12px",
+        font: `600 ${isMobile ? 11 : 13}px ui-monospace, SFMono-Regular, Menlo, monospace`,
+        color: "#fff",
+        background: "rgba(0,0,0,0.82)",
+        borderRight: "1px solid rgba(255,255,255,0.25)",
+        borderBottom: "1px solid rgba(255,255,255,0.25)",
+        borderBottomRightRadius: "6px",
+        letterSpacing: "0.02em",
+        pointerEvents: "none",
+        whiteSpace: "nowrap",
+      });
+      document.body.appendChild(badge);
+    },
+    { text, isMobile },
+  );
+}
+
+async function capture(browser, site, viewport, outPath, stamp) {
   const context = await browser.newContext({
     viewport: { width: viewport.width, height: viewport.height },
     isMobile: viewport.isMobile,
@@ -83,6 +129,8 @@ async function capture(browser, site, viewport, outPath) {
     await page.goto(`https://${site.domain}`, { waitUntil: "load", timeout: NAV_TIMEOUT_MS });
     await page.waitForLoadState("networkidle", { timeout: 15_000 }).catch(() => {});
     await scrollThrough(page);
+    // Stamped after the scroll pass so it cannot be disturbed by lazy-load reflow.
+    await stampTimestamp(page, `${stamp} · ${site.domain}`, viewport.isMobile);
     await page.screenshot({ path: outPath, fullPage: true, type: "jpeg", quality: QUALITY });
   } finally {
     await context.close();
@@ -108,6 +156,7 @@ async function main() {
   const outDir = path.join(SHOTS_DIR, date);
   await fs.mkdir(outDir, { recursive: true });
 
+  const stamp = localTimestamp();
   const browser = await chromium.launch();
   const failures = [];
   const rows = [];
@@ -119,11 +168,11 @@ async function main() {
         const filename = `${site.domain}-${viewport.name}.jpg`;
         const outPath = path.join(outDir, filename);
         try {
-          await capture(browser, site, viewport, outPath);
+          await capture(browser, site, viewport, outPath, stamp);
         } catch (error) {
           // One retry — most failures here are a slow cold start on the first hit.
           try {
-            await capture(browser, site, viewport, outPath);
+            await capture(browser, site, viewport, outPath, stamp);
           } catch (retryError) {
             failures.push(`${site.domain} ${viewport.name}: ${retryError.message.split("\n")[0]}`);
             continue;
@@ -142,12 +191,16 @@ async function main() {
   const lines = [
     `# Screenshots ${date}`,
     "",
-    "| Domain | Image | Desktop | Mobile |",
-    "| --- | --- | --- | --- |",
+    `Captured ${stamp}.`,
+    "",
+    "| Domain | Image | Accent | Desktop | Mobile |",
+    "| --- | --- | --- | --- | --- |",
   ];
   for (const { site, files } of rows) {
     const cell = (name) => (files[name] ? `[${name}](${files[name].filename})` : "—");
-    lines.push(`| ${site.domain} | ${site.image ?? "—"} | ${cell("desktop")} | ${cell("mobile")} |`);
+    lines.push(
+      `| ${site.domain} | ${site.image ?? "—"} | ${site.accent ?? "—"} | ${cell("desktop")} | ${cell("mobile")} |`,
+    );
   }
   if (failures.length) {
     lines.push("", "## Failed", "");

@@ -13,6 +13,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 import sharp from "sharp";
+import { deriveAccent } from "./lib/accent.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const LIBRARY_DIR = path.join(ROOT, "library");
@@ -116,6 +117,7 @@ async function main() {
       width: meta.width,
       height: meta.height,
       bytes: optimized.length,
+      accent: await deriveAccent(optimized),
       label: label?.label ?? "",
       category: label?.category ?? "",
       notes: label?.notes ?? "",
@@ -125,6 +127,15 @@ async function main() {
     usedNames.add(outputName);
     added += 1;
   }
+
+  // Backfill accents for entries catalogued before accent extraction existed.
+  let backfilled = 0;
+  for (const entry of catalog) {
+    if (entry.accent !== undefined) continue;
+    entry.accent = await deriveAccent(path.join(IMAGES_DIR, entry.file));
+    backfilled += 1;
+  }
+  if (backfilled) console.log(`derived ${backfilled} accent colour(s)`);
 
   catalog.sort((a, b) => a.file.localeCompare(b.file, undefined, { numeric: true }));
   await fs.writeFile(CATALOG_PATH, `${JSON.stringify(catalog, null, 2)}\n`, "utf8");

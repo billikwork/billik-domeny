@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 // Advance every domain to the next image in its playlist.
 //
-//   node scripts/rotate-heroes.mjs            # rotate and write
-//   node scripts/rotate-heroes.mjs --dry-run  # show what would change, touch nothing
+//   node scripts/rotate-heroes.mjs                # rotate and write
+//   node scripts/rotate-heroes.mjs --dry-run      # show what would change, touch nothing
+//   node scripts/rotate-heroes.mjs --accents-only # re-apply accents for the CURRENT images
 //
 // Hero files are written with a content-hashed name (hero-<hash>.webp) because
 // apps/sites/next.config.ts serves /heroes/* as `immutable` for a year. A stable filename
@@ -23,6 +24,9 @@ const HEROES_DIR = path.join(ROOT, "apps/sites/public/heroes");
 const CONTENT_DIR = path.join(ROOT, "content/sites");
 
 const dryRun = process.argv.includes("--dry-run");
+// --accents-only re-applies each site's accent colour for the image it is already showing,
+// without advancing any playlist. Used to adopt new accents without skipping a week.
+const accentsOnly = process.argv.includes("--accents-only");
 
 const readJson = async (p) => JSON.parse(await fs.readFile(p, "utf8"));
 const writeJson = async (p, value) => fs.writeFile(p, `${JSON.stringify(value, null, 2)}\n`, "utf8");
@@ -58,7 +62,7 @@ async function main() {
       continue;
     }
 
-    const nextIndex = (entry.index + 1) % entry.images.length;
+    const nextIndex = accentsOnly ? entry.index : (entry.index + 1) % entry.images.length;
     const imageName = entry.images[nextIndex];
     const imagePath = path.join(IMAGES_DIR, imageName);
 
@@ -73,6 +77,9 @@ async function main() {
     const hash = crypto.createHash("sha256").update(bytes).digest("hex").slice(0, 8);
     const filename = `hero-${hash}.webp`;
     const heroImage = `/heroes/${siteId}/${filename}`;
+    // Accents are precomputed per image in the catalog, so the weekly run needs no image
+    // processing and every colour stays reviewable and hand-editable in one file.
+    const accent = byFile.get(imageName)?.accent || site.accentColor;
 
     // heroAlt is deliberately left alone. Catalog labels are cataloguing descriptions
     // ("Banner na samostmievacie kukly...") and make poor alt text, and because each playlist is
@@ -83,6 +90,8 @@ async function main() {
       image: imageName,
       label: byFile.get(imageName)?.label ?? "",
       heroImage,
+      accent,
+      accentWas: site.accentColor,
       // "live": false marks a domain whose DNS does not point at Vercel yet. It still rotates —
       // the image is committed and ready — but the deploy check and screenshots skip it so one
       // unconnected domain cannot fail the weekly run.
@@ -107,6 +116,7 @@ async function main() {
     await fs.writeFile(path.join(siteHeroDir, filename), bytes);
 
     site.heroImage = heroImage;
+    site.accentColor = accent;
     await writeJson(contentPath, site);
 
     entry.index = nextIndex;
@@ -124,10 +134,13 @@ async function main() {
     await writeJson(SUMMARY_PATH, summary);
   }
 
-  console.log(dryRun ? `dry run — ${summary.sites.length} sites would rotate:` : `rotated ${summary.sites.length} sites:`);
+  const verb = dryRun ? "dry run —" : accentsOnly ? "re-applied accents for" : "rotated";
+  console.log(`${verb} ${summary.sites.length} sites:`);
   for (const site of summary.sites) {
     const note = site.live ? "" : "  (not live — skipped by deploy check and screenshots)";
-    console.log(`  ${site.domain.padEnd(34)} ${site.image.padEnd(9)} (${site.from} -> ${site.to})${note}`);
+    const step = accentsOnly ? `index ${site.to}` : `${site.from} -> ${site.to}`;
+    const colour = site.accent === site.accentWas ? site.accent : `${site.accentWas} -> ${site.accent}`;
+    console.log(`  ${site.domain.padEnd(34)} ${site.image.padEnd(9)} ${step.padEnd(9)} ${colour}${note}`);
   }
 }
 

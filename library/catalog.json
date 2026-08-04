@@ -8,7 +8,8 @@
     "bytes": 215184,
     "label": "Marketingový banner Billik Trade s kolážou kovových výrobkov – brány, schody, zábradlia a workoutové ihrisko.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; kovovýroba na mieru"
+    "notes": "má text www.billik.sk; vhodné pre hero; kovovýroba na mieru",
+    "accent": "#edb31d"
   },
   {
     "file": "2.webp",
@@ -19,7 +20,8 @@
     "bytes": 183112,
     "label": "Leták kovovýroby na mieru s fotkami brán, plotov, schodov a stavebných konštrukcií.",
     "category": "kovovyroba",
-    "notes": "má text www.billik.sk; kontaktné údaje Nitra"
+    "notes": "má text www.billik.sk; kontaktné údaje Nitra",
+    "accent": "#edb41d"
   },
   {
     "file": "3.webp",
@@ -30,7 +32,8 @@
     "bytes": 157992,
     "label": "Dvaja zvárači zvárajú a brúsia veľký oceľový rám v dielni s nápisom Billik.",
     "category": "zvarenie",
-    "notes": "má text www.billik.sk; vhodné pre hero; akčná fotografia"
+    "notes": "má text www.billik.sk; vhodné pre hero; akčná fotografia",
+    "accent": "#4790c2"
   },
   {
     "file": "4.webp",
@@ -41,7 +44,8 @@
     "bytes": 104722,
     "label": "Zváracia prilba Forgearc PRO-SERIES a horák s iskrami na stole s nápisom Billik Trade.",
     "category": "produkt-zvaracka",
-    "notes": "vhodné pre hero; produktová fotografia zváracieho príslušenstva"
+    "notes": "vhodné pre hero; produktová fotografia zváracieho príslušenstva",
+    "accent": "#cc9e66"
   },
   {
     "file": "5.webp",
@@ -52,7 +56,8 @@
     "bytes": 162720,
     "label": "Exteriér dielne Billik Trade so zváračom, pracovníkmi a panelom služieb vrátane práškového lakovania.",
     "category": "kompozit-sluzby",
-    "notes": "má text www.billik.sk; vhodné pre hero; zobrazuje viacero služieb naraz"
+    "notes": "má text www.billik.sk; vhodné pre hero; zobrazuje viacero služieb naraz",
+    "accent": "#477bc2"
   },
   {
     "file": "6.webp",
@@ -63,7 +68,8 @@
     "bytes": 197898,
     "label": "Exteriér požičovne Billik Trade s pracovníkmi manipulujúcimi zváračkami a generátormi.",
     "category": "prenajom-pozicovna",
-    "notes": "obsahuje www.billiktrade.sk; vhodné pre hero; reálna prevádzka požičovne"
+    "notes": "obsahuje www.billiktrade.sk; vhodné pre hero; reálna prevádzka požičovne",
+    "accent": "#85b2d6"
   },
   {
     "file": "7.webp",
@@ -74,7 +80,8 @@
     "bytes": 182240,
     "label": "Koláž fotografií prezentujúca služby Billik Trade – zváranie, kovovýroba, servis a práškové lakovanie.",
     "category": "kompozit-sluzby",
-    "notes": "obsahuje www.billik.sk; vhodné pre hero; všetky hlavné služby"
+    "notes": "obsahuje www.billik.sk; vhodné pre hero; všetky hlavné služby",
+    "accent": "#477dc2"
   },
   {
     "file": "8.webp",
@@ -85,7 +92,8 @@
     "bytes": 214920,
     "label": "Marketingová koláž kováčske práce, CNC stroja, kovových schodov a robotického zvárania.",
     "category": "kovovyroba",
-    "notes": "obsahuje www.billik.sk na dodávke; koláž viacerých fotografií"
+    "notes": "obsahuje www.billik.sk na dodávke; koláž viacerých fotografií",
+    "accent": "#477ec2"
   },
   {
     "file": "9.webp",
@@ -96,7 +104,8 @@
     "bytes": 184288,
     "label": "Tmavý banner Billik Trade s fotkami zvárača, opravy zváračky a práškového lakovania.",
     "category": "letak-banner",
-    "notes": "vhodné pre hero; zobrazuje viacero služieb naraz"
+    "notes": "vhodné pre hero; zobrazuje viacero služieb naraz",
+    "accent": "#478bc2"
   },
   {
     "file": "10.webp",
@@ -107,7 +116,8 @@
     "bytes": 223276,
     "label": "Banner kovovýroby s bránami, schodmi, zváračskými prácami a posilňovacími klietkami.",
     "category": "letak-banner",
-    "notes": "obsahuje Práškové lakovanie v službách; vhodné pre hero"
+    "notes": "obsahuje Práškové lakovanie v službách; vhodné pre hero",
+    "accent": "#478cc2"
   },
   {
     "file": "11.webp",
@@ -118,7 +128,8 @@
     "bytes": 221586,
     "label": "Prehľadový banner Billik Trade so zváraním, kovovýrobou, servisom a požičovňou.",
     "category": "letak-banner",
-    "notes": "vhodné pre hero; kombinuje viacero služieb a produktov"
+    "notes": "vhodné pre hero; kombinuje viacero služieb a produktov",
+    "accent": "#448ec5"
   },
   {
     "file": "12.webp",
@@ -129,7 +140,8 @@
     "bytes": 192346,
     "label": "Banner požičovne zváračiek, brúsok a elektrocentrál s ukážkami kovových brán a schodov.",
     "category": "prenajom-pozicovna",
-    "notes": "kombinuje prenájom techniky a kovovýrobu; vhodné pre hero"
+    "notes": "kombinuje prenájom techniky a kovovýrobu; vhodné pre hero",
+    "accent": "#1d96ed"
   },
   {
     "file": "13.webp",
@@ -140,7 +152,8 @@
     "bytes": 150466,
     "label": "Reklamný banner prenájmu zváračiek, brúsok a elektrocentrál s fotkami zariadení.",
     "category": "prenajom-pozicovna",
-    "notes": "kontaktné údaje Nitra; zobrazuje zváračku, brúsku a generátor"
+    "notes": "kontaktné údaje Nitra; zobrazuje zváračku, brúsku a generátor",
+    "accent": "#edbc1d"
   },
   {
     "file": "14.webp",
@@ -151,7 +164,8 @@
     "bytes": 166420,
     "label": "Banner opravy a servisu zváračiek v Nitre s otvorenou MIG 250 a multimetrom.",
     "category": "servis-oprava",
-    "notes": "kontaktné údaje Billik Trade; vhodné pre servisové stránky"
+    "notes": "kontaktné údaje Billik Trade; vhodné pre servisové stránky",
+    "accent": "#edba1d"
   },
   {
     "file": "15.webp",
@@ -162,7 +176,8 @@
     "bytes": 185162,
     "label": "Banner požičovne zváračiek MIG/MAG/MMA/TIG, brúsok a benzínových elektrocentrál.",
     "category": "prenajom-pozicovna",
-    "notes": "kontaktné údaje Nitra; zobrazuje MIG 200, generátor a brúsku"
+    "notes": "kontaktné údaje Nitra; zobrazuje MIG 200, generátor a brúsku",
+    "accent": "#edb81d"
   },
   {
     "file": "16.webp",
@@ -173,7 +188,8 @@
     "bytes": 148788,
     "label": "Čistý banner prenájmu zváračiek, brúsok a elektrocentrál s produktovými fotkami.",
     "category": "prenajom-pozicovna",
-    "notes": "kontaktné údaje Nitra; MIG 200, brúska, generátor"
+    "notes": "kontaktné údaje Nitra; MIG 200, brúska, generátor",
+    "accent": "#47c2bb"
   },
   {
     "file": "17.webp",
@@ -184,7 +200,8 @@
     "bytes": 153168,
     "label": "Banner opravy a servisu zváračiek v Nitre s technikom opravujúcim zváračku.",
     "category": "servis-oprava",
-    "notes": "má text www.billik.sk; vhodné pre hero; zobrazuje opravu elektroniky"
+    "notes": "má text www.billik.sk; vhodné pre hero; zobrazuje opravu elektroniky",
+    "accent": "#1d78ed"
   },
   {
     "file": "18.webp",
@@ -195,7 +212,8 @@
     "bytes": 205906,
     "label": "Banner záručného aj pozáručného servisu zváračiek s MIG 200 a multimetrom.",
     "category": "servis-oprava",
-    "notes": "kontakt na Nitru; zobrazená MIG 200 zváračka"
+    "notes": "kontakt na Nitru; zobrazená MIG 200 zváračka",
+    "accent": "#edb01d"
   },
   {
     "file": "19.webp",
@@ -206,7 +224,8 @@
     "bytes": 182864,
     "label": "Plagát sortimentu na predaj – zváračky, horáky, ochranné pomôcky a chémia KeWax.",
     "category": "produkt-zvaracka",
-    "notes": "kontaktné údaje Nitra; vhodné pre hero; žltá/čierna firemná farba"
+    "notes": "kontaktné údaje Nitra; vhodné pre hero; žltá/čierna firemná farba",
+    "accent": "#edb01d"
   },
   {
     "file": "20.webp",
@@ -217,7 +236,8 @@
     "bytes": 172238,
     "label": "Banner sortimentu na predaj so zváračkami KoWex, prilbou, rukavicami a spotrebným materiálom.",
     "category": "produkt-zvaracka",
-    "notes": "kontaktné údaje Nitra; KoWex produkty; vhodné pre hero"
+    "notes": "kontaktné údaje Nitra; KoWex produkty; vhodné pre hero",
+    "accent": "#38ced1"
   },
   {
     "file": "21.webp",
@@ -228,7 +248,8 @@
     "bytes": 184394,
     "label": "Leták s posilňovacími klietkami, kovanými bránami, schodmi a stavebnými konštrukciami.",
     "category": "kovovyroba",
-    "notes": "obsahuje www.billik.sk; prehľad služieb a produktov"
+    "notes": "obsahuje www.billik.sk; prehľad služieb a produktov",
+    "accent": "#edb31d"
   },
   {
     "file": "22.webp",
@@ -239,7 +260,8 @@
     "bytes": 201446,
     "label": "Leták kovovýroby na mieru s fotkami brán, plotov, zábradlí a oceľových konštrukcií.",
     "category": "kovovyroba",
-    "notes": "má text www.billik.sk; vhodné pre hero; hotové výrobky"
+    "notes": "má text www.billik.sk; vhodné pre hero; hotové výrobky",
+    "accent": "#47c2ba"
   },
   {
     "file": "23.webp",
@@ -250,7 +272,8 @@
     "bytes": 144982,
     "label": "Plagát revolučného práškového lakovania s aplikáciou žltého prášku na ráfik a ukážkami výrobkov.",
     "category": "praskove-lakovanie",
-    "notes": "má text www.billik.sk; vhodné pre hero; ideálne pre praskovanie.eu / lakovanie.eu"
+    "notes": "má text www.billik.sk; vhodné pre hero; ideálne pre praskovanie.eu / lakovanie.eu",
+    "accent": "#edaf1d"
   },
   {
     "file": "24.webp",
@@ -261,7 +284,8 @@
     "bytes": 114856,
     "label": "Firemný banner so štyrmi službami a fotografiou zváracieho stroja na servisnom stole.",
     "category": "letak-banner",
-    "notes": "zdôrazňuje servisné stredisko; vhodné ako firemný banner"
+    "notes": "zdôrazňuje servisné stredisko; vhodné ako firemný banner",
+    "accent": "#1de0ed"
   },
   {
     "file": "25.webp",
@@ -272,7 +296,8 @@
     "bytes": 136782,
     "label": "Banner so žltým zváracím invertorom Billik Trade a robotickými ramenami v pozadí.",
     "category": "produkt-zvaracka",
-    "notes": "má text www.billik.sk; vhodné pre hero; výroba od roku 1992"
+    "notes": "má text www.billik.sk; vhodné pre hero; výroba od roku 1992",
+    "accent": "#edac1d"
   },
   {
     "file": "26.webp",
@@ -283,7 +308,8 @@
     "bytes": 142092,
     "label": "Banner so zváracím invertorom Billik Trade a robotickým ramenom v priemyselnom pozadí.",
     "category": "produkt-zvaracka",
-    "notes": "má text www.billik.sk; vhodné pre hero; produktový záber"
+    "notes": "má text www.billik.sk; vhodné pre hero; produktový záber",
+    "accent": "#1de1ed"
   },
   {
     "file": "27.webp",
@@ -294,7 +320,8 @@
     "bytes": 147122,
     "label": "Banner spoľahlivého partnera pre zváraciu techniku s fotkou žltej zváračky Billik Trade.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; rodinná firma z Nitry; 30+ rokov skúseností"
+    "notes": "má text www.billik.sk; rodinná firma z Nitry; 30+ rokov skúseností",
+    "accent": "#edae1d"
   },
   {
     "file": "28.webp",
@@ -305,7 +332,8 @@
     "bytes": 156452,
     "label": "Banner spoločnosti Billik Trade so zváračkou a textom o profesionálnej zváracej technike.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; produktová fotografia"
+    "notes": "má text www.billik.sk; vhodné pre hero; produktová fotografia",
+    "accent": "#30dad3"
   },
   {
     "file": "29.webp",
@@ -316,7 +344,8 @@
     "bytes": 155120,
     "label": "Široký banner Billik Trade so zváračom, zváracími strojmi, kompresormi a náradím.",
     "category": "zváracia-technika",
-    "notes": "obsahuje www.billik.sk; plný reklamný banner; vhodné pre hero"
+    "notes": "obsahuje www.billik.sk; plný reklamný banner; vhodné pre hero",
+    "accent": "#1deddf"
   },
   {
     "file": "30.webp",
@@ -327,7 +356,8 @@
     "bytes": 147638,
     "label": "Banner na zváracie invertory Billik s čiernym strojom v popredí a zváračom v pozadí.",
     "category": "produkt-zvaracka",
-    "notes": "má text www.billik.sk; produktový marketingový leták"
+    "notes": "má text www.billik.sk; produktový marketingový leták",
+    "accent": "#38d1c1"
   },
   {
     "file": "31.webp",
@@ -338,7 +368,8 @@
     "bytes": 90946,
     "label": "Čierna zváracia kukla IWELD s iskrami a dymom pri zváraní, propagačný obrázok Billik Trade.",
     "category": "produkt-zvaracka",
-    "notes": "má text www.billik.sk; propaguje samostmievacie kukly; vhodné pre hero"
+    "notes": "má text www.billik.sk; propaguje samostmievacie kukly; vhodné pre hero",
+    "accent": "#468ec3"
   },
   {
     "file": "32.webp",
@@ -349,7 +380,8 @@
     "bytes": 181926,
     "label": "Zvárac v ochrannom vybavení zvára profil v dielni vedľa stroja IWELD ARC 250.",
     "category": "zvarenie",
-    "notes": "má text www.billik.sk; vhodné pre hero; akčná fotografia zvárania"
+    "notes": "má text www.billik.sk; vhodné pre hero; akčná fotografia zvárania",
+    "accent": "#c4934e"
   },
   {
     "file": "33.webp",
@@ -360,7 +392,8 @@
     "bytes": 190418,
     "label": "Banner s tromi zváracími strojmi ARC 200, MIG 250 P a TIG 200 AC/DC a zváračom v akcii.",
     "category": "zváracia-technika",
-    "notes": "má text www.billik.sk; vhodné pre hero; expedícia do 24 hodín"
+    "notes": "má text www.billik.sk; vhodné pre hero; expedícia do 24 hodín",
+    "accent": "#228ce7"
   },
   {
     "file": "34.webp",
@@ -371,7 +404,8 @@
     "bytes": 156982,
     "label": "Banner na samostmievacie kukly iWeld Gorilla Packet LCD so zváračom v akcii.",
     "category": "produkt-zvaracka",
-    "notes": "má text www.billik.sk; reklamný banner; doručenie nad 99 € zdarma"
+    "notes": "má text www.billik.sk; reklamný banner; doručenie nad 99 € zdarma",
+    "accent": "#1d7aed"
   },
   {
     "file": "35.webp",
@@ -382,7 +416,8 @@
     "bytes": 172270,
     "label": "Banner kvalitného zvaru s robotickým zváračom, strojmi iWELD a zváracou helmou.",
     "category": "zváracia-technika",
-    "notes": "má text www.billik.sk; vhodné pre hero; robotické zváranie"
+    "notes": "má text www.billik.sk; vhodné pre hero; robotické zváranie",
+    "accent": "#ed6a1d"
   },
   {
     "file": "36.webp",
@@ -393,7 +428,8 @@
     "bytes": 187350,
     "label": "Banner zváracích setov iWELD so zváračom, strojom MIG 200 LCD a prilbou.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; expedícia do 24 hodín"
+    "notes": "má text www.billik.sk; vhodné pre hero; expedícia do 24 hodín",
+    "accent": "#ed671d"
   },
   {
     "file": "38.webp",
@@ -404,7 +440,8 @@
     "bytes": 84634,
     "label": "Vertikálny banner zváracích setov iWELD so zváračom, strojom a príslušenstvom.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; zváracie sety všetko v jednom"
+    "notes": "má text www.billik.sk; vhodné pre hero; zváracie sety všetko v jednom",
+    "accent": "#2694e3"
   },
   {
     "file": "39.webp",
@@ -415,7 +452,8 @@
     "bytes": 229836,
     "label": "Banner „Nehľadajte kompromisy“ so zváračom iWELD, strojmi MMA 200 a spotrebným materiálom.",
     "category": "produkt-zvaracka",
-    "notes": "má text www.billik.sk; vhodné pre hero; akčná fotografia"
+    "notes": "má text www.billik.sk; vhodné pre hero; akčná fotografia",
+    "accent": "#edba1d"
   },
   {
     "file": "40.webp",
@@ -426,7 +464,8 @@
     "bytes": 327734,
     "label": "Štvorcový banner kvality zvárania s fotkou zvárača iWELD a produktmi na stole.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; veľký textový banner"
+    "notes": "má text www.billik.sk; vhodné pre hero; veľký textový banner",
+    "accent": "#edbc1d"
   },
   {
     "file": "41.webp",
@@ -437,7 +476,8 @@
     "bytes": 295018,
     "label": "Banner rýchleho dodania zváracích potrieb s zváračom a strojmi iWELD MIG 200.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; expedícia do 24 hodín"
+    "notes": "má text www.billik.sk; vhodné pre hero; expedícia do 24 hodín",
+    "accent": "#ed6b1d"
   },
   {
     "file": "42.webp",
@@ -448,7 +488,8 @@
     "bytes": 197272,
     "label": "Banner rýchlosti s zváračom pri MIG zváraní a oranžovou zváračkou iWELD MIG 200.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; skladová dostupnosť"
+    "notes": "má text www.billik.sk; vhodné pre hero; skladová dostupnosť",
+    "accent": "#ed6e1d"
   },
   {
     "file": "43.webp",
@@ -459,7 +500,8 @@
     "bytes": 159784,
     "label": "Banner „Pre tých, pre ktorých je zváranie vášňou“ s rukou držiacou horák a iskrami.",
     "category": "zvarenie",
-    "notes": "má text www.billik.sk; vhodné pre hero; zamerané na vášeň pre zváranie"
+    "notes": "má text www.billik.sk; vhodné pre hero; zamerané na vášeň pre zváranie",
+    "accent": "#2adfce"
   },
   {
     "file": "44.webp",
@@ -470,7 +512,8 @@
     "bytes": 181254,
     "label": "Banner „Kvalita pod kontrolou“ so zváračom pri MIG zváraní a produktmi iWELD.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné ako hero banner"
+    "notes": "má text www.billik.sk; vhodné ako hero banner",
+    "accent": "#ed6a1d"
   },
   {
     "file": "45.webp",
@@ -481,7 +524,8 @@
     "bytes": 188808,
     "label": "Banner „Nitrianska špička“ so zváračom, mapou Slovenska a produktmi iWELD.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; partner v zváraní"
+    "notes": "má text www.billik.sk; vhodné pre hero; partner v zváraní",
+    "accent": "#ed6c1d"
   },
   {
     "file": "46.webp",
@@ -492,7 +536,8 @@
     "bytes": 182876,
     "label": "Technik opravuje otvorený zvárací stroj iWELD MMA 200 IGBT na pracovnom stole.",
     "category": "servis-oprava",
-    "notes": "má text www.billik.sk; zobrazuje konkrétny model zváračky"
+    "notes": "má text www.billik.sk; zobrazuje konkrétny model zváračky",
+    "accent": "#ea6920"
   },
   {
     "file": "47.webp",
@@ -503,7 +548,8 @@
     "bytes": 119834,
     "label": "Koláž štyroch scén – profesionálne zváranie, domáci majster, ochrana a riešenie problémov.",
     "category": "letak-banner",
-    "notes": "Billik Trade branding; vhodné pre kategóriu zvárania"
+    "notes": "Billik Trade branding; vhodné pre kategóriu zvárania",
+    "accent": "#c28c47"
   },
   {
     "file": "48.webp",
@@ -514,7 +560,8 @@
     "bytes": 255860,
     "label": "Vertikálny banner „Pridajte sa k profesionálom“ so zváračom a strojom iWELD MAGA 200.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; adresa Nitra Kmetkova 9"
+    "notes": "má text www.billik.sk; adresa Nitra Kmetkova 9",
+    "accent": "#edba1d"
   },
   {
     "file": "49.webp",
@@ -525,7 +572,8 @@
     "bytes": 245786,
     "label": "Banner efektivity so zváračom iWELD, strojom MMA 200 IGBT a príslušenstvom.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; moderné invertory"
+    "notes": "má text www.billik.sk; vhodné pre hero; moderné invertory",
+    "accent": "#75c247"
   },
   {
     "file": "50.webp",
@@ -536,7 +584,8 @@
     "bytes": 245362,
     "label": "Banner „Skladom v Nitre“ so skladom, produktmi iWELD a fotkou predajne.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; osobný odber v Nitre"
+    "notes": "má text www.billik.sk; vhodné pre hero; osobný odber v Nitre",
+    "accent": "#7eca40"
   },
   {
     "file": "51.webp",
@@ -547,7 +596,8 @@
     "bytes": 168072,
     "label": "Banner zváracích metód MIG, MAG, TIG a MMA so zváračom a strojmi Billik.",
     "category": "zváracia-technika",
-    "notes": "má text www.billik.sk; vhodné pre hero; kompletná ponuka metód"
+    "notes": "má text www.billik.sk; vhodné pre hero; kompletná ponuka metód",
+    "accent": "#31d8cf"
   },
   {
     "file": "52.webp",
@@ -558,7 +608,8 @@
     "bytes": 233592,
     "label": "Banner „Váš projekt, naša podpora“ s dvoma mužmi v dielni a zváračkou iWELD MMA 200.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; ľudský prístup"
+    "notes": "má text www.billik.sk; vhodné pre hero; ľudský prístup",
+    "accent": "#edb61d"
   },
   {
     "file": "53.webp",
@@ -569,7 +620,8 @@
     "bytes": 256178,
     "label": "Banner „Hrdosť na výsledky“ s mužom držiacim zvarený L-profil a strojom iWELD MMA 200.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; kvalita zvaru"
+    "notes": "má text www.billik.sk; vhodné pre hero; kvalita zvaru",
+    "accent": "#edb51d"
   },
   {
     "file": "54.webp",
@@ -580,7 +632,8 @@
     "bytes": 243298,
     "label": "Banner „Zváranie ako životný štýl“ so zváračom a zelenou zváračkou iWELD MMA 200.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; komunita zváračov"
+    "notes": "má text www.billik.sk; vhodné pre hero; komunita zváračov",
+    "accent": "#77c643"
   },
   {
     "file": "55.webp",
@@ -591,7 +644,8 @@
     "bytes": 210468,
     "label": "Banner bleskovej výbavy so zváracím drôtom, elektródami a rukavicami iWELD v krabici.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; rýchle dodanie; osobný odber v Nitre"
+    "notes": "má text www.billik.sk; rýchle dodanie; osobný odber v Nitre",
+    "accent": "#8acb3e"
   },
   {
     "file": "56.webp",
@@ -602,7 +656,8 @@
     "bytes": 185856,
     "label": "Banner „Kvalitná kukla = základ“ s prilbou iWeld Panther 2.0 a rukavicami.",
     "category": "produkt-zvaracka",
-    "notes": "má text www.billik.sk; propaguje samostmievacie kukly"
+    "notes": "má text www.billik.sk; propaguje samostmievacie kukly",
+    "accent": "#83d139"
   },
   {
     "file": "57.webp",
@@ -613,7 +668,8 @@
     "bytes": 269172,
     "label": "Banner spoľahlivých strojov so zváračom a zváračkou Billik Trade MIG-250 LCD.",
     "category": "produkt-zvaracka",
-    "notes": "má text www.billik.sk; vhodné pre hero; vysoká záťaž"
+    "notes": "má text www.billik.sk; vhodné pre hero; vysoká záťaž",
+    "accent": "#ed1d20"
   },
   {
     "file": "58.webp",
@@ -624,7 +680,8 @@
     "bytes": 203858,
     "label": "Banner „Profesionálny štandard“ so zváračom iWELD a strojom MMA 200 IGBT.",
     "category": "produkt-zvaracka",
-    "notes": "má text www.billik.sk; vhodné pre hero; overená kvalita"
+    "notes": "má text www.billik.sk; vhodné pre hero; overená kvalita",
+    "accent": "#ed1d22"
   },
   {
     "file": "59.webp",
@@ -635,7 +692,8 @@
     "bytes": 180660,
     "label": "Banner odborného poradenstva pri výbere zváračky s dvoma mužmi a strojom iWeld MGA 200.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; poradenstvo"
+    "notes": "má text www.billik.sk; vhodné pre hero; poradenstvo",
+    "accent": "#c54844"
   },
   {
     "file": "60.webp",
@@ -646,7 +704,8 @@
     "bytes": 185928,
     "label": "Banner servisu zváračiek v Nitre s technikom opravujúcim červenú zváračku iWELD.",
     "category": "servis-oprava",
-    "notes": "má text www.billik.sk; kontakt servis@billik.sk; Kmetkova 9 Nitra"
+    "notes": "má text www.billik.sk; kontakt servis@billik.sk; Kmetkova 9 Nitra",
+    "accent": "#d93330"
   },
   {
     "file": "61.webp",
@@ -657,7 +716,8 @@
     "bytes": 261960,
     "label": "Banner „Prečo si vybrať práve nás?“ so zváračom iWELD a produktmi na stole.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; individuálny prístup"
+    "notes": "má text www.billik.sk; vhodné pre hero; individuálny prístup",
+    "accent": "#edbf1d"
   },
   {
     "file": "62.webp",
@@ -668,7 +728,8 @@
     "bytes": 233356,
     "label": "Banner „Vybavte svoju dielňu na 100%“ so zváračkou iWELD MMA 200 a príslušenstvom.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; kompletná výbava dielne"
+    "notes": "má text www.billik.sk; vhodné pre hero; kompletná výbava dielne",
+    "accent": "#edbc1d"
   },
   {
     "file": "63.webp",
@@ -679,7 +740,8 @@
     "bytes": 281292,
     "label": "Banner „Chcete zvárať lepšie?“ so zváračom a strojom iWELD AMMA 200.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; moderná technika"
+    "notes": "má text www.billik.sk; vhodné pre hero; moderná technika",
+    "accent": "#edbe1d"
   },
   {
     "file": "64.webp",
@@ -690,7 +752,8 @@
     "bytes": 279134,
     "label": "Banner zlepšenia zvárania so zváračom iWELD a žltou zváračkou MMA 250.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; nové technológie"
+    "notes": "má text www.billik.sk; vhodné pre hero; nové technológie",
+    "accent": "#edb71d"
   },
   {
     "file": "65.webp",
@@ -701,7 +764,8 @@
     "bytes": 263282,
     "label": "Banner bezpečnosti so zváračom v ochrannom oblečení iWELD a prilbou.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; propaguje bezpečnostné vybavenie"
+    "notes": "má text www.billik.sk; propaguje bezpečnostné vybavenie",
+    "accent": "#edb81d"
   },
   {
     "file": "66.webp",
@@ -712,7 +776,8 @@
     "bytes": 197644,
     "label": "Banner spokojných zákazníkov s iWELD zváračkou, prilbou a tromi recenziami.",
     "category": "letak-banner",
-    "notes": "obsahuje www.billik.sk; tri svedectvá zákazníkov"
+    "notes": "obsahuje www.billik.sk; tri svedectvá zákazníkov",
+    "accent": "#2e94dc"
   },
   {
     "file": "67.webp",
@@ -723,7 +788,8 @@
     "bytes": 205602,
     "label": "Banner noviniek s prilbou iWeld Crystal 2.0, strojom MIG 200LCD a príslušenstvom.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; novinky každý mesiac"
+    "notes": "má text www.billik.sk; vhodné pre hero; novinky každý mesiac",
+    "accent": "#1d9fed"
   },
   {
     "file": "68.webp",
@@ -734,7 +800,8 @@
     "bytes": 186072,
     "label": "Banner dlhoročných skúseností s dvoma mužmi pri zelenom stroji iWELD MIG 200LCD.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; partnerský prístup"
+    "notes": "má text www.billik.sk; vhodné pre hero; partnerský prístup",
+    "accent": "#88cd3c"
   },
   {
     "file": "69.webp",
@@ -745,7 +812,8 @@
     "bytes": 199450,
     "label": "Banner „Keď sa projekt zasekne…“ so zváračom a zelenou zváračkou iWELD MIG 200LCD.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; rýchle dodanie spotrebného materiálu"
+    "notes": "má text www.billik.sk; rýchle dodanie spotrebného materiálu",
+    "accent": "#8bd138"
   },
   {
     "file": "70.webp",
@@ -756,7 +824,8 @@
     "bytes": 212404,
     "label": "Banner darčekov pre zvárača – kukla iWELD, rukavice, sklíčka a darčeková krabica.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; praktické darčeky"
+    "notes": "má text www.billik.sk; vhodné pre hero; praktické darčeky",
+    "accent": "#e79423"
   },
   {
     "file": "71.webp",
@@ -767,7 +836,8 @@
     "bytes": 216656,
     "label": "Banner „Pripravení na sezónu?“ so zváracím strojom iWELD MIG 200LCD a príslušenstvom.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; všetko skladom; údržba bez starostí"
+    "notes": "má text www.billik.sk; všetko skladom; údržba bez starostí",
+    "accent": "#aaca40"
   },
   {
     "file": "72.webp",
@@ -778,7 +848,8 @@
     "bytes": 195380,
     "label": "Banner „Kvalita za rozumnú cenu“ so zváracím setom iWeld MIG 200LCD a príslušenstvom.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; najlepší pomer ceny a výkonu"
+    "notes": "má text www.billik.sk; najlepší pomer ceny a výkonu",
+    "accent": "#99cc3d"
   },
   {
     "file": "73.webp",
@@ -789,7 +860,8 @@
     "bytes": 192862,
     "label": "Banner „Zváranie bez tápania“ s iWELD MIG 200LCD, prilbou a odborným poradenstvom.",
     "category": "letak-banner",
-    "notes": "obsahuje www.billik.sk; kontakt info@billik.sk"
+    "notes": "obsahuje www.billik.sk; kontakt info@billik.sk",
+    "accent": "#1dd5ed"
   },
   {
     "file": "74.webp",
@@ -800,7 +872,8 @@
     "bytes": 236648,
     "label": "Banner bezpečnosti s tromi kuklami iWELD Panorama, Vision a Gamma 4.0 True Color.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; prémiové samostmievacie kukly"
+    "notes": "má text www.billik.sk; prémiové samostmievacie kukly",
+    "accent": "#edba1d"
   },
   {
     "file": "75.webp",
@@ -811,7 +884,8 @@
     "bytes": 232708,
     "label": "Banner „Viac než len e-shop“ s tímom odborníkov pri zelenom stroji iWELD MIG 200 LCD.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; ľudský prístup"
+    "notes": "má text www.billik.sk; vhodné pre hero; ľudský prístup",
+    "accent": "#bac742"
   },
   {
     "file": "76.webp",
@@ -822,7 +896,8 @@
     "bytes": 264186,
     "label": "Banner spotrebného materiálu so zváračkou iWELD MIG 250 LCD, prilbou a drôtom.",
     "category": "produkt-zvaracka",
-    "notes": "má text www.billik.sk; vhodné pre hero; náhradné trysky a drôt"
+    "notes": "má text www.billik.sk; vhodné pre hero; náhradné trysky a drôt",
+    "accent": "#edc01d"
   },
   {
     "file": "77.webp",
@@ -833,7 +908,8 @@
     "bytes": 301754,
     "label": "Vianočný banner darčekov s prilbou iWELD Panther, rukavicami a darčekovou krabicou.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vianočná tematika; ideálny darček pre majstra"
+    "notes": "má text www.billik.sk; vianočná tematika; ideálny darček pre majstra",
+    "accent": "#edb61d"
   },
   {
     "file": "78.webp",
@@ -844,7 +920,8 @@
     "bytes": 282968,
     "label": "Banner „Príprava je polovica úspechu“ so zváracím setom iWeld MIG 200 LCD a plynom.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; kompletná výbava"
+    "notes": "má text www.billik.sk; vhodné pre hero; kompletná výbava",
+    "accent": "#edbb1d"
   },
   {
     "file": "79.webp",
@@ -855,7 +932,8 @@
     "bytes": 229326,
     "label": "Banner porovnania starej a novej zváračky iWELD s heslom „Prechod na novú úroveň“.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; predtým vs teraz; moderný invertor"
+    "notes": "má text www.billik.sk; predtým vs teraz; moderný invertor",
+    "accent": "#edb91d"
   },
   {
     "file": "80.webp",
@@ -866,7 +944,8 @@
     "bytes": 281392,
     "label": "Vertikálny leták prechodu na moderné zváračky iWELD s predajňou v Nitre.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; zobrazuje predajňu; vhodné pre hero"
+    "notes": "má text www.billik.sk; zobrazuje predajňu; vhodné pre hero",
+    "accent": "#edb71d"
   },
   {
     "file": "81.webp",
@@ -877,7 +956,8 @@
     "bytes": 274036,
     "label": "Banner odbornosti so zváračom, dvoma mužmi a strojom iWELD MIG 250 LCD.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; zváranie je remeslo"
+    "notes": "má text www.billik.sk; zváranie je remeslo",
+    "accent": "#edb61d"
   },
   {
     "file": "82.webp",
@@ -888,7 +968,8 @@
     "bytes": 304966,
     "label": "Banner kvality pod záťažou so zváračom, strojom iWELD MIG 250 LCD a aplikáciami.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; priemysel, stavebníctvo, autoservis, domáca dielňa"
+    "notes": "má text www.billik.sk; priemysel, stavebníctvo, autoservis, domáca dielňa",
+    "accent": "#edb81d"
   },
   {
     "file": "83.webp",
@@ -899,7 +980,8 @@
     "bytes": 267814,
     "label": "Banner servisu s mužom opravujúcim žltú zváračku iWELD a servisným autom Billik Trade.",
     "category": "servis-oprava",
-    "notes": "má text www.billik.sk; zobrazuje predajňu a servisné auto"
+    "notes": "má text www.billik.sk; zobrazuje predajňu a servisné auto",
+    "accent": "#edb51d"
   },
   {
     "file": "84.webp",
@@ -910,7 +992,8 @@
     "bytes": 245998,
     "label": "Banner zvárania bez zbytočného nastavovania so zváračom a invertorom iWELD MIG 200 LCD.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; synergické funkcie; vhodné pre hero"
+    "notes": "má text www.billik.sk; synergické funkcie; vhodné pre hero",
+    "accent": "#378cd2"
   },
   {
     "file": "85.webp",
@@ -921,7 +1004,8 @@
     "bytes": 227896,
     "label": "Banner „Viac než len e-shop“ s tromi mužmi a strojmi iWELD MIG 200 a TIG 200.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; tím odborníkov; vhodné pre hero"
+    "notes": "má text www.billik.sk; tím odborníkov; vhodné pre hero",
+    "accent": "#91c247"
   },
   {
     "file": "86.webp",
@@ -932,7 +1016,8 @@
     "bytes": 240184,
     "label": "Banner spokojných zákazníkov s recenziami a strojom iWeld MIG 250 LCD.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; tri zákaznícke recenzie"
+    "notes": "má text www.billik.sk; tri zákaznícke recenzie",
+    "accent": "#edb41d"
   },
   {
     "file": "87.webp",
@@ -943,7 +1028,8 @@
     "bytes": 222962,
     "label": "Banner bezpečnosti s kuklou iWELD Panther, rukavicami a iskrami v pozadí.",
     "category": "produkt-zvaracka",
-    "notes": "má text www.billik.sk; investícia do zdravia; samostmievací filter"
+    "notes": "má text www.billik.sk; investícia do zdravia; samostmievací filter",
+    "accent": "#edb31d"
   },
   {
     "file": "88.webp",
@@ -954,7 +1040,8 @@
     "bytes": 267522,
     "label": "Banner „Remeslo, ktoré má budúcnosť“ so zváračom a strojom iWELD MIG 200 LCD.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; partner pre profesionálne zváranie"
+    "notes": "má text www.billik.sk; vhodné pre hero; partner pre profesionálne zváranie",
+    "accent": "#ed7d1d"
   },
   {
     "file": "89.webp",
@@ -965,7 +1052,8 @@
     "bytes": 246172,
     "label": "Banner servisu s technikom opravujúcim otvorený stroj iWeld MIG 200 LCD.",
     "category": "servis-oprava",
-    "notes": "má text www.billik.sk; originálne náhradné diely"
+    "notes": "má text www.billik.sk; originálne náhradné diely",
+    "accent": "#e87621"
   },
   {
     "file": "90.webp",
@@ -976,7 +1064,8 @@
     "bytes": 262000,
     "label": "Banner zlepšenia kvality zvarov so zváračom a strojmi iWELD MIG 200 LCD a TIG 200.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; vhodné pre hero; odborné poradenstvo"
+    "notes": "má text www.billik.sk; vhodné pre hero; odborné poradenstvo",
+    "accent": "#edb81d"
   },
   {
     "file": "91.webp",
@@ -987,7 +1076,8 @@
     "bytes": 218152,
     "label": "Banner „Všetko pod jednou strechou“ s kompletným sortimentom iWELD produktov.",
     "category": "letak-banner",
-    "notes": "má text www.billik.sk; zváračky, kukly, drôty, rukavice, príslušenstvo"
+    "notes": "má text www.billik.sk; zváračky, kukly, drôty, rukavice, príslušenstvo",
+    "accent": "#ed741d"
   },
   {
     "file": "92.webp",
@@ -998,6 +1088,7 @@
     "bytes": 66760,
     "label": "Zvárac v čiernej ochranné prilbe zvára s lietajúcimi iskrami a jasným oblúkom.",
     "category": "zvarenie",
-    "notes": "má text BILLIK TRADE s.r.o.; vhodné pre hero; dramatická akčná fotografia"
+    "notes": "má text BILLIK TRADE s.r.o.; vhodné pre hero; dramatická akčná fotografia",
+    "accent": "#478fc2"
   }
 ]

@@ -7,9 +7,11 @@
       "image": "41.webp",
       "label": "Banner rýchleho dodania zváracích potrieb s zváračom a strojmi iWELD MIG 200.",
       "heroImage": "/heroes/billik-cz/hero-b6bdc8cc.webp",
-      "from": 0,
-      "to": 1,
-      "live": true
+      "accent": "#ed6b1d",
+      "accentWas": "#0066cc",
+      "live": true,
+      "from": 1,
+      "to": 1
     },
     {
       "id": "billiktrade-eu",
@@ -17,9 +19,11 @@
       "image": "11.webp",
       "label": "Prehľadový banner Billik Trade so zváraním, kovovýrobou, servisom a požičovňou.",
       "heroImage": "/heroes/billiktrade-eu/hero-eae2be6f.webp",
-      "from": 0,
-      "to": 1,
-      "live": true
+      "accent": "#448ec5",
+      "accentWas": "#2563eb",
+      "live": true,
+      "from": 1,
+      "to": 1
     },
     {
       "id": "billikwelding-eu",
@@ -27,9 +31,11 @@
       "image": "3.webp",
       "label": "Dvaja zvárači zvárajú a brúsia veľký oceľový rám v dielni s nápisom Billik.",
       "heroImage": "/heroes/billikwelding-eu/hero-c4938421.webp",
-      "from": 0,
-      "to": 1,
-      "live": true
+      "accent": "#4790c2",
+      "accentWas": "#1d4ed8",
+      "live": true,
+      "from": 1,
+      "to": 1
     },
     {
       "id": "billikwelding-sk",
@@ -37,9 +43,11 @@
       "image": "45.webp",
       "label": "Banner „Nitrianska špička“ so zváračom, mapou Slovenska a produktmi iWELD.",
       "heroImage": "/heroes/billikwelding-sk/hero-db46c7ac.webp",
-      "from": 0,
-      "to": 1,
-      "live": true
+      "accent": "#ed6c1d",
+      "accentWas": "#ffd700",
+      "live": true,
+      "from": 1,
+      "to": 1
     },
     {
       "id": "invertory-eu",
@@ -47,9 +55,11 @@
       "image": "25.webp",
       "label": "Banner so žltým zváracím invertorom Billik Trade a robotickými ramenami v pozadí.",
       "heroImage": "/heroes/invertory-eu/hero-5956fb7f.webp",
-      "from": 0,
-      "to": 1,
-      "live": true
+      "accent": "#edac1d",
+      "accentWas": "#00b4a0",
+      "live": true,
+      "from": 1,
+      "to": 1
     },
     {
       "id": "lakovanie-eu",
@@ -57,9 +67,11 @@
       "image": "23.webp",
       "label": "Plagát revolučného práškového lakovania s aplikáciou žltého prášku na ráfik a ukážkami výrobkov.",
       "heroImage": "/heroes/lakovanie-eu/hero-79ec3f32.webp",
-      "from": 0,
-      "to": 1,
-      "live": true
+      "accent": "#edaf1d",
+      "accentWas": "#2563eb",
+      "live": true,
+      "from": 1,
+      "to": 1
     },
     {
       "id": "ochrannepracovneprostriedky-sk",
@@ -67,9 +79,11 @@
       "image": "65.webp",
       "label": "Banner bezpečnosti so zváračom v ochrannom oblečení iWELD a prilbou.",
       "heroImage": "/heroes/ochrannepracovneprostriedky-sk/hero-dd56def1.webp",
-      "from": 0,
-      "to": 1,
-      "live": false
+      "accent": "#edb81d",
+      "accentWas": "#eab308",
+      "live": false,
+      "from": 1,
+      "to": 1
     },
     {
       "id": "praskovanie-eu",
@@ -77,9 +91,11 @@
       "image": "9.webp",
       "label": "Tmavý banner Billik Trade s fotkami zvárača, opravy zváračky a práškového lakovania.",
       "heroImage": "/heroes/praskovanie-eu/hero-27406c1c.webp",
-      "from": 0,
-      "to": 1,
-      "live": true
+      "accent": "#478bc2",
+      "accentWas": "#DC2627",
+      "live": true,
+      "from": 1,
+      "to": 1
     },
     {
       "id": "servoglas-sk",
@@ -87,9 +103,11 @@
       "image": "34.webp",
       "label": "Banner na samostmievacie kukly iWeld Gorilla Packet LCD so zváračom v akcii.",
       "heroImage": "/heroes/servoglas-sk/hero-e562fac4.webp",
-      "from": 0,
-      "to": 1,
-      "live": true
+      "accent": "#1d7aed",
+      "accentWas": "#f97316",
+      "live": true,
+      "from": 1,
+      "to": 1
     },
     {
       "id": "servore-eu",
@@ -97,9 +115,11 @@
       "image": "17.webp",
       "label": "Banner opravy a servisu zváračiek v Nitre s technikom opravujúcim zváračku.",
       "heroImage": "/heroes/servore-eu/hero-8ebe6604.webp",
-      "from": 0,
-      "to": 1,
-      "live": true
+      "accent": "#1d78ed",
+      "accentWas": "#16a34a",
+      "live": true,
+      "from": 1,
+      "to": 1
     },
     {
       "id": "zamocnickvyroba-eu",
@@ -107,9 +127,11 @@
       "image": "1.webp",
       "label": "Marketingový banner Billik Trade s kolážou kovových výrobkov – brány, schody, zábradlia a workoutové ihrisko.",
       "heroImage": "/heroes/zamocnickvyroba-eu/hero-5640a74a.webp",
-      "from": 0,
-      "to": 1,
-      "live": true
+      "accent": "#edb31d",
+      "accentWas": "#eab308",
+      "live": true,
+      "from": 1,
+      "to": 1
     },
     {
       "id": "zamocnickvyroba-sk",
@@ -117,9 +139,11 @@
       "image": "2.webp",
       "label": "Leták kovovýroby na mieru s fotkami brán, plotov, schodov a stavebných konštrukcií.",
       "heroImage": "/heroes/zamocnickvyroba-sk/hero-4bf8c6b6.webp",
-      "from": 0,
-      "to": 1,
-      "live": true
+      "accent": "#edb41d",
+      "accentWas": "#ca8a04",
+      "live": true,
+      "from": 1,
+      "to": 1
     },
     {
       "id": "zvaraciatechnika-eu",
@@ -127,9 +151,11 @@
       "image": "51.webp",
       "label": "Banner zváracích metód MIG, MAG, TIG a MMA so zváračom a strojmi Billik.",
       "heroImage": "/heroes/zvaraciatechnika-eu/hero-bf31b31c.webp",
-      "from": 0,
-      "to": 1,
-      "live": true
+      "accent": "#31d8cf",
+      "accentWas": "#2563eb",
+      "live": true,
+      "from": 1,
+      "to": 1
     },
     {
       "id": "zvaracky-eu",
@@ -137,9 +163,11 @@
       "image": "20.webp",
       "label": "Banner sortimentu na predaj so zváračkami KoWex, prilbou, rukavicami a spotrebným materiálom.",
       "heroImage": "/heroes/zvaracky-eu/hero-a6c5d8e8.webp",
-      "from": 0,
-      "to": 1,
-      "live": true
+      "accent": "#38ced1",
+      "accentWas": "#eab308",
+      "live": true,
+      "from": 1,
+      "to": 1
     }
   ]
 }

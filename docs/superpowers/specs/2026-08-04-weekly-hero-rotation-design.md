@@ -35,6 +35,32 @@ a database. Screenshots must wait for that deploy to be live, or they capture th
 | Retention | Keep every week forever (no pruning) |
 | Manual admin uploads | Rotation always wins — no pin flag |
 | `heroAlt` | Left alone (see below) |
+| `accentColor` | Derived from the image, precomputed per image in the catalog |
+| Screenshot stamp | Date + time in Europe/Bratislava burned into each capture |
+
+### Accent colour
+
+`accentColor` drives the CTA button, headings, benefit badges, the divider gradient, the
+background wash and the favicon. It follows the hero image, so the palette matches what is on
+screen.
+
+Extraction (`scripts/lib/accent.mjs`) is **saturation-weighted**, not a plain dominant-colour
+grab: these are dark workshop photos, so the literal dominant colour is a muddy grey almost every
+time. Near-black and near-white pixels are discarded, remaining pixels are binned by hue and
+weighted by saturation, and the winning bin's median hue drives the result.
+
+Output is clamped to S 50–85%, L 52–68%. Both bounds are required:
+`packages/ui/src/landing-page.tsx` puts hardcoded black text *on* the accent (CTA button, numbered
+badges) and also uses the accent as text *on* a near-black background. Measured across all 91
+images the worst case is 4.1:1 — better than three of the previously hand-picked colours, the
+worst of which (`#1d4ed8` on billikwelding.eu) was 2.9:1.
+
+Colours are computed once at library-build time and stored in `catalog.json`, so the weekly run
+needs no image processing and every colour is reviewable and hand-editable in one file. An image
+that yields no usable hue keeps the site's existing colour rather than going grey.
+
+`node scripts/rotate-heroes.mjs --accents-only` re-applies accents for the images already showing,
+without advancing any playlist — used when accents change but the week has not.
 
 `heroAlt` was originally going to track the image. It doesn't: catalog labels are cataloguing
 descriptions ("Banner na samostmievacie kukly iWeld Gorilla Packet LCD so zváračom v akcii.") and
