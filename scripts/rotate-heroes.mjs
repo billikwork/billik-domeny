@@ -83,6 +83,10 @@ async function main() {
       image: imageName,
       label: byFile.get(imageName)?.label ?? "",
       heroImage,
+      // "live": false marks a domain whose DNS does not point at Vercel yet. It still rotates —
+      // the image is committed and ready — but the deploy check and screenshots skip it so one
+      // unconnected domain cannot fail the weekly run.
+      live: entry.live !== false,
       from: entry.index,
       to: nextIndex,
     });
@@ -122,7 +126,8 @@ async function main() {
 
   console.log(dryRun ? `dry run — ${summary.sites.length} sites would rotate:` : `rotated ${summary.sites.length} sites:`);
   for (const site of summary.sites) {
-    console.log(`  ${site.domain.padEnd(34)} ${site.image.padEnd(9)} (${site.from} -> ${site.to})`);
+    const note = site.live ? "" : "  (not live — skipped by deploy check and screenshots)";
+    console.log(`  ${site.domain.padEnd(34)} ${site.image.padEnd(9)} (${site.from} -> ${site.to})${note}`);
   }
 }
 

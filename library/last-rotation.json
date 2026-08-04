@@ -8,7 +8,8 @@
       "label": "Banner rýchleho dodania zváracích potrieb s zváračom a strojmi iWELD MIG 200.",
       "heroImage": "/heroes/billik-cz/hero-b6bdc8cc.webp",
       "from": 0,
-      "to": 1
+      "to": 1,
+      "live": true
     },
     {
       "id": "billiktrade-eu",
@@ -17,7 +18,8 @@
       "label": "Prehľadový banner Billik Trade so zváraním, kovovýrobou, servisom a požičovňou.",
       "heroImage": "/heroes/billiktrade-eu/hero-eae2be6f.webp",
       "from": 0,
-      "to": 1
+      "to": 1,
+      "live": true
     },
     {
       "id": "billikwelding-eu",
@@ -26,7 +28,8 @@
       "label": "Dvaja zvárači zvárajú a brúsia veľký oceľový rám v dielni s nápisom Billik.",
       "heroImage": "/heroes/billikwelding-eu/hero-c4938421.webp",
       "from": 0,
-      "to": 1
+      "to": 1,
+      "live": true
     },
     {
       "id": "billikwelding-sk",
@@ -35,7 +38,8 @@
       "label": "Banner „Nitrianska špička“ so zváračom, mapou Slovenska a produktmi iWELD.",
       "heroImage": "/heroes/billikwelding-sk/hero-db46c7ac.webp",
       "from": 0,
-      "to": 1
+      "to": 1,
+      "live": true
     },
     {
       "id": "invertory-eu",
@@ -44,7 +48,8 @@
       "label": "Banner so žltým zváracím invertorom Billik Trade a robotickými ramenami v pozadí.",
       "heroImage": "/heroes/invertory-eu/hero-5956fb7f.webp",
       "from": 0,
-      "to": 1
+      "to": 1,
+      "live": true
     },
     {
       "id": "lakovanie-eu",
@@ -53,7 +58,8 @@
       "label": "Plagát revolučného práškového lakovania s aplikáciou žltého prášku na ráfik a ukážkami výrobkov.",
       "heroImage": "/heroes/lakovanie-eu/hero-79ec3f32.webp",
       "from": 0,
-      "to": 1
+      "to": 1,
+      "live": true
     },
     {
       "id": "ochrannepracovneprostriedky-sk",
@@ -62,7 +68,8 @@
       "label": "Banner bezpečnosti so zváračom v ochrannom oblečení iWELD a prilbou.",
       "heroImage": "/heroes/ochrannepracovneprostriedky-sk/hero-dd56def1.webp",
       "from": 0,
-      "to": 1
+      "to": 1,
+      "live": false
     },
     {
       "id": "praskovanie-eu",
@@ -71,7 +78,8 @@
       "label": "Tmavý banner Billik Trade s fotkami zvárača, opravy zváračky a práškového lakovania.",
       "heroImage": "/heroes/praskovanie-eu/hero-27406c1c.webp",
       "from": 0,
-      "to": 1
+      "to": 1,
+      "live": true
     },
     {
       "id": "servoglas-sk",
@@ -80,7 +88,8 @@
       "label": "Banner na samostmievacie kukly iWeld Gorilla Packet LCD so zváračom v akcii.",
       "heroImage": "/heroes/servoglas-sk/hero-e562fac4.webp",
       "from": 0,
-      "to": 1
+      "to": 1,
+      "live": true
     },
     {
       "id": "servore-eu",
@@ -89,7 +98,8 @@
       "label": "Banner opravy a servisu zváračiek v Nitre s technikom opravujúcim zváračku.",
       "heroImage": "/heroes/servore-eu/hero-8ebe6604.webp",
       "from": 0,
-      "to": 1
+      "to": 1,
+      "live": true
     },
     {
       "id": "zamocnickvyroba-eu",
@@ -98,7 +108,8 @@
       "label": "Marketingový banner Billik Trade s kolážou kovových výrobkov – brány, schody, zábradlia a workoutové ihrisko.",
       "heroImage": "/heroes/zamocnickvyroba-eu/hero-5640a74a.webp",
       "from": 0,
-      "to": 1
+      "to": 1,
+      "live": true
     },
     {
       "id": "zamocnickvyroba-sk",
@@ -107,7 +118,8 @@
       "label": "Leták kovovýroby na mieru s fotkami brán, plotov, schodov a stavebných konštrukcií.",
       "heroImage": "/heroes/zamocnickvyroba-sk/hero-4bf8c6b6.webp",
       "from": 0,
-      "to": 1
+      "to": 1,
+      "live": true
     },
     {
       "id": "zvaraciatechnika-eu",
@@ -116,7 +128,8 @@
       "label": "Banner zváracích metód MIG, MAG, TIG a MMA so zváračom a strojmi Billik.",
       "heroImage": "/heroes/zvaraciatechnika-eu/hero-bf31b31c.webp",
       "from": 0,
-      "to": 1
+      "to": 1,
+      "live": true
     },
     {
       "id": "zvaracky-eu",
@@ -125,7 +138,8 @@
       "label": "Banner sortimentu na predaj so zváračkami KoWex, prilbou, rukavicami a spotrebným materiálom.",
       "heroImage": "/heroes/zvaracky-eu/hero-a6c5d8e8.webp",
       "from": 0,
-      "to": 1
+      "to": 1,
+      "live": true
     }
   ]
 }

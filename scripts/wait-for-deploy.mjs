@@ -41,14 +41,20 @@ async function main() {
   const timeoutSeconds = parseTimeout(process.argv.slice(2));
   const summary = JSON.parse(await fs.readFile(SUMMARY_PATH, "utf8"));
 
+  const live = summary.sites.filter((site) => site.live !== false);
+  const skipped = summary.sites.filter((site) => site.live === false);
+  for (const site of skipped) {
+    console.log(`skipping ${site.domain} — marked not live in playlists.json`);
+  }
+
   const expected = new Map();
-  for (const site of summary.sites) {
+  for (const site of live) {
     const filename = path.basename(site.heroImage);
     const bytes = await fs.readFile(path.join(HEROES_DIR, site.id, filename));
     expected.set(site.id, sha256(bytes));
   }
 
-  const pending = new Map(summary.sites.map((site) => [site.id, site]));
+  const pending = new Map(live.map((site) => [site.id, site]));
   const deadline = Date.now() + timeoutSeconds * 1000;
 
   console.log(`waiting for ${pending.size} domains to serve the new hero (timeout ${timeoutSeconds}s)`);

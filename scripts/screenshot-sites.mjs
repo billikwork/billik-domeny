@@ -93,7 +93,12 @@ async function main() {
   const { date: dateOverride, only } = parseArgs(process.argv.slice(2));
   const loaded = await loadSites();
   const date = dateOverride ?? loaded.date;
-  const sites = only ? loaded.sites.filter((s) => s.id === only) : loaded.sites;
+
+  for (const site of loaded.sites.filter((s) => s.live === false)) {
+    console.log(`skipping ${site.domain} — marked not live in playlists.json`);
+  }
+  const capturable = loaded.sites.filter((s) => s.live !== false);
+  const sites = only ? capturable.filter((s) => s.id === only) : capturable;
 
   if (sites.length === 0) {
     console.error(only ? `no site matched --only ${only}` : "no sites to capture");

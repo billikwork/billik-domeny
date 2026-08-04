@@ -109,6 +109,17 @@ step forward rather than a jump. Sister domains are deliberately offset — the 
 the two coating sites, and the two helmet-heavy sites never land on the same photo in the same
 week.
 
+### Domains that are not live
+
+`"live": false` on a playlist entry marks a domain whose DNS does not point at Vercel. It still
+rotates — the image is committed and waiting — but `wait-for-deploy` and `screenshot-sites` skip
+it, so one unconnected domain cannot fail the weekly run and turn the failure email into noise.
+
+As of 2026-08-04 exactly one domain is flagged: **ochrannepracovneprostriedky.sk** resolves to
+`212.57.34.249` (the registrar, serving a self-signed certificate) rather than Vercel's
+`216.198.79.1` like the other 13. Its site exists in the repo but has never been publicly served.
+Once its DNS is pointed at Vercel, delete the flag and it rejoins the rotation.
+
 The 255 MB of originals in `OBRAZKY/` are **gitignored** — they never enter git history. Only the
 optimized copies the sites actually serve are committed.
 
