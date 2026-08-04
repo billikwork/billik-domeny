@@ -26,12 +26,22 @@ function parseTimeout(argv) {
 const sha256 = (buffer) => crypto.createHash("sha256").update(buffer).digest("hex");
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+// Checking only the hero asset is not enough: an accents-only run reuses the same image bytes, so
+// the asset is already live and the check would pass before the new colour had deployed at all.
+// The rendered HTML is the real signal — it carries both the hero filename and the inline accent.
 async function isLive(site, expectedHash) {
-  const url = `https://${site.domain}${site.heroImage}`;
   try {
-    const response = await fetch(url, { cache: "no-store", redirect: "follow" });
-    if (!response.ok) return false;
-    return sha256(Buffer.from(await response.arrayBuffer())) === expectedHash;
+    const page = await fetch(`https://${site.domain}/`, { cache: "no-store", redirect: "follow" });
+    if (!page.ok) return false;
+    const html = await page.text();
+
+    if (!html.includes(path.basename(site.heroImage))) return false;
+    if (site.accent && !html.toLowerCase().includes(site.accent.toLowerCase())) return false;
+
+    // The asset itself still gets a byte check, to catch a stale CDN copy.
+    const asset = await fetch(`https://${site.domain}${site.heroImage}`, { cache: "no-store" });
+    if (!asset.ok) return false;
+    return sha256(Buffer.from(await asset.arrayBuffer())) === expectedHash;
   } catch {
     return false;
   }

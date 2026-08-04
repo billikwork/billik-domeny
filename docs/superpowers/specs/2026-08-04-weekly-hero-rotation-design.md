@@ -94,7 +94,13 @@ in the same commit, so each folder holds exactly one image.
    public URLs.
 4. **Screenshot.** `scripts/screenshot-sites.mjs` drives Playwright Chromium over the 14 domains,
    writing `screenshots/<YYYY-MM-DD>/<domain>-desktop.jpg` and `-mobile.jpg` (JPEG quality 72,
-   full page), plus `index.md` recording which library image each domain received.
+   full page), plus `index.md` recording which library image and accent each domain received.
+
+   Each capture carries a burned-in stamp — `2026-08-10 06:14 SELČ · billik.cz` — formatted in
+   Europe/Bratislava, since the runner is UTC. It is injected as a strip in normal flow at the top
+   of `<body>` rather than as an overlay: every corner of these pages holds real content (logo
+   left, phone number right), and an overlay covered it. The site header is `sticky`, not `fixed`,
+   so it participates in flow and moves down by the strip's height instead of rendering over it.
 5. **Commit screenshots** with `[skip ci]` so Vercel does not rebuild for files the sites never
    serve.
 

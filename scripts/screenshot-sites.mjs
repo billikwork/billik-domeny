@@ -89,29 +89,30 @@ async function scrollThrough(page) {
 }
 
 // Burned into the page rather than composited afterwards: no re-encode, no font files to ship,
-// and it scales with the viewport. Pinned top-left so it never covers the hero.
+// and it scales with the viewport.
+//
+// It goes in as a strip in normal flow at the top of <body>, not as an overlay — an overlay in any
+// corner covered real content (the logo on the left, the phone number on the right). The site
+// header is `sticky`, not `fixed`, so it participates in flow and simply moves down by the strip's
+// height instead of rendering on top of it.
 async function stampTimestamp(page, text, isMobile) {
   await page.evaluate(
     ({ text, isMobile }) => {
-      const badge = document.createElement("div");
-      badge.textContent = text;
-      Object.assign(badge.style, {
-        position: "absolute",
-        top: "0",
-        left: "0",
+      const strip = document.createElement("div");
+      strip.textContent = text;
+      Object.assign(strip.style, {
+        position: "relative",
         zIndex: "2147483647",
-        padding: isMobile ? "5px 8px" : "7px 12px",
+        padding: isMobile ? "6px 10px" : "8px 14px",
         font: `600 ${isMobile ? 11 : 13}px ui-monospace, SFMono-Regular, Menlo, monospace`,
         color: "#fff",
-        background: "rgba(0,0,0,0.82)",
-        borderRight: "1px solid rgba(255,255,255,0.25)",
-        borderBottom: "1px solid rgba(255,255,255,0.25)",
-        borderBottomRightRadius: "6px",
-        letterSpacing: "0.02em",
-        pointerEvents: "none",
+        background: "#000",
+        borderBottom: "1px solid rgba(255,255,255,0.28)",
+        letterSpacing: "0.04em",
         whiteSpace: "nowrap",
+        textAlign: "left",
       });
-      document.body.appendChild(badge);
+      document.body.prepend(strip);
     },
     { text, isMobile },
   );
