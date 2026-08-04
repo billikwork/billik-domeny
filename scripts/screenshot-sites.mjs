@@ -103,13 +103,20 @@ async function stampTimestamp(page, text, isMobile) {
       Object.assign(strip.style, {
         position: "relative",
         zIndex: "2147483647",
-        padding: isMobile ? "6px 10px" : "8px 14px",
-        font: `600 ${isMobile ? 11 : 13}px ui-monospace, SFMono-Regular, Menlo, monospace`,
+        boxSizing: "border-box",
+        width: "100%",
+        padding: isMobile ? "12px 14px" : "18px 24px",
+        // Sized against the full-page image, not the viewport: these captures are ~2600px tall,
+        // so anything small enough to look tidy in a header is unreadable when the whole page is
+        // on screen at once.
+        font: `700 ${isMobile ? 19 : 30}px ui-monospace, SFMono-Regular, Menlo, monospace`,
         color: "#fff",
-        background: "#000",
-        borderBottom: "1px solid rgba(255,255,255,0.28)",
-        letterSpacing: "0.04em",
-        whiteSpace: "nowrap",
+        background: "#dc2626",
+        borderBottom: "3px solid #7f1d1d",
+        letterSpacing: "0.03em",
+        // Wrapping rather than nowrap so a long domain never gets cut off at a narrow viewport.
+        whiteSpace: "normal",
+        overflowWrap: "anywhere",
         textAlign: "left",
       });
       document.body.prepend(strip);
