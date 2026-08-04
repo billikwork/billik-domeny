@@ -13,10 +13,22 @@
     "Tovar expedujeme do 24 hodín po celom Slovensku. Doručenie nad 99 € je zdarma. Servisné stredisko máme priamo v Nitre — opravujeme zváračky záručne aj pozáručne."
   ],
   "benefits": [
-    { "title": "Individuálny prístup", "description": "Ku každému zákazníkovi pristupujeme osobne a férovo." },
-    { "title": "Overená kvalita", "description": "Do sortimentu dávame len to, čo sami používame." },
-    { "title": "Široký sortiment", "description": "Zváračky, kukly, drôty, elektródy a príslušenstvo na jednom mieste." },
-    { "title": "Servis v Nitre", "description": "Oprava a diagnostika zváračiek priamo u nás." }
+    {
+      "title": "Individuálny prístup",
+      "description": "Ku každému zákazníkovi pristupujeme osobne a férovo."
+    },
+    {
+      "title": "Overená kvalita",
+      "description": "Do sortimentu dávame len to, čo sami používame."
+    },
+    {
+      "title": "Široký sortiment",
+      "description": "Zváračky, kukly, drôty, elektródy a príslušenstvo na jednom mieste."
+    },
+    {
+      "title": "Servis v Nitre",
+      "description": "Oprava a diagnostika zváračiek priamo u nás."
+    }
   ],
   "faqs": [
     {
@@ -32,10 +44,16 @@
       "answer": "Áno, odborné poradenstvo je súčasťou našej služby. Môžete nás kontaktovať telefonicky, e-mailom alebo osobne v predajni."
     }
   ],
-  "heroImage": "/heroes/billikwelding-sk/hero.webp",
+  "heroImage": "/heroes/billikwelding-sk/hero-db46c7ac.webp",
   "heroAlt": "Zváracia technika Billik Trade — zváračky, kukly a príslušenstvo",
   "ctaText": "Nakupovať na billik.sk",
   "ctaUrl": "https://www.billik.sk/sortiment/?utm_source=billikwelding.sk&utm_medium=domain",
   "accentColor": "#ffd700",
-  "keywords": ["zváracia technika", "zváračky", "zvaranie", "Billik Trade", "Nitra"]
+  "keywords": [
+    "zváracia technika",
+    "zváračky",
+    "zvaranie",
+    "Billik Trade",
+    "Nitra"
+  ]
 }

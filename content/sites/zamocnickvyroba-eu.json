@@ -13,10 +13,22 @@
     "Spolupracujeme so stavebnými firmami, architektmi aj koncovými zákazníkmi v Slovensku a EÚ. Kontaktujte nás pre konzultáciu a nezáväznú cenovú ponuku."
   ],
   "benefits": [
-    { "title": "Výroba na mieru", "description": "Brány, zábradlia, schody a konštrukcie podľa vašich výkresov." },
-    { "title": "Zváranie a kovovýroba", "description": "Celý proces pod jednou strechou v Nitre." },
-    { "title": "Rýchle dodanie", "description": "Vlastná dielňa v Nitre — kratšie termíny bez zbytočných prostredníkov." },
-    { "title": "Individuálny prístup", "description": "Riešenia pre domácnosti aj priemyselné projekty." }
+    {
+      "title": "Výroba na mieru",
+      "description": "Brány, zábradlia, schody a konštrukcie podľa vašich výkresov."
+    },
+    {
+      "title": "Zváranie a kovovýroba",
+      "description": "Celý proces pod jednou strechou v Nitre."
+    },
+    {
+      "title": "Rýchle dodanie",
+      "description": "Vlastná dielňa v Nitre — kratšie termíny bez zbytočných prostredníkov."
+    },
+    {
+      "title": "Individuálny prístup",
+      "description": "Riešenia pre domácnosti aj priemyselné projekty."
+    }
   ],
   "faqs": [
     {
@@ -32,10 +44,16 @@
       "answer": "Pošlite nám rozmery, fotku alebo výkres. Pripravíme nezáväznú ponuku vrátane materiálu a výroby."
     }
   ],
-  "heroImage": "/heroes/zamocnickvyroba-eu/hero.webp",
+  "heroImage": "/heroes/zamocnickvyroba-eu/hero-5640a74a.webp",
   "heroAlt": "Zámočnícka kovová výroba — brány a konštrukcie Billik Trade",
   "ctaText": "Vyžiadať cenovú ponuku",
   "ctaUrl": "https://www.billik.sk/kovovyroba/?utm_source=zamocnickvyroba.eu&utm_medium=domain",
   "accentColor": "#eab308",
-  "keywords": ["zámočnícka výroba", "kovová výroba", "brány na mieru", "zábradlia", "Billik Trade"]
+  "keywords": [
+    "zámočnícka výroba",
+    "kovová výroba",
+    "brány na mieru",
+    "zábradlia",
+    "Billik Trade"
+  ]
 }

@@ -1,8 +1,8 @@
 {
-  "lastRotated": null,
+  "lastRotated": "2026-08-04",
   "sites": {
     "billik-cz": {
-      "index": 0,
+      "index": 1,
       "images": [
         "33.webp",
         "41.webp",
@@ -15,7 +15,7 @@
       ]
     },
     "billiktrade-eu": {
-      "index": 0,
+      "index": 1,
       "images": [
         "7.webp",
         "11.webp",
@@ -28,7 +28,7 @@
       ]
     },
     "billikwelding-eu": {
-      "index": 0,
+      "index": 1,
       "images": [
         "47.webp",
         "3.webp",
@@ -41,7 +41,7 @@
       ]
     },
     "billikwelding-sk": {
-      "index": 0,
+      "index": 1,
       "images": [
         "61.webp",
         "45.webp",
@@ -54,7 +54,7 @@
       ]
     },
     "invertory-eu": {
-      "index": 0,
+      "index": 1,
       "images": [
         "30.webp",
         "25.webp",
@@ -67,7 +67,7 @@
       ]
     },
     "lakovanie-eu": {
-      "index": 0,
+      "index": 1,
       "images": [
         "5.webp",
         "23.webp",
@@ -77,7 +77,7 @@
       ]
     },
     "ochrannepracovneprostriedky-sk": {
-      "index": 0,
+      "index": 1,
       "images": [
         "74.webp",
         "65.webp",
@@ -90,7 +90,7 @@
       ]
     },
     "praskovanie-eu": {
-      "index": 0,
+      "index": 1,
       "images": [
         "23.webp",
         "9.webp",
@@ -100,7 +100,7 @@
       ]
     },
     "servoglas-sk": {
-      "index": 0,
+      "index": 1,
       "images": [
         "36.webp",
         "34.webp",
@@ -113,7 +113,7 @@
       ]
     },
     "servore-eu": {
-      "index": 0,
+      "index": 1,
       "images": [
         "68.webp",
         "17.webp",
@@ -126,7 +126,7 @@
       ]
     },
     "zamocnickvyroba-eu": {
-      "index": 0,
+      "index": 1,
       "images": [
         "48.webp",
         "1.webp",
@@ -139,7 +139,7 @@
       ]
     },
     "zamocnickvyroba-sk": {
-      "index": 0,
+      "index": 1,
       "images": [
         "52.webp",
         "2.webp",
@@ -152,7 +152,7 @@
       ]
     },
     "zvaraciatechnika-eu": {
-      "index": 0,
+      "index": 1,
       "images": [
         "84.webp",
         "51.webp",
@@ -165,7 +165,7 @@
       ]
     },
     "zvaracky-eu": {
-      "index": 0,
+      "index": 1,
       "images": [
         "40.webp",
         "20.webp",

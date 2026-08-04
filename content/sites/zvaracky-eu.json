@@ -13,10 +13,22 @@
     "Zváračky expedujeme po Slovensku aj do EÚ. Servisné stredisko máme v Nitre — záručný aj pozáručný servis bez zbytočného čakania."
   ],
   "benefits": [
-    { "title": "Kvalitné značky", "description": "IWELD a Billik — stroje, ktoré odporúčame z praxe." },
-    { "title": "Široký výber", "description": "MMA, TIG, MIG aj kompletné sety pre začiatočníkov." },
-    { "title": "Rýchle dodanie", "description": "Expedícia do 24 hodín, osobný odber v Nitre." },
-    { "title": "Odborné poradenstvo", "description": "Pomôžeme vybrať zváračku podľa materiálu a rozpočtu." }
+    {
+      "title": "Kvalitné značky",
+      "description": "IWELD a Billik — stroje, ktoré odporúčame z praxe."
+    },
+    {
+      "title": "Široký výber",
+      "description": "MMA, TIG, MIG aj kompletné sety pre začiatočníkov."
+    },
+    {
+      "title": "Rýchle dodanie",
+      "description": "Expedícia do 24 hodín, osobný odber v Nitre."
+    },
+    {
+      "title": "Odborné poradenstvo",
+      "description": "Pomôžeme vybrať zváračku podľa materiálu a rozpočtu."
+    }
   ],
   "faqs": [
     {
@@ -32,10 +44,16 @@
       "answer": "Máme vlastné servisné stredisko v Nitre. Záručný servis riešime bezplatne, pozáručný po diagnostike a cenovej ponuke."
     }
   ],
-  "heroImage": "/heroes/zvaracky-eu/hero.webp",
+  "heroImage": "/heroes/zvaracky-eu/hero-a6c5d8e8.webp",
   "heroAlt": "Kvalitné zváračky a invertory IWELD — Billik Trade",
   "ctaText": "Vybrať zváračku",
   "ctaUrl": "https://www.billik.sk/sortiment/?utm_source=zvaracky.eu&utm_medium=domain",
   "accentColor": "#eab308",
-  "keywords": ["zváračky", "zváračka", "invertor na zváranie", "MIG zváračka", "Billik Trade"]
+  "keywords": [
+    "zváračky",
+    "zváračka",
+    "invertor na zváranie",
+    "MIG zváračka",
+    "Billik Trade"
+  ]
 }

@@ -13,10 +13,22 @@
     "Whether you run an industrial production line or a home workshop, our team provides expert advice in English and Slovak. Orders are dispatched within 24 hours, and we offer warranty and post-warranty service at our Nitra facility."
   ],
   "benefits": [
-    { "title": "Proven reliability", "description": "Equipment tested by professionals in demanding conditions." },
-    { "title": "Expert advice", "description": "30 years of welding expertise at your service." },
-    { "title": "Fast dispatch", "description": "Orders shipped within 24 hours from our Nitra warehouse." },
-    { "title": "Full service", "description": "Warranty and post-warranty repair at our service centre." }
+    {
+      "title": "Proven reliability",
+      "description": "Equipment tested by professionals in demanding conditions."
+    },
+    {
+      "title": "Expert advice",
+      "description": "30 years of welding expertise at your service."
+    },
+    {
+      "title": "Fast dispatch",
+      "description": "Orders shipped within 24 hours from our Nitra warehouse."
+    },
+    {
+      "title": "Full service",
+      "description": "Warranty and post-warranty repair at our service centre."
+    }
   ],
   "faqs": [
     {
@@ -32,10 +44,17 @@
       "answer": "Our headquarters and showroom are at Priemyselná 4, 949 01 Nitra, Slovakia. We are open Monday to Friday, 7:00–16:30."
     }
   ],
-  "heroImage": "/heroes/billikwelding-eu/hero.webp",
+  "heroImage": "/heroes/billikwelding-eu/hero-c4938421.webp",
   "heroAlt": "Professional welder at work — Billik Trade welding equipment",
   "ctaText": "Browse our shop",
   "ctaUrl": "https://www.billik.sk/sortiment/?utm_source=billikwelding.eu&utm_medium=domain",
   "accentColor": "#1d4ed8",
-  "keywords": ["welding equipment", "welding machines", "MIG welder", "TIG welder", "Billik Trade", "Slovakia"]
+  "keywords": [
+    "welding equipment",
+    "welding machines",
+    "MIG welder",
+    "TIG welder",
+    "Billik Trade",
+    "Slovakia"
+  ]
 }

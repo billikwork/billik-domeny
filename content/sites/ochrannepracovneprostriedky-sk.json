@@ -13,10 +13,22 @@
     "Neviete, ktorú kuklu alebo rukavice zvoliť? Naši odborníci vám poradia podľa typu zvárania, dĺžky práce a podmienok vo vašej dielni. Navštívte predajňu v Nitre alebo objednajte online."
   ],
   "benefits": [
-    { "title": "Ochrana zraku", "description": "Samostmievacie kukly s UV/IR filtrom a vysokou optickou triedou." },
-    { "title": "Overené značky", "description": "IWELD Panther, Vision, Gamma a ďalšie modely skladom." },
-    { "title": "Rýchle dodanie", "description": "OPP expedujeme do 24 hodín po celom Slovensku." },
-    { "title": "Odborný výber", "description": "Poradíme s výberom OPP podľa typu zvárania a pracoviska." }
+    {
+      "title": "Ochrana zraku",
+      "description": "Samostmievacie kukly s UV/IR filtrom a vysokou optickou triedou."
+    },
+    {
+      "title": "Overené značky",
+      "description": "IWELD Panther, Vision, Gamma a ďalšie modely skladom."
+    },
+    {
+      "title": "Rýchle dodanie",
+      "description": "OPP expedujeme do 24 hodín po celom Slovensku."
+    },
+    {
+      "title": "Odborný výber",
+      "description": "Poradíme s výberom OPP podľa typu zvárania a pracoviska."
+    }
   ],
   "faqs": [
     {
@@ -32,10 +44,16 @@
       "answer": "Áno, zásobujeme remeselníkov, autoservisy aj priemyselné podniky. Pre väčšie objednávky pripravíme individuálnu ponuku."
     }
   ],
-  "heroImage": "/heroes/ochrannepracovneprostriedky-sk/hero.webp",
+  "heroImage": "/heroes/ochrannepracovneprostriedky-sk/hero-dd56def1.webp",
   "heroAlt": "Samostmievacie kukly IWELD a zváracie rukavice — ochranné pracovné prostriedky",
   "ctaText": "Pozrieť OPP v e-shope",
   "ctaUrl": "https://www.billik.sk/sortiment/?utm_source=ochrannepracovneprostriedky.sk&utm_medium=domain",
   "accentColor": "#eab308",
-  "keywords": ["ochranné pracovné prostriedky", "OPP", "zváracia kukla", "samostmievacia kukla", "zváracie rukavice"]
+  "keywords": [
+    "ochranné pracovné prostriedky",
+    "OPP",
+    "zváracia kukla",
+    "samostmievacia kukla",
+    "zváracie rukavice"
+  ]
 }

@@ -13,10 +13,22 @@
     "Tovar expedujeme do 24 hodín. Osobný odber je možný na Priemyselnej 4 v Nitre, kde vám odborníci pomôžu s výberom správneho invertora pre váš materiál a spôsob zvárania."
   ],
   "benefits": [
-    { "title": "Stabilný oblúk", "description": "Presné nastavenie prúdu bez výkyvov pri zváraní." },
-    { "title": "Jednoduché ovládanie", "description": "Digitálny displej a intuitívne ovládače pre rýchly štart." },
-    { "title": "Skladom ihneď", "description": "Vybrané modely máme pripravené k okamžitému odberu." },
-    { "title": "Odborné poradenstvo", "description": "Pomôžeme vybrať invertor podľa hrúbky materiálu a technológie." }
+    {
+      "title": "Stabilný oblúk",
+      "description": "Presné nastavenie prúdu bez výkyvov pri zváraní."
+    },
+    {
+      "title": "Jednoduché ovládanie",
+      "description": "Digitálny displej a intuitívne ovládače pre rýchly štart."
+    },
+    {
+      "title": "Skladom ihneď",
+      "description": "Vybrané modely máme pripravené k okamžitému odberu."
+    },
+    {
+      "title": "Odborné poradenstvo",
+      "description": "Pomôžeme vybrať invertor podľa hrúbky materiálu a technológie."
+    }
   ],
   "faqs": [
     {
@@ -32,10 +44,16 @@
       "answer": "Áno, Billik Trade expeduje zváraciu techniku po celom Slovensku a do zahraničia. Kontaktujte nás pre konkrétnu ponuku a dopravu."
     }
   ],
-  "heroImage": "/heroes/invertory-eu/hero.webp",
+  "heroImage": "/heroes/invertory-eu/hero-5956fb7f.webp",
   "heroAlt": "Moderný zvárací invertor Billik Trade — výkon v kompaktnom balení",
   "ctaText": "Pozrieť ponuku invertorov",
   "ctaUrl": "https://www.billik.sk/sortiment/?utm_source=invertory.eu&utm_medium=domain",
   "accentColor": "#00b4a0",
-  "keywords": ["zváracie invertory", "invertor na zváranie", "MMA invertor", "IWELD invertor", "Billik Trade"]
+  "keywords": [
+    "zváracie invertory",
+    "invertor na zváranie",
+    "MMA invertor",
+    "IWELD invertor",
+    "Billik Trade"
+  ]
 }

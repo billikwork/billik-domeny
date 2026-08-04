@@ -13,10 +13,22 @@
     "Pôsobíme pre zákazníkov na celom Slovensku. Pre cenovú ponuku nás kontaktujte telefonicky, e-mailom alebo navštívte predajňu na Priemyselnej 4 v Nitre."
   ],
   "benefits": [
-    { "title": "Tradícia od 1992", "description": "Desiatky rokov skúseností v zváraní a kovovej výrobe." },
-    { "title": "Kompletný servis", "description": "Výroba a zváranie na jednom mieste v našej dielni v Nitre." },
-    { "title": "Férové poradenstvo", "description": "Pomôžeme vybrať riešenie, ktoré dáva zmysel aj cenovo." },
-    { "title": "Región Nitra", "description": "Výroba a osobná konzultácia priamo v našej dielni." }
+    {
+      "title": "Tradícia od 1992",
+      "description": "Desiatky rokov skúseností v zváraní a kovovej výrobe."
+    },
+    {
+      "title": "Kompletný servis",
+      "description": "Výroba a zváranie na jednom mieste v našej dielni v Nitre."
+    },
+    {
+      "title": "Férové poradenstvo",
+      "description": "Pomôžeme vybrať riešenie, ktoré dáva zmysel aj cenovo."
+    },
+    {
+      "title": "Región Nitra",
+      "description": "Výroba a osobná konzultácia priamo v našej dielni."
+    }
   ],
   "faqs": [
     {
@@ -32,10 +44,17 @@
       "answer": "Billik Trade sídli na Priemyselnej 4, 949 01 Nitra. Otvorené pondelok až piatok 7:00–16:30."
     }
   ],
-  "heroImage": "/heroes/zamocnickvyroba-sk/hero.webp",
+  "heroImage": "/heroes/zamocnickvyroba-sk/hero-4bf8c6b6.webp",
   "heroAlt": "Zámočnícka výroba a kovové konštrukcie na mieru — Billik Trade",
   "ctaText": "Kontaktovať výrobu",
   "ctaUrl": "https://www.billik.sk/kovovyroba/?utm_source=zamocnickvyroba.sk&utm_medium=domain",
   "accentColor": "#ca8a04",
-  "keywords": ["zámočnícka výroba", "kovovýroba Nitra", "zámočník", "brány", "zábradlia", "Billik Trade"]
+  "keywords": [
+    "zámočnícka výroba",
+    "kovovýroba Nitra",
+    "zámočník",
+    "brány",
+    "zábradlia",
+    "Billik Trade"
+  ]
 }

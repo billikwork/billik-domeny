@@ -13,10 +13,22 @@
     "Väčšinu kukiel a príslušenstva máme skladom v Nitre a expedujeme do 24 hodín po celom Slovensku. Osobný odber je možný na Priemyselnej 4."
   ],
   "benefits": [
-    { "title": "Samostmievacie kukly", "description": "Moderné kukly IWELD s rýchlou reakciou a širokým zorným poľom." },
-    { "title": "Náhradné sklá a filtre", "description": "Originálne aj kompatibilné diely pre dlhšiu životnosť kukly." },
-    { "title": "Skladom ihneď", "description": "Populárne modely pripravené k okamžitému odberu alebo expedícii." },
-    { "title": "Odborné poradenstvo", "description": "Pomôžeme vybrať správnu ochranu zraku pre váš typ práce." }
+    {
+      "title": "Samostmievacie kukly",
+      "description": "Moderné kukly IWELD s rýchlou reakciou a širokým zorným poľom."
+    },
+    {
+      "title": "Náhradné sklá a filtre",
+      "description": "Originálne aj kompatibilné diely pre dlhšiu životnosť kukly."
+    },
+    {
+      "title": "Skladom ihneď",
+      "description": "Populárne modely pripravené k okamžitému odberu alebo expedícii."
+    },
+    {
+      "title": "Odborné poradenstvo",
+      "description": "Pomôžeme vybrať správnu ochranu zraku pre váš typ práce."
+    }
   ],
   "faqs": [
     {
@@ -32,10 +44,16 @@
       "answer": "Navštívte predajňu Billik Trade v Nitre na Priemyselnej 4. Radi vám poradíme a ukážeme dostupné modely."
     }
   ],
-  "heroImage": "/heroes/servoglas-sk/hero.webp",
+  "heroImage": "/heroes/servoglas-sk/hero-e562fac4.webp",
   "heroAlt": "Samostmievacie zváracie kukly a ochranné sklá IWELD — Billik Trade",
   "ctaText": "Pozrieť kukly a sklá",
   "ctaUrl": "https://www.billik.sk/sortiment/?utm_source=servoglas.sk&utm_medium=domain",
   "accentColor": "#f97316",
-  "keywords": ["zváracia kukla", "samostmievacia kukla", "sklo do kukly", "IWELD kukla", "ochrana pri zváraní"]
+  "keywords": [
+    "zváracia kukla",
+    "samostmievacia kukla",
+    "sklo do kukly",
+    "IWELD kukla",
+    "ochrana pri zváraní"
+  ]
 }
