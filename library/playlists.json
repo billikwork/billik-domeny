@@ -1,0 +1,181 @@
+{
+  "lastRotated": null,
+  "sites": {
+    "billik-cz": {
+      "index": 0,
+      "images": [
+        "33.webp",
+        "41.webp",
+        "72.webp",
+        "62.webp",
+        "71.webp",
+        "55.webp",
+        "73.webp",
+        "91.webp"
+      ]
+    },
+    "billiktrade-eu": {
+      "index": 0,
+      "images": [
+        "7.webp",
+        "11.webp",
+        "5.webp",
+        "24.webp",
+        "47.webp",
+        "9.webp",
+        "1.webp",
+        "12.webp"
+      ]
+    },
+    "billikwelding-eu": {
+      "index": 0,
+      "images": [
+        "47.webp",
+        "3.webp",
+        "32.webp",
+        "29.webp",
+        "4.webp",
+        "43.webp",
+        "35.webp",
+        "92.webp"
+      ]
+    },
+    "billikwelding-sk": {
+      "index": 0,
+      "images": [
+        "61.webp",
+        "45.webp",
+        "75.webp",
+        "59.webp",
+        "27.webp",
+        "28.webp",
+        "50.webp",
+        "81.webp"
+      ]
+    },
+    "invertory-eu": {
+      "index": 0,
+      "images": [
+        "30.webp",
+        "25.webp",
+        "26.webp",
+        "79.webp",
+        "51.webp",
+        "33.webp",
+        "84.webp",
+        "80.webp"
+      ]
+    },
+    "lakovanie-eu": {
+      "index": 0,
+      "images": [
+        "5.webp",
+        "23.webp",
+        "7.webp",
+        "9.webp",
+        "11.webp"
+      ]
+    },
+    "ochrannepracovneprostriedky-sk": {
+      "index": 0,
+      "images": [
+        "74.webp",
+        "65.webp",
+        "87.webp",
+        "56.webp",
+        "34.webp",
+        "4.webp",
+        "70.webp",
+        "31.webp"
+      ]
+    },
+    "praskovanie-eu": {
+      "index": 0,
+      "images": [
+        "23.webp",
+        "9.webp",
+        "5.webp",
+        "11.webp",
+        "7.webp"
+      ]
+    },
+    "servoglas-sk": {
+      "index": 0,
+      "images": [
+        "36.webp",
+        "34.webp",
+        "67.webp",
+        "31.webp",
+        "56.webp",
+        "87.webp",
+        "74.webp",
+        "4.webp"
+      ]
+    },
+    "servore-eu": {
+      "index": 0,
+      "images": [
+        "68.webp",
+        "17.webp",
+        "60.webp",
+        "83.webp",
+        "46.webp",
+        "14.webp",
+        "18.webp",
+        "89.webp"
+      ]
+    },
+    "zamocnickvyroba-eu": {
+      "index": 0,
+      "images": [
+        "48.webp",
+        "1.webp",
+        "22.webp",
+        "8.webp",
+        "21.webp",
+        "10.webp",
+        "2.webp",
+        "3.webp"
+      ]
+    },
+    "zamocnickvyroba-sk": {
+      "index": 0,
+      "images": [
+        "52.webp",
+        "2.webp",
+        "10.webp",
+        "21.webp",
+        "3.webp",
+        "22.webp",
+        "8.webp",
+        "1.webp"
+      ]
+    },
+    "zvaraciatechnika-eu": {
+      "index": 0,
+      "images": [
+        "84.webp",
+        "51.webp",
+        "35.webp",
+        "29.webp",
+        "44.webp",
+        "90.webp",
+        "85.webp",
+        "82.webp"
+      ]
+    },
+    "zvaracky-eu": {
+      "index": 0,
+      "images": [
+        "40.webp",
+        "20.webp",
+        "19.webp",
+        "57.webp",
+        "58.webp",
+        "76.webp",
+        "39.webp",
+        "66.webp"
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+name: Weekly hero rotation
+
+on:
+  schedule:
+    # Mondays 04:00 UTC = 06:00 Bratislava in summer, 05:00 in winter.
+    - cron: "0 4 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-rotation
+  cancel-in-progress: false
+
+jobs:
+  rotate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # rotate-heroes and wait-for-deploy have no dependencies, so there is nothing to install yet.
+      - name: Rotate heroes
+        run: node scripts/rotate-heroes.mjs
+
+      - name: Commit rotation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add apps/sites/public/heroes content/sites library/playlists.json library/last-rotation.json
+          if git diff --staged --quiet; then
+            echo "nothing to rotate"
+            exit 0
+          fi
+          git commit -m "rotate: weekly hero images"
+          git pull --rebase --autostash
+          git push
+
+      - name: Wait for Vercel deploy
+        run: node scripts/wait-for-deploy.mjs --timeout 900
+
+      - name: Install Playwright
+        run: |
+          npm install --no-save playwright@1.62.1
+          npx playwright install --with-deps chromium
+
+      - name: Screenshot domains
+        run: node scripts/screenshot-sites.mjs
+
+      - name: Commit screenshots
+        if: always()
+        run: |
+          git add screenshots
+          if git diff --staged --quiet; then
+            echo "no screenshots to commit"
+            exit 0
+          fi
+          git commit -m "screenshots: weekly capture [skip ci]"
+          git pull --rebase --autostash
+          git push
