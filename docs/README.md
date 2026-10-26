@@ -8,7 +8,9 @@ Hub pre zápisky a rozhodnutia v tomto repe.
   test.zvaraciestroje.sk 8.2, billik.sk + test.billik.sk 8.4) a poplatok z `/services` zmizol.
   Zvaraciestroje.sk padalo na 8.2 kvôli `nesbot/carbon` 2.62.0 — nasadený upstream patch
   z Carbon 2.62.1 (`docs/patches/`). Pozor: je to zásah do `vendor/`, `composer install`
-  ho prepíše. Otvorené: neuhradená faktúra 20,16 € a trvalý bump Carbonu cez hatecomp.
+  ho prepíše. Webglobe 26. 10. 2026 písomne potvrdil, že výzvu 20,16 € neplatíme a že
+  služba sa nebude znova fakturovať, pokiaľ držíme PHP aktuálne. Otvorené: trvalý bump
+  Carbonu cez hatecomp a ďalší EOL (PHP 8.2 dobehne koniec 2026).
   Viď `journal/01`.
 
 ## Index

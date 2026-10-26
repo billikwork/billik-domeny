@@ -415,3 +415,26 @@ na celom účte, vrátane tých 17,88 € bez DPH ročne za zvaraciestroje.sk.
 3. Záloha pôvodného súboru: `Creator.php.ZALOHA-povodny`, md5 `dd8e4cc7f1fd48983ded64a7bf30f82f`.
 4. Odporúčania mimo PHP platia ďalej: Avada 7.11.15, zrušenie billik.sk hostingu
    (~120 €/rok), zmazanie mŕtveho `test.billik.sk`.
+
+## Potvrdenie od Webglobe (26. 10. 2026)
+
+Karol poslal podpore e-mail (`info@webglobe.sk`, 12:33) so zhrnutím prepnutých verzií
+a žiadosťou o potvrdenie, že výzva 2 689 062 475 odpadá a že sa služba nebude
+fakturovať ani od 1. 12. 2026.
+
+Odpoveď prišla za päť minút — Michal Knezovič, Customer Support Specialist, 12:38 SEČ:
+
+> ak ste medzičasom vykonali zmenu php, predfaktúru hradiť nemusíte, bude automaticky
+> systémom zrušená. Služba si kontroluje aktuálnosť php verzie a nebude Vám znova
+> fakturovaná ak php verzie udržíte aktuálne.
+
+Tým je bod 1 z „Čo zostáva otvorené" uzavretý: **výzvu 2 689 062 475 (20,16 € s DPH)
+neplatíme**, zrušenie beží automaticky zo strany systému. Ďalšie obdobie od 1. 12. 2026
+(17,88 € bez DPH/rok) nepríde, pokiaľ verzie zostanú aktuálne.
+
+Z toho vyplýva nová priebežná povinnosť: **držať PHP aktuálne.** Dnešný strop fakturácie
+je 8.1 a nižšie, Webglobe ho bude posúvať s každou ďalšou end-of-life verziou. Keď PHP 8.2
+dobehne podporu (koniec 2026), zvaraciestroje.sk bude treba posunúť znova — a vtedy už
+Carbon patch nemusí stačiť. To je ďalší argument pre trvalý bump cez hatecomp.
+
+Body 2–4 zostávajú otvorené bez zmeny (zásah vo `vendor/`, záloha, odporúčania mimo PHP).
