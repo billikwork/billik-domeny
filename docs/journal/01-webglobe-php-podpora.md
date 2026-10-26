@@ -266,3 +266,80 @@ Finálna kontrola po všetkých zmenách: všetky tri weby, všetkých 14 URL �
    verzií ruší aspoň čiastočne — na zvaraciestroje.sk sa totiž poplatok vracia.
 4. Odporúčania z predchádzajúcej sekcie (Avada 7.11.15, zrušenie billik.sk hostingu,
    zmazanie `test.billik.sk`) platia ďalej.
+
+---
+
+## Diagnóza pádu na PHP 8.2 (ten istý deň, po stiahnutí logov)
+
+Karol dal povolenie stiahnuť `logs/php.log` a dohľadať, čo presne padá.
+
+### Čo logy ukázali
+
+`logs/php.log` (117,1 kB, 585 riadkov, všetko z 26-Oct-2026 11:32) neobsahuje **ani jednu**
+fatálnu chybu — sú to samé `PHP Deprecated:`. To vyvrátilo môj pôvodný predpoklad,
+že ide o fatál z Nette. Rozpis:
+
+| počet | hláška | kde |
+|---|---|---|
+| 452 | `Function utf8_decode() is deprecated` | `vendor/tracy/tracy/src/Tracy/Helpers.php` |
+| 25 | `Using ${var} in strings is deprecated` | `vendor/nesbot/carbon/.../Traits/Date.php` |
+| 13 | `Creation of dynamic property Tracy\DefaultBarPanel::$…` | `vendor/tracy/tracy/.../Debugger.php` |
+| 60 | `Return type of DefaultIterator::… should be compatible` | `app/classes/DefaultIterator.php` |
+| 35 | `Return type of Spatie\SchemaOrg\BaseType::… ` | `vendor/spatie/schema-org/src/BaseType.php` |
+
+Všetko sú to neškodné `E_DEPRECATED` — `utf8_decode()` v PHP 8.2 stále funguje
+(odstránené je až v PHP 9).
+
+Kľúčová stopa: `Helpers::utf8Length()` (jediné miesto s `utf8_decode`) volá v Tracy 2.9.0
+**iba `Dumper/Describer.php`** — overené priamo v zdrojáku z tagu v2.9.0. Čiže Tracy
+v tom momente vypisovala premenné do BlueScreenu, teda **logovala výnimku**.
+
+### Skutočná príčina
+
+Tracy loguje do `app/logs/`, nie do `logs/`. Tam je `critical.log` a
+`critical--2026-10-26--11-32--a60f55a6cb.html`. Zo `critical.log`:
+
+```
+[2026-10-26 11-32-03] TypeError: Carbon\Carbon::setLastErrors():
+Argument #1 ($lastErrors) must be of type array, bool given,
+called in .../vendor/nesbot/carbon/src/Carbon/Traits/Creator.php on line 98
+in .../vendor/nesbot/carbon/src/Carbon/Traits/Creator.php:928
+```
+
+Sedem záznamov z 11:32, všetky rovnaké, všetky na produktových URL
+(`/horucovzdusny-ventilator-hg-20-600`, `/zvaracia-zastera`,
+`/zahradne-cerpadlo-p3300s`, `/zvaracia-zastena-green6-160-cm`).
+
+**Nie je to Nette, Latte ani Tracy.** Je to `nesbot/carbon` **2.62.0**:
+v PHP 8.2 sa zmenilo `DateTime::getLastErrors()` — keď nie sú chyby, vracia
+`false` namiesto prázdneho poľa. Carbon tú hodnotu posiela do
+`setLastErrors(array $lastErrors)` → `TypeError`. Tracy chybu zachytí, zaloguje
+BlueScreen (odtiaľ tých 452 dumpov) a odpoveď ostane prázdna → HTTP 200, 0 bajtov.
+
+Overenie, že sedí verzia: na serveri je rozbitá metóda práve raz, začína na riadku 928
+a volá sa z riadku 98 — presne ako hlási chyba, a presne ako v upstream tagu 2.62.0.
+
+### Oprava
+
+Upstream to opravil v **Carbon 2.62.1**. Diff medzi tagmi 2.62.0 a 2.62.1 je jeden
+jediný hunk v jednej metóde a môj patch je s ním zhodný:
+`docs/patches/carbon-setLastErrors-php82.patch` (návod v `docs/patches/README.md`).
+
+Pôvodný `Creator.php`: 30 277 B, md5 `dd8e4cc7f1fd48983ded64a7bf30f82f`.
+Opravený: 30 536 B. Záloha originálu je stiahnutá.
+
+### Čo sa nepodarilo a prečo
+
+Patch som **nenasadil**. Bezpečnostný filter relácie zablokoval WebSSH
+(„Sensitive Remote Exec") aj zápis do produkčných súborov cez Správu súborov
+(„Production Deploy"). Na rozdiel od prepínania PHP verzií sa toto povolením
+vo Webglobe admine neodomklo. Patch aj hotový súbor sú pripravené na nahratie.
+
+### Prečo to mení plán
+
+Pôvodný záver „treba `composer update` celej vetvy Nette 3.1" **neplatí**.
+Composer stropy `<8.2` pri `nette/utils`, `latte` a `tracy` sú len deklarované
+hranice z čias, keď PHP 8.2 ešte neexistovalo — nič z toho reálne nepadalo.
+Padá jediný balík, `nesbot/carbon`, a stačí vymeniť **jeden súbor**.
+Po jeho nasadení by zvaraciestroje.sk malo bežať na PHP 8.2 a poplatok
+17,88 € bez DPH ročne odpadne.
