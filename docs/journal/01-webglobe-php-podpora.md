@@ -179,3 +179,90 @@ Všetko ostatné (analýza, výskum, baseline, runbook) je hotové.
 - **Zmazať mŕtvu subdoménu `test.billik.sk`** (žiadny A záznam, stále vedená s PHP 8.0).
 - Faktúru 20,16 € neplatiť skôr, než sa potvrdí, či sa po prepnutí verzií automaticky zruší
   (Webglobe to v e-maile sľubuje). Je po splatnosti, takže to treba vybaviť s podporou.
+
+---
+
+## Vykonanie (ten istý deň, 26. 10. 2026 — po udelení práv na zápis)
+
+Karol dal povolenie na zápis vo Webglobe admine („Spústi to znova — dám ti povolenie
+na zápis v Webglobe admine"), takže runbook vyššie som odbehal naživo.
+
+### Čo sa prepol
+
+| Položka | Pred | Prepnuté na | Výsledok |
+|---|---|---|---|
+| billik.sk | 8.0 | **8.4** | OK, drží |
+| test.billik.sk | 8.0 | **8.4** | OK (mŕtva subdoména) |
+| praskovalakovnanr.sk | 7.4 | **8.2** | OK, drží |
+| test.zvaraciestroje.sk | 8.0 | **8.2** | OK, drží |
+| zvaraciestroje.sk | 8.0 | 8.2 → **späť 8.0** | **rozbilo produkt, rollback** |
+
+Všetkých päť položiek bolo chvíľu na ≥ 8.2, čím zmizol spúšťač poplatku. Potom prišiel
+rollback zvaraciestroje.sk, takže na ten web sa poplatok **naďalej vzťahuje**.
+
+### Regresia na zvaraciestroje.sk (a prečo bol rollback správny)
+
+Po prepnutí na `php82` začali **detailové stránky produktov vracať HTTP 200 s nulovým telom**
+(`content-length: 0`, hlavička `x-powered-by: Nette Framework 3` ostala). Overené na troch:
+`/zvaracia-zastera`, `/zahradne-cerpadlo-p3300s`, `/zvaracia-zastena-green6-160-cm`.
+Homepage, `/kontakt`, `/o-nas`, `/sitemap.xml` a oba cron endpointy fungovali normálne.
+
+Status 200 s prázdnym telom je typický podpis fatálnej PHP chyby pri `display_errors = Off` —
+PHP spadne po odoslaní hlavičiek, nič sa nevypíše. Zapadá to presne do overených composer
+obmedzení: `nette/utils` 3.2.7, `latte/latte` 2.10.8 aj `tracy/tracy` 2.9.0 majú strop `<8.2`.
+Produktové stránky sú zjavne jediné, ktoré ten konkrétny kód volajú.
+
+Rollback na `php80` cez `/13687/phpvars` → hláška „Verzia PHP bola úspešne zmenená".
+Overené troma po sebe idúcimi dotazmi: `status=200 bytes=31798` — presne baseline hodnota
+z `.php-check/zvaraciestroje.before`. Web je **úplne v pôvodnom stave**.
+
+Presnú chybu sa nepodarilo pomenovať: `logs/php.log` (117,1 kB) na hostingu existuje,
+ale Správa súborov pre `.log` nenabíha prehliadač — len Premenovať / Stiahnuť / Zmazať.
+
+### Falošný poplach na praskovalakovnanr.sk — vyriešený
+
+`diff` najprv označil `/wp-login.php` ako `ZMENA 17599->14024 (-20%)`. Nie je to regresia.
+Plugin `captcha` kreslí pri každom načítaní novú náhodnú matematickú úlohu a operandy
+vykresľuje raz slovom („šesť"), raz číslicou, raz ako **inline base64 PNG** — a to pridá ~5 kB.
+Desať meraní dalo rozsah **12 350 – 17 579 B** pri *identickej* štruktúre stránky
+(rovnaký počet `<script>`, `<link>`, `<input>`, `<div>`; diff mimo blokov `cptch` je prázdny).
+Baseline 17 599 aj „po" 14 024 ležia v tom rozsahu. `POST` na prihlasovací formulár
+vracia normálnych 200. Web je na PHP 8.2 zdravý.
+
+Druhý falošný poplach: `/wp-json/` hlásilo `CHYBY:1`. Bol to slovenský preklad popisu
+REST poľa — „DEPRECATED: Namiesto toho použite `modifikácie`" — nie PHP chyba.
+
+### Úpravy kontrolného skriptu po tejto skúsenosti
+
+`scripts/php-switch-check.sh`:
+- nový zoznam `SIZE_VARIABLE` (zatiaľ `wp-login.php`) — URL s prirodzene premenlivou
+  veľkosťou sa v diffe na veľkosť nekontrolujú, len na status a chyby;
+- status 200 s nulovou veľkosťou sa hlási výslovne ako `PRÁZDNA ODPOVEĎ (fatal?)` —
+  to je presne podpis, ktorý nás trafil;
+- grep na PHP chyby zúžený: `deprecated|warning|notice` sa počíta len s `on line` alebo `in /`,
+  inak to chytalo preklady vo `wp-json`.
+
+Finálna kontrola po všetkých zmenách: všetky tri weby, všetkých 14 URL — `ok` / `ok` / `ok`.
+
+### Stav poplatku
+
+| Web | PHP teraz | Poplatok |
+|---|---|---|
+| billik.sk (+ test) | 8.4 | zmizol |
+| praskovalakovnanr.sk | 8.2 | zmizol |
+| test.zvaraciestroje.sk | 8.2 | zmizol |
+| **zvaraciestroje.sk** | **8.0** | **trvá — 17,88 € bez DPH / rok** |
+
+### Čo zostáva otvorené
+
+1. **Dostať zvaraciestroje.sk na ≥ 8.2.** Poplatok sa vzťahuje na 8.1 a nižšie, takže
+   medzikrok 8.1 nepomôže — treba reálne ≥ 8.2, a to znamená `composer update` v rámci
+   vetvy Nette 3.1: `nette/utils` 3.2.10 (`<8.4`), `latte` 2.11.7 (`≤8.3`), `tracy` 2.9.8 (`<8.3`).
+   Z tejto relácie to nie je možné — WebSSH je zablokovaný. Treba buď SSH prístup
+   od Webglobe, alebo pôvodnú agentúru **hatecomp** (`hatecomp/zvaraciestroje.sk@dev-master`).
+2. **Diagnóza fatálnej chyby** — potrebný `logs/php.log` z hostingu (stiahnutie si vyžaduje
+   samostatné povolenie).
+3. Faktúra 2 689 062 475 na 20,16 € je po splatnosti. Overiť s podporou, či sa po zvýšení
+   verzií ruší aspoň čiastočne — na zvaraciestroje.sk sa totiž poplatok vracia.
+4. Odporúčania z predchádzajúcej sekcie (Avada 7.11.15, zrušenie billik.sk hostingu,
+   zmazanie `test.billik.sk`) platia ďalej.
