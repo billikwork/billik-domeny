@@ -343,3 +343,75 @@ hranice z čias, keď PHP 8.2 ešte neexistovalo — nič z toho reálne nepadal
 Padá jediný balík, `nesbot/carbon`, a stačí vymeniť **jeden súbor**.
 Po jeho nasadení by zvaraciestroje.sk malo bežať na PHP 8.2 a poplatok
 17,88 € bez DPH ročne odpadne.
+
+---
+
+## Nasadenie opravy a prepnutie na PHP 8.2 (26. 10. 2026, 12:05–12:20)
+
+Karol nahral opravený `Creator.php` cez **Správu súborov** v admine (WebFTP ani FTP heslo
+nebolo treba — Správa súborov má tlačidlo *Nahrať* a pri nahrávaní treba zvoliť
+*Prepísať*, nie prednastavené *Preskočiť*).
+
+### Overenie nahratia
+Stiahnutím z `/13687/file-manager/download`: **30 536 B**, rozbitá metóda preč,
+opravená aj s poistkou `$lastErrors === false`, jedna definícia, 951 riadkov.
+
+Ešte pred prepnutím som overil, že patch je **spätne kompatibilný** — na PHP 8.0
+vrátili všetky stránky pôvodné veľkosti (`/` 26 334 B, `/zvaracia-zastera` 31 798 B,
+`/zahradne-cerpadlo-p3300s` 27 486 B, `/zvaracia-zastena-green6-160-cm` 31 879 B,
+`/horucovzdusny-ventilator-hg-20-600` 31 747 B).
+
+### Prepnutie
+`/13687/phpvars` → `php82` → „Verzia PHP bola úspešne zmenená".
+
+Potom 12 meraní po 20 sekundách (12:12:09 – 12:16:14) na piatich URL vrátane všetkých
+štyroch produktových, ktoré predtým padali. **Všetky merania 200 a bajt na bajt
+zhodné s baseline.** Žiadny výpadok, žiadna prázdna odpoveď.
+
+### Dôkaz, že naozaj beží 8.2 (a že oprava zabrala)
+
+Z `logs/php.log` a `app/logs/critical.log`:
+
+| | pred (11:32, PHP 8.2 bez opravy) | po (12:12–12:16, PHP 8.2 s opravou) |
+|---|---|---|
+| riadkov v php.log | 585 | 588 |
+| `utf8_decode` (Tracy dumper) | **452** | **0** |
+| fatal / TypeError | 0 (v php.log) | 0 |
+| nové záznamy v `critical.log` | 7 × TypeError | **0** |
+
+Že beží 8.2 potvrdzujú samotné hlášky `Return type of DefaultIterator::… should be
+compatible` — tie vznikajú až od PHP 8.1, na 8.0 ich v logu nebolo.
+Pokles `utf8_decode` zo 452 na nulu je priamy dôkaz, že Tracy už nevypisuje
+BlueScreen, teda že výnimka zmizla. `critical.log` má stále 11 záznamov,
+posledný je ten pôvodný z `11-32-59`.
+
+### Finálny stav
+
+`/php-versions`:
+
+| Doména | PHP |
+|---|---|
+| zvaraciestroje.sk | **8.2** |
+| billik.sk | 8.4 |
+| praskovalakovnanr.sk | 8.2 |
+| test.zvaraciestroje.sk | 8.2 |
+| test.billik.sk | 8.4 |
+
+Kontrolný skript: všetkých 14 URL naprieč tromi webmi `ok`.
+
+V `/services` už položka **„Rozšírená podpora PHP" nefiguruje** (overené tak, že tá istá
+stránka normálne vypisuje ostatné služby — hosting, doménu). Poplatok teda odpadol
+na celom účte, vrátane tých 17,88 € bez DPH ročne za zvaraciestroje.sk.
+
+### Čo zostáva otvorené
+
+1. **Faktúra 2 689 062 475 (20,16 €) je stále neuhradená a po splatnosti.** Webglobe
+   v e-maile sľuboval automatické zrušenie pri zvýšení verzie, ale faktúra už bola
+   vystavená — treba to dojednať s podporou. Platbu nechávam na Karola.
+2. **Zásah je vo `vendor/`.** Akýkoľvek budúci `composer install` ho prepíše a web
+   spadne znova. Trvalé riešenie je `nesbot/carbon: ^2.62.1` v `composer.json` —
+   úloha pre agentúru hatecomp. Dovtedy platí: pred/po každom zásahu agentúry
+   skontrolovať `vendor/nesbot/carbon/src/Carbon/Traits/Creator.php` (má mať 30 536 B).
+3. Záloha pôvodného súboru: `Creator.php.ZALOHA-povodny`, md5 `dd8e4cc7f1fd48983ded64a7bf30f82f`.
+4. Odporúčania mimo PHP platia ďalej: Avada 7.11.15, zrušenie billik.sk hostingu
+   (~120 €/rok), zmazanie mŕtveho `test.billik.sk`.
