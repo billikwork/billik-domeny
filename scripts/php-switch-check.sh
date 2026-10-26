@@ -8,6 +8,13 @@
 #
 # Porovnáva HTTP status a veľkosť odpovede. Rozdiel vo veľkosti o pár bajtov
 # je bežný (CSRF token, čas). Zmena statusu alebo prepad veľkosti = problém.
+#
+# Pozor na status 200 s nulovou veľkosťou: to je typický podpis fatálnej PHP
+# chyby pri display_errors=Off. Skript ju hlási ako PRÁZDNA ODPOVEĎ.
+#
+# Niektoré URL menia veľkosť pri každom načítaní (napr. wp-login.php kreslí
+# náhodnú captchu raz slovom, raz ako base64 PNG → rozsah 12-18 kB). Tie sú
+# vymenované v SIZE_VARIABLE a kontroluje sa im len status a výskyt chýb.
 
 set -uo pipefail
 MODE="${1:?použitie: $0 before|after|diff <site>}"
@@ -38,6 +45,9 @@ https://www.praskovalakovnanr.sk/wp-login.php
 EOF
 }
 
+# URL, ktorých veľkosť sa mení aj bez zmeny PHP – diff im veľkosť neráta
+SIZE_VARIABLE='wp-login\.php'
+
 urls_billik() {
   cat <<'EOF'
 https://www.billik.sk/
@@ -60,7 +70,7 @@ snap() {
       -o /tmp/pscheck.body -w '%{http_code} %{size_download}' "$u" 2>/dev/null || echo "000 0")
     # počet riadkov s PHP chybami priamo vo výstupe
     local errs
-    errs=$(grep -ciE "fatal error|parse error|deprecated:|warning:.*on line|uncaught (exception|error)" /tmp/pscheck.body 2>/dev/null | head -1)
+    errs=$(grep -ciE "fatal error|parse error|uncaught (exception|error)|(deprecated|warning|notice):.*(on line|in /)" /tmp/pscheck.body 2>/dev/null | head -1)
     errs=${errs:-0}
     printf '%s\t%s\t%s\t%s\n' "$code" "$size" "$errs" "$u" >> "$f"
   done <<< "$URLS"
@@ -74,10 +84,16 @@ case "$MODE" in
     b="$OUT/$SITE.before"; a="$OUT/$SITE.after"
     [ -f "$b" ] && [ -f "$a" ] || { echo "chýba $b alebo $a"; exit 1; }
     echo "URL | status pred→po | veľkosť pred→po | PHP chyby po"
-    paste "$b" "$a" | awk -F'\t' '{
+    paste "$b" "$a" | awk -F'\t' -v varia="$SIZE_VARIABLE" '{
       status = ($1==$5) ? "ok" : "ZMENA " $1 "->" $5
-      d = ($2==0) ? 0 : ($6-$2)*100/$2
-      size = (d<-5 || d>5) ? sprintf("ZMENA %d->%d (%.0f%%)", $2, $6, d) : "ok"
+      if ($5+0 == 200 && $6+0 == 0)
+        size = "PRÁZDNA ODPOVEĎ (fatal?)"
+      else if (varia != "" && $4 ~ varia)
+        size = "preskočené (premenlivá)"
+      else {
+        d = ($2==0) ? 0 : ($6-$2)*100/$2
+        size = (d<-5 || d>5) ? sprintf("ZMENA %d->%d (%.0f%%)", $2, $6, d) : "ok"
+      }
       err  = ($7+0>0) ? "CHYBY:" $7 : "ok"
       printf "%-62s %-22s %-28s %s\n", $4, status, size, err
     }'
