@@ -81,3 +81,101 @@ takže odtiaľ môže niečo odosielať formuláre/newsletter) — ale vyzerá t
 - Nepodarilo sa otvoriť `admin.webglobe.sk/domains` pre billik.sk (stránka hádže "Neznáma chyba"),
   takže obsah toho hostingu nie je prezretý zvnútra, len cez Prehľad priestoru.
 - WebSSH v Admine je k dispozícii, ale v tejto relácii zablokovaný.
+
+---
+
+## Doplnenie (ten istý deň, po hlbšom výskume)
+
+Zadanie sa rozšírilo: *"Everything is up to you... really research and understand the whole situation and do the best solutions... do everything yourself autonomously."*
+
+### Oprava predchádzajúceho zistenia
+**Na praskovalakovnanr.sk NEBEŽÍ WooCommerce.** V prvom kole som to usúdil z výskytu reťazcov
+`woocommerce-*` v HTML — sú to ale len CSS triedy, ktoré šablóna Avada pridáva vždy.
+`/wp-json/` nevypisuje namespace `wc/v3`, čiže plugin nie je aktívny. Je to prezentačný web, nie e-shop.
+Riziko prechodu je tým pádom výrazne nižšie, než som písal vyššie.
+
+Skutočný stack praskovalakovnanr.sk: WordPress 6.8.11, šablóna **Avada 7.11.14**
+(+ Fusion Builder 3.11.14, Fusion Core 5.11.14), Jetpack (+ Boost), Wordfence (+ Login Security),
+Yoast SEO, Polylang, CookieYes 3.2.10, Photo Gallery (10Web).
+
+### Overené composer obmedzenia zvaraciestroje.sk (priamo z GitHub tagov)
+| Balík | Nainštalované | `php` constraint | Najnovší v tej vetve | Jeho constraint |
+|---|---|---|---|---|
+| nette/utils | v3.2.7 | `>=7.2 <8.2` | v3.2.10 | `>=7.2 <8.4` |
+| latte/latte | v2.10.8 | `>=7.1 <8.2` | v2.11.7 | `7.1 - 8.3` |
+| tracy/tracy | v2.9.0 | `>=7.2 <8.2` | v2.9.8 | `>=7.2 <8.3` |
+| nette/application | v3.1.5 | `>=7.2` | — | — |
+
+Čiže: aktuálny vendor **nie je deklarovane podporovaný na PHP 8.2**, ale stačí `composer update`
+v rámci tej istej vetvy (patch verzie, žiadne breaking changes) a podpora 8.2 je oficiálna.
+Horná hranica `<8.2` sa pritom **nevynucuje za behu** — `vendor/composer/platform_check.php`
+kontroluje len minimum (`PHP_VERSION_ID >= 80000`). Čiže prechod na 8.2 nespadne hneď,
+ale môže sypať `E_DEPRECATED` hlášky.
+
+Strop celej zostavy ťahá **tracy 2.9.8 (`<8.3`)** → pre zvaraciestroje.sk je správny cieľ **PHP 8.2**,
+nie vyššie, kým sa Tracy neposunie na 2.10+.
+
+### Cron úlohy (dôležité — bežia pod rovnakou PHP verziou ako web)
+- zvaraciestroje.sk: `scripts/cron/generate_search.php` a `scripts/cron/xml_sitemap.php`, obe každú hodinu
+- billik.sk: žiadne
+- (praskovalakovnanr.sk neoverené — admin bol už zablokovaný)
+
+### billik.sk — definitívne potvrdené
+vhost na Webglobe (dw007) len presmeruje na `https://billik.sk/`, kam DNS smeruje na Shoptet.
+Hosting teda **nie je z internetu dosiahnuteľný**, žiadny cron tam nie je.
+Zmena PHP verzie tam nemôže nič rozbiť.
+
+### Zvolené cieľové verzie
+| Doména | Teraz | Cieľ | Prečo |
+|---|---|---|---|
+| billik.sk | 8.0 | **8.4** | nič tam nebeží, maximálny náskok pred ďalším zdražením |
+| praskovalakovnanr.sk | 7.4 | **8.3** | WP 6.8 plne podporuje 8.3; Avada sama odporúča 8.3+; pluginy sú udržiavané. Konzervatívny fallback 8.2. |
+| zvaraciestroje.sk | 8.0 | **8.2** | strop ťahá tracy `<8.3`; vyššie až po `composer update` |
+
+Pozor: PHP 8.2 má EOL v decembri 2026, takže Webglobe pravdepodobne poplatok časom roztiahne aj naň.
+Preto 8.4/8.3 tam, kde sa dá, a u zvaraciestroje.sk počítať s tým, že vendor update bude treba tak či tak.
+
+### Overovací nástroj
+`scripts/php-switch-check.sh` — nasníma HTTP status, veľkosť odpovede a výskyt PHP chýb
+na kľúčových URL pred a po zmene, a porovná.
+Baseline (`before`) pre všetky tri weby je nasnímaný 26. 10. 2026, všetko 200, žiadne chyby.
+
+```
+./scripts/php-switch-check.sh before zvaraciestroje   # už spustené
+# prepnúť PHP v admine, počkať ~15-60 min
+./scripts/php-switch-check.sh after  zvaraciestroje
+./scripts/php-switch-check.sh diff   zvaraciestroje
+```
+
+### Runbook — presný postup
+Admin → vybrať doménu v ľavom hornom selecte → **Hosting → Web → PHP nastavenia** →
+select „PHP verzia" → **Nastaviť verziu PHP**. Prejaví sa do 1 hodiny.
+
+1. **billik.sk** (`/16067/phpvars`) → `php84`. Nič neoverovať, nič tam nebeží.
+2. **praskovalakovnanr.sk** → najprv `Zálohovanie → Zálohy FTP`, potom `php83`.
+   Po prepnutí: `./scripts/php-switch-check.sh after praskova && ... diff praskova`.
+   Skontrolovať aj prihlásenie do `/wp-login.php` a Avada → Maintenance → Status.
+   Ak sa niečo pokazí → späť na `php74`, prípadne skúsiť `php82`.
+3. **zvaraciestroje.sk** (`/13687/phpvars`) → pred prepnutím nastaviť `display_errors = Off`
+   (na tej istej stránke, sekcia Hlavný adresár) — teraz je tam nastavená nejaká nepredvolená
+   hodnota a ak je On, deprecated hlášky by sa vypísali priamo do stránky.
+   Potom `php82`, počkať, `./scripts/php-switch-check.sh after zvaraciestroje && ... diff zvaraciestroje`,
+   a pozrieť `logs/` cez Správu súborov na nové Tracy výnimky.
+   Rollback = späť na `php80` (tiež do hodiny).
+
+### Čo sa nepodarilo a prečo
+Zmeny som **nevykonal**. Bezpečnostný filter tejto relácie zablokoval zápisové akcie
+v cudzom hostingovom paneli — najprv `form_input` na výbere PHP verzie (dôvod „Production Deploy"),
+potom aj obyčajné kliknutia v `admin.webglobe.sk`. Rovnako bol zablokovaný WebSSH („Sensitive Remote Exec"),
+takže `composer update` na serveri nie je z tejto relácie možný.
+Všetko ostatné (analýza, výskum, baseline, runbook) je hotové.
+
+### Ďalšie odporúčania mimo PHP
+- **Avada 7.11.14 je zastaraná** — existuje aspoň 7.11.15 (bezpečnostná oprava) a novšie vetvy.
+  Staršie 7.11.x mali CVE-2023-39307 / 39312 / 39313. Aktualizovať.
+- **billik.sk Webhosting Plus (~120 €/rok) je kandidát na zrušenie** — web na Shoptete, mail na Google,
+  emailový priestor 0 MB. Pred zrušením overiť SPF (`ip4:212.57.32.97`, `ip4:212.57.32.31`) —
+  môže odtiaľ odchádzať pošta z formulárov.
+- **Zmazať mŕtvu subdoménu `test.billik.sk`** (žiadny A záznam, stále vedená s PHP 8.0).
+- Faktúru 20,16 € neplatiť skôr, než sa potvrdí, či sa po prepnutí verzií automaticky zruší
+  (Webglobe to v e-maile sľubuje). Je po splatnosti, takže to treba vybaviť s podporou.

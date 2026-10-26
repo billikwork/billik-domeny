@@ -10,3 +10,4 @@ dist
 # Source photo drops. Only the optimized copies in library/images are committed.
 OBRAZKY
 OBRAZKY-*
+.php-check/

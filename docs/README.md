@@ -7,4 +7,4 @@ Hub pre zápisky a rozhodnutia v tomto repe.
   Zanalyzované, nič zatiaľ nezmenené. Čaká sa na rozhodnutie o postupe. Viď `journal/01`.
 
 ## Index
-- [01 — Webglobe: poplatok "Rozšírená podpora PHP"](journal/01-webglobe-php-podpora.md)
+- [01 — Webglobe: poplatok "Rozšírená podpora PHP"](journal/01-webglobe-php-podpora.md) — analýza, cieľové verzie, runbook
