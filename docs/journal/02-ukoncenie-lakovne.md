@@ -27,7 +27,21 @@ Hosting praskovalakovnanr.sk je pod Webglobe účtom **BIL0007 (BILLIK TRADE s.r
 - Overené lokálne (next dev s `Host:` hlavičkami): oznam, noindex, redirect `/x/y → /`, ostatné weby nezmenené.
 - Pozn.: lokálny build padá na arm64 node (lightningcss), ide len s `/usr/local/bin/node` (x64) — staršia vec, Vercel to netrápi.
 
+## Vykonané 2026-11-16
+- **lakovanie.eu, praskovanie.eu**: oznam nasadený (commit 7ca2985, Vercel auto-deploy z `main`). Overené curlom:
+  titulok „Práškové lakovanie sme ukončili“, tlačidlo na billik.sk, `noindex, nofollow`, staré cesty 308 → `/`.
+- **billik.sk/lakovna/** (Shoptet): stránka „PRÁŠKOVÁ LAKOVŇA“ skrytá (Vzhľad a obsah → Stránky, nie zmazaná)
+  + 301 `/lakovna/` → `/` (Marketing → Základné SEO → Presmerovanie URL, admin URL `/admin/presmerovanie-url/`).
+  Overené: `curl -I https://www.billik.sk/lakovna/` → 301 na `https://www.billik.sk/`.
+- **praskovalakovnanr.sk** (Webglobe BIL0007, doménové ID 167439):
+  - záloha: FTP záloha zo 15. 11. 2026 stiahnutá do `~/Downloads/praskovalakovnanr.sk-2026-11-15-6e1eba7975.tgz`
+    (473 MB, 21 655 súborov, `public_html` + `DB_BACKUP/` s dumpmi DB `praskovalakovnanr_sk_wp` 10.–14. 11.). Archív otestovaný `tar -tzf`.
+  - odoslané požiadavky na zrušenie (Služby → Prehľad služieb → kôš → „Požiadať o zrušenie“):
+    **Webhosting Plus** (89,88 €/rok) a **Reg. poplatok za doménu .sk** (doména platí do 13. 1. 2027).
+
 ## Otvorené
-- Shoptet `/lakovna/` — čaká na prihlásenie do Shoptet adminu.
-- praskovalakovnanr.sk záloha + zrušenie hostingu a domény — čaká na prihlásenie do Webglobe účtu BIL0007.
-- Overiť nasadenie oznamu na lakovanie.eu a praskovanie.eu po pushi.
+- Webglobe zrušenie spracúva ručne — skontrolovať potvrdzujúci e-mail na billik@billik.sk a že služby zmizli z prehľadu.
+- Záloha leží len v `~/Downloads` — presunúť na trvalé miesto (Google Drive / NAS).
+- **praskovalakovna.sk** (bez „nr“, Webglobe, registrovaná 16. 3. 2023, autofakturácia zapnutá) — ďalšia lakovacia
+  doména, v zadaní nebola. A 212.57.34.249, HTTPS neodpovedá. Čaká na rozhodnutie, či ju zrušiť.
+- lakovanie.eu a praskovanie.eu domény zostávajú (nesú oznam); rozhodnúť neskôr, či ich nechať expirovať.
