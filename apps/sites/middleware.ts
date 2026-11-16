@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { getSiteByHost, getSiteById } from "@billik/site-config";
+import { getSiteByHost, getSiteById, type SiteConfig } from "@billik/site-config";
 
 function isPreviewHost(host: string) {
   const hostname = host.toLowerCase().split(":")[0];
@@ -9,6 +9,25 @@ function isPreviewHost(host: string) {
     hostname === "127.0.0.1" ||
     hostname.endsWith(".vercel.app")
   );
+}
+
+// Paths a closed site still serves itself; everything else redirects to the notice on "/".
+const CLOSED_SITE_PASSTHROUGH = new Set([
+  "/",
+  "/robots.txt",
+  "/sitemap.xml",
+  "/favicon.ico",
+  "/icon",
+  "/apple-icon",
+]);
+
+function closedSiteResponse(request: NextRequest, site: SiteConfig, response: NextResponse) {
+  if (site.closed && !CLOSED_SITE_PASSTHROUGH.has(request.nextUrl.pathname)) {
+    const url = request.nextUrl.clone();
+    url.pathname = "/";
+    return attachSiteId(NextResponse.redirect(url, 308), site.id);
+  }
+  return attachSiteId(response, site.id);
 }
 
 function attachSiteId(response: NextResponse, siteId: string) {
@@ -22,7 +41,7 @@ export function middleware(request: NextRequest) {
   const response = NextResponse.next();
 
   if (siteFromHost) {
-    return attachSiteId(response, siteFromHost.id);
+    return closedSiteResponse(request, siteFromHost, response);
   }
 
   if (isPreviewHost(host)) {
@@ -30,7 +49,7 @@ export function middleware(request: NextRequest) {
     if (previewSite) {
       const site = getSiteById(previewSite);
       if (site) {
-        return attachSiteId(response, site.id);
+        return closedSiteResponse(request, site, response);
       }
     }
     return response;

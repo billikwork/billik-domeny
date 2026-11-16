@@ -1,6 +1,6 @@
 import { buildJsonLd } from "@billik/seo";
 import { getAllSites } from "@billik/site-config";
-import { LandingPage, PreviewPage } from "@billik/ui";
+import { ClosedPage, LandingPage, PreviewPage } from "@billik/ui";
 import { getCurrentSite, isLocalPreview } from "@/lib/get-site";
 
 export default async function Home() {
@@ -14,6 +14,10 @@ export default async function Home() {
 
   if (!site) {
     return <PreviewPage sites={getAllSites()} />;
+  }
+
+  if (site.closed) {
+    return <ClosedPage site={site} />;
   }
 
   const jsonLd = buildJsonLd(site);

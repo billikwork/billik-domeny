@@ -8,6 +8,17 @@ export interface SiteBenefit {
   description: string;
 }
 
+/**
+ * Set when a site no longer offers its service. The site then renders only a notice page
+ * (no hero, benefits, FAQ or CTA), is marked noindex and is left out of the sitemap.
+ */
+export interface SiteClosed {
+  heading: string;
+  message: string;
+  linkUrl: string;
+  linkLabel: string;
+}
+
 export interface SiteConfig {
   id: string;
   domain: string;
@@ -26,4 +37,5 @@ export interface SiteConfig {
   ctaUrl: string;
   accentColor: string;
   keywords: string[];
+  closed?: SiteClosed;
 }

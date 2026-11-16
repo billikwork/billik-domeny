@@ -15,7 +15,7 @@ import zamocnickvyrobaSk from "../../../content/sites/zamocnickvyroba-sk.json";
 import zvaraciatechnikaEu from "../../../content/sites/zvaraciatechnika-eu.json";
 import zvarackyEu from "../../../content/sites/zvaracky-eu.json";
 
-export type { SiteConfig, SiteBenefit, SiteFaq } from "./types";
+export type { SiteConfig, SiteBenefit, SiteFaq, SiteClosed } from "./types";
 
 const sites: SiteConfig[] = [
   billikCz as SiteConfig,

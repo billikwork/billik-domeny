@@ -11,6 +11,11 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
     return { rules: { userAgent: "*", disallow: "/" } };
   }
 
+  // Closed sites stay crawlable on purpose: robots.txt must not hide the noindex meta tag.
+  if (site.closed) {
+    return { rules: { userAgent: "*", allow: "/" } };
+  }
+
   return {
     rules: { userAgent: "*", allow: "/" },
     sitemap: `https://www.${site.domain}/sitemap.xml`,

@@ -7,7 +7,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   const site = await getCurrentSite();
-  if (!site) {
+  if (!site || site.closed) {
     return [];
   }
 

@@ -62,6 +62,13 @@ async function main() {
       continue;
     }
 
+    // Closed sites show only a notice page, so there is no hero to rotate (and the deploy check
+    // would wait forever for a hero that is never rendered).
+    if (site.closed) {
+      console.log(`skipping ${siteId} — site is closed`);
+      continue;
+    }
+
     const nextIndex = accentsOnly ? entry.index : (entry.index + 1) % entry.images.length;
     const imageName = entry.images[nextIndex];
     const imagePath = path.join(IMAGES_DIR, imageName);

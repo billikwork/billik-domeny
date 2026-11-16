@@ -17,6 +17,15 @@ export function buildMetadata(site: SiteConfig, options?: { isPreview?: boolean 
   const url = `https://www.${site.domain}`;
   const isPreview = options?.isPreview ?? false;
 
+  if (site.closed) {
+    return {
+      title: site.title,
+      description: site.description,
+      icons: siteIconPath(site, isPreview),
+      robots: { index: false, follow: false },
+    };
+  }
+
   return {
     title: site.title,
     description: site.description,
