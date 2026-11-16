@@ -84,3 +84,10 @@ Používateľ: oznam s odkazom na billik.sk, „really nice visual“, na nepotr
 - **praskovalakovna.sk** (ID 184971): NS `ns1/2.sk-nik.sk` → Webglobe „Primárne“ (dns1–3.syphon.sk) — **žiadosť čaká na schválenie
   vlastníkom domény** (BILLIK, spol. s r.o.), schvaľovací e-mail išiel na info@billik.sk. V zóne nastavené A `@`, `*` a nový `www` → 216.198.79.1
   (dns1.syphon.sk už vracia nové hodnoty). Po schválení NS Vercel vystaví certifikát sám. Kým to nikto neschváli, doména ostáva bez webu.
+
+## 2026-11-16 (pokračovanie) — prehľad nákladov Webglobe BIL0007
+Ročne bez DPH (ceny obnovy): domény 248,83 € (7× .sk à 17,99, 9× .eu à 11,99, 1× .cz 14,99) + hostingy 210,14 €
+(billik.sk Webhosting Plus 89,88, praskovalakovnanr.sk Webhosting Plus 89,88, zvaraciestroje.sk Firemný 30,38) = **≈ 459 € (≈ 565 € s DPH)**.
+Oprava: SEO microwebov na Verceli je **11** (nie 9) — billik.cz, billiktrade.eu, billikwelding.sk/.eu, invertory.eu, zvaraciatechnika.eu,
+servoglas.sk, servore.eu, zamocnickvyroba.sk/.eu, zvaracky.eu → 152,89 €/rok.
+Návrh úspor: hosting billik.sk + hosting praskovalakovnanr.sk + 4 lakovacie domény po expirácii ≈ 240 €/rok bez DPH; voliteľne zvaraciestroje.sk 48,37 €.
