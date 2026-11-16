@@ -76,3 +76,11 @@ Používateľ: oznam s odkazom na billik.sk, „really nice visual“, na nepotr
   - praskovalakovna.sk (ID 184971): NS `ns1/2.sk-nik.sk` → Webglobe „Primárne“ (dns1–3.syphon.sk), potom A `@` + www → Vercel
 - Zistenia pre šéfa: praskovalakovna.sk vlastní **BILLIK, spol. s r.o.** (IČO 31425658, Výčapy-Opatovce), kontakt „Prosim doplnit z NIC!“.
   `ochrannepracovneprostriedky.sk` (ID 184989) JE v účte BIL0007 (v zozname DNS), len nie v prehľade fakturovaných služieb — oprava predošlého zápisu.
+
+## 2026-11-16 (pokračovanie) — DNS prepnuté (súhlas používateľa: „Yes, switch both“)
+- **praskovalakovnanr.sk** (Webglobe ID 167439): A `@` 212.57.32.72 → **216.198.79.1** (Vercel). www je CNAME na apex, MX/mail nezmenené,
+  wildcard `*` ostal na 212.57.32.72. Overené: `/`, `/sk/kontakt/`, `/sk/uvodna-stranka/` → 200 oznam s noindex, HTTPS cert od Vercelu funguje.
+  Rollback: vrátiť A `@` na 212.57.32.72 (WordPress beží na hostingu do 11. 1. 2027).
+- **praskovalakovna.sk** (ID 184971): NS `ns1/2.sk-nik.sk` → Webglobe „Primárne“ (dns1–3.syphon.sk) — **žiadosť čaká na schválenie
+  vlastníkom domény** (BILLIK, spol. s r.o.), schvaľovací e-mail išiel na info@billik.sk. V zóne nastavené A `@`, `*` a nový `www` → 216.198.79.1
+  (dns1.syphon.sk už vracia nové hodnoty). Po schválení NS Vercel vystaví certifikát sám. Kým to nikto neschváli, doména ostáva bez webu.

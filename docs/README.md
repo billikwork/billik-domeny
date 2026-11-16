@@ -4,7 +4,7 @@ Hub pre zápisky a rozhodnutia v tomto repe.
 
 ## Stav
 - **2026-11-16** — Lakovňa skončila. lakovanie.eu a praskovanie.eu ukazujú oznam s odkazom na billik.sk;
-  billik.sk/lakovna/ skrytá + 301 na billik.sk; praskovalakovnanr.sk zálohovaná a zrušenie hostingu aj domény požiadané. Otvorené: praskovalakovna.sk. Viď `journal/02`.
+  billik.sk/lakovna/ skrytá + 301 na billik.sk; praskovalakovnanr.sk zálohovaná a zrušenie hostingu aj domény požiadané. Oznam beží aj na praskovalakovnanr.sk; praskovalakovna.sk čaká na schválenie zmeny NS (e-mail na info@billik.sk). Viď `journal/02`.
 - **2026-10-26** — Webglobe spustil poplatok "Rozšírená podpora PHP". **Vyriešené.**
   Všetkých päť položiek je na ≥ 8.2 (zvaraciestroje.sk 8.2, praskovalakovnanr.sk 8.2,
   test.zvaraciestroje.sk 8.2, billik.sk + test.billik.sk 8.4) a poplatok z `/services` zmizol.
