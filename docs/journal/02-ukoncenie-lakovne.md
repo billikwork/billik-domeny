@@ -45,3 +45,22 @@ Hosting praskovalakovnanr.sk je pod Webglobe účtom **BIL0007 (BILLIK TRADE s.r
 - **praskovalakovna.sk** (bez „nr“, Webglobe, registrovaná 16. 3. 2023, autofakturácia zapnutá) — ďalšia lakovacia
   doména, v zadaní nebola. A 212.57.34.249, HTTPS neodpovedá. Čaká na rozhodnutie, či ju zrušiť.
 - lakovanie.eu a praskovanie.eu domény zostávajú (nesú oznam); rozhodnúť neskôr, či ich nechať expirovať.
+
+## 2026-11-16 (pokračovanie) — všetko pozastavené, otázky pre šéfa
+Používateľ: „Make everything on hold, and I'm gonna ask my boss“. Ďalšie zrušenia nerobím.
+Už odoslané požiadavky na praskovalakovnanr.sk (hosting + doména) bežia do konca obdobia
+(hosting do 11. 1. 2027, doména do 13. 1. 2027) — dá sa ich ešte stiahnuť cez podporu Webglobe.
+
+Inventúra Webglobe BIL0007 (ceny obnovy bez DPH / rok) a čo doména reálne ukazuje (curl 16. 11. 2026):
+| služba | cena/rok | stav |
+|---|---|---|
+| billik.sk Webhosting Plus | 89,88 € | nič na ňom nebeží (web Shoptet, mail Google) |
+| praskovalakovnanr.sk hosting + doména | 89,88 + 17,99 € | zrušenie požiadané |
+| praskovalakovna.sk doména | 17,99 € | web neodpovedá |
+| lakovanie.eu, praskovanie.eu | 2 × 11,99 € | len oznam o ukončení |
+| zvaraciestroje.sk Firemný Webhosting + doména | 30,38 + 17,99 € | beží starý web „BILLIK - zváracia technika“ |
+| 9 SEO microwebov na Verceli (billik.cz, billiktrade.eu, billikwelding.sk/.eu, invertory.eu, zvaraciatechnika.eu, servoglas.sk, servore.eu, zamocnickvyroba.sk/.eu, zvaracky.eu) | 12–18 € každá | bežia |
+| billik.sk doména | 17,99 € | hlavný e-shop, ponechať |
+
+Mimo účtu: `ochrannepracovneprostriedky.sk` je v repe ako web, ale DNS ukazuje na 212.57.34.249 (nie Vercel) a neodpovedá —
+doména je registrovaná inde alebo zle nastavená.
