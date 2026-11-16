@@ -1,5 +1,6 @@
+import { headers } from "next/headers";
 import { buildJsonLd } from "@billik/seo";
-import { getAllSites } from "@billik/site-config";
+import { getAllSites, getSiteByHost } from "@billik/site-config";
 import { ClosedPage, LandingPage, PreviewPage } from "@billik/ui";
 import { getCurrentSite, isLocalPreview } from "@/lib/get-site";
 
@@ -17,7 +18,10 @@ export default async function Home() {
   }
 
   if (site.closed) {
-    return <ClosedPage site={site} />;
+    const requestHost = ((await headers()).get("host") ?? "").toLowerCase().split(":")[0];
+    // Show the domain the visitor actually typed, but only if it really belongs to this site.
+    const host = getSiteByHost(requestHost)?.id === site.id ? requestHost : site.domain;
+    return <ClosedPage site={site} host={host} />;
   }
 
   const jsonLd = buildJsonLd(site);

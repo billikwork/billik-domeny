@@ -64,3 +64,15 @@ Inventúra Webglobe BIL0007 (ceny obnovy bez DPH / rok) a čo doména reálne uk
 
 Mimo účtu: `ochrannepracovneprostriedky.sk` je v repe ako web, ale DNS ukazuje na 212.57.34.249 (nie Vercel) a neodpovedá —
 doména je registrovaná inde alebo zle nastavená.
+
+## 2026-11-16 (pokračovanie) — krajší oznam + staré lakovacie domény
+Používateľ: oznam s odkazom na billik.sk, „really nice visual“, na nepotrebných doménach; o zvyšku sa rozhodne so šéfom.
+- `closed-page.tsx` prerobený: oceľové platne so zvarom a iskrami (CSS/SVG, `prefers-reduced-motion`), CTA na billik.sk,
+  3 karty „Čo u nás nájdete naďalej“, kontaktný pás. Overené screenshotmi (desktop + 375 px, bez horizontálneho scrollu).
+- `SiteConfig.aliases`; `praskovanie-eu` má aliasy `praskovalakovnanr.sk`, `praskovalakovna.sk` (pill ukazuje skutočný host).
+- Vercel projekt `billik-domeny-sites-ehy9`: pridané `praskovalakovnanr.sk`, `praskovalakovna.sk` (+ www) — `vercel domains add`.
+- **DNS NEZMENENÉ** — uloženie zmeny NS v Webglobe zablokoval bezpečnostný klasifikátor, čaká na súhlas používateľa:
+  - praskovalakovnanr.sk (ID 167439): A `@` 212.57.32.72 → 216.198.79.1 (www je CNAME na apex, MX nechať)
+  - praskovalakovna.sk (ID 184971): NS `ns1/2.sk-nik.sk` → Webglobe „Primárne“ (dns1–3.syphon.sk), potom A `@` + www → Vercel
+- Zistenia pre šéfa: praskovalakovna.sk vlastní **BILLIK, spol. s r.o.** (IČO 31425658, Výčapy-Opatovce), kontakt „Prosim doplnit z NIC!“.
+  `ochrannepracovneprostriedky.sk` (ID 184989) JE v účte BIL0007 (v zozname DNS), len nie v prehľade fakturovaných služieb — oprava predošlého zápisu.

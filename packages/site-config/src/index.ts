@@ -39,6 +39,10 @@ const domainMap = new Map<string, SiteConfig>();
 for (const site of sites) {
   domainMap.set(site.domain, site);
   domainMap.set(`www.${site.domain}`, site);
+  for (const alias of site.aliases ?? []) {
+    domainMap.set(alias, site);
+    domainMap.set(`www.${alias}`, site);
+  }
 }
 
 export function getAllSites(): SiteConfig[] {

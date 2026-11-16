@@ -22,6 +22,8 @@ export interface SiteClosed {
 export interface SiteConfig {
   id: string;
   domain: string;
+  /** Extra domains served by this same site (www. variants are added automatically). */
+  aliases?: string[];
   locale: string;
   language: string;
   title: string;
